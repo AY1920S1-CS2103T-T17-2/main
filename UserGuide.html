@@ -21,7 +21,7 @@
 <ul class="sectlevel2">
 <li><a href="#financial-tracker">3.1. Financial Tracker</a></li>
 <li><a href="#friend-contact-list">3.2. Friend Contact List</a></li>
-<li><a href="#calendar-event-planner">3.3. Calendar (Event Planner)</a></li>
+<li><a href="#calendar">3.3. Calendar</a></li>
 <li><a href="#event-itinerary">3.4. Event Itinerary</a></li>
 <li><a href="#travel-diary-with-pictures">3.5. Travel Diary with pictures</a></li>
 </ul>
@@ -184,51 +184,69 @@ A way for the user to beautify the appearance for the contact list. <em>e.g. Put
 </div>
 </div>
 <div class="sect2">
-<h3 id="calendar-event-planner"><a class="link" href="#calendar-event-planner">3.3. Calendar (Event Planner)</a></h3>
+<h3 id="calendar"><a class="link" href="#calendar">3.3. Calendar</a></h3>
 <div class="paragraph">
 <p>Gives you an overview of when you will be free to travel and recommends when will be a suitable time to travel.</p>
 </div>
 <div class="paragraph">
-<p><code>addCommitment</code>      : adds commitment to indicate that you won’t be able to travel on a day or over a period of time due to commitments during the public holidays/school vacation<br></p>
+<p><strong>Adding a commitment: <code>addCommitment</code></strong><br>
+Adds commitment to indicate that you won’t be able to travel on a day or over a period of time due to commitments during the public holidays/school vacation.<br>
+Format: <code>addCommitment [date] [name] &lt;details of commitment&gt;</code></p>
 </div>
 <div class="paragraph">
-<p><code>addCommitments</code>     : similar to the above, but we can add multiple commitments at once<br></p>
+<p><strong>Adding a public holiday: <code>addHoliday</code></strong><br>
+Adds a public holiday to your calendar so that you can view any upcoming public holidays easily.<br>
+Format: <code>addHoliday [date] [name of holiday]</code></p>
 </div>
 <div class="paragraph">
-<p><code>addPublicHoliday</code>   : adds a public holiday from your calendar<br></p>
+<p><strong>Adding a school break: <code>addSchoolBreak</code></strong><br>
+Adds a school break to your calendar so that you can view when your school breaks are easily.<br>
+Format: <code>addSchoolBreak [date] [name of break]</code> or <code>addSchoolBreak [start date] [end date] [name of break]</code></p>
 </div>
 <div class="paragraph">
-<p><code>addSchoolBreak</code>     : adds the start and end date of your school vacation<br></p>
+<p><strong>Adding a trip: <code>addTrip</code></strong><br>
+Adds your trip to the calendar. Now, you can keep track of your trip with ease.<br>
+Format: <code>addTrip [date] [name of trip]</code> or <code>addSchoolBreak [start date] [end date] [name of trip]</code></p>
 </div>
 <div class="paragraph">
-<p><code>addTrip</code>            : adds your trip to the calendar<br></p>
+<p><strong>Checking your availability for a trip: <code>check</code></strong><br>
+Checks whether you would be able to travel on a specified date/for a specified period of time.<br>
+Format: <code>check [date]</code> or <code>check [start date] [end date]</code></p>
 </div>
 <div class="paragraph">
-<p><code>checkAvailability</code>  : checks whether you are available for the stated period of time<br></p>
+<p><strong>Clearing all commitments for a particular date: <code>clearAll</code></strong><br>
+Clears all of your commitments for a particular date.<br>
+Format: <code>clearAll [date]</code></p>
 </div>
 <div class="paragraph">
-<p><code>clearCommitments</code>   : clears all commitments for the stated period of time<br></p>
+<p><strong>Editing your school break: <code>editSchoolBreak</code></strong><br>
+Edits either the start or end date of your school break.<br>
+Format: <code>editSchoolBreak [original start date] [name] [original end date] [new start date] [new end date]</code></p>
 </div>
 <div class="paragraph">
-<p><code>deleteCommitment</code>   : deletes commitment from your calendar<br></p>
+<p><strong>Editing your commitment: <code>editCommitment</code></strong><br>
+Edits your commitment. You may change the date and/or details of your commitment.<br>
+Format: <code>editCommitment [original date] [name] &lt;new date&gt; &lt;new details&gt;</code></p>
 </div>
 <div class="paragraph">
-<p><code>deleteSchoolBreak</code>  : deletes school break from your calendar<br></p>
+<p><strong>Removing a commitment: <code>removeCommitment</code></strong><br>
+Removes your commitment, as specified by the name and date of your commitment.<br>
+Format: <code>removeCommitment [date] [name]</code></p>
 </div>
 <div class="paragraph">
-<p><code>deletePublicHoliday</code>: deletes public holiday from your calendar<br></p>
+<p><strong>Removing a school break: <code>deleteSchoolBreak</code></strong><br>
+Removes a school break from your calendar.<br>
+Format: <code>removeSchoolBreak [date] [name]</code> or <code>removeSchoolBreak [start date] [end date] [name]</code></p>
 </div>
 <div class="paragraph">
-<p><code>editBreak</code>        : edits the start and/or end date of your school vacation <br></p>
+<p><strong>Removing a public holiday: <code>deleteHoliday</code></strong><br>
+Removes a school break from your calendar.<br>
+Format: <code>removeHoliday [date] [name]</code></p>
 </div>
 <div class="paragraph">
-<p><code>editCommitment</code>   : edits the duration of your commitment<br></p>
-</div>
-<div class="paragraph">
-<p><code>showAvailability</code> : shows you when you have 3 or more “free” days in the given period of time which you have specified<br></p>
-</div>
-<div class="paragraph">
-<p><code>suggestDate</code>      : suggests when you can travel for numDays</p>
+<p><strong>Suggesting a period of time to travel: <code>suggest</code></strong><br>
+Suggests when you can travel for a specified number of days within a time frame (as determined by the start and end dates).<br>
+Format: <code>suggest [start date] [end date] [number of days]</code></p>
 </div>
 <div class="paragraph">
 <p>The event planner feature also provides  certain extra extensions. <br>
@@ -790,4 +808,4 @@ After setting the notification, the user can snooze the notification or reminder
 <p><code>tagEntry</code>         : tags your entry with the specified tag(s)</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-16 13:16:33 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-16 14:45:02 UTC</div></div></div></body></html>
