@@ -961,9 +961,32 @@ However, in the parser package of itinerary, it contains various parser objects 
 This is to ensure that each command in financial tracker have only one parser validating the command.
 The GUI also collaborate with Model Class directly, which will be changed to only communicate with Logic class in later time.</p>
 </div>
-<div class="sect3">
-<h4 id="expense-statistics"><a class="link" href="#expense-statistics">4.4.1. Expense Statistics</a></h4>
-
+<div class="imageblock">
+<div class="content">
+<img src="images/FinancialTrackerClassDiagram.png" alt="FinancialTrackerClassDiagram">
+</div>
+<div class="title">Figure 15. Class Diagram of the Financial Tracker feature</div>
+</div>
+<div class="paragraph">
+<p>The Model,
+stores the <code>FinancialTracker</code> data which includes the <code>ExpenseList</code> which keeps track of all the expenses
+that are included by the user and stores it into the storage in a JSON file.</p>
+</div>
+<div class="paragraph">
+<p>It exposes an unmodifiable <code>ObservableList&lt;Expense&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Each time a new <code>Country</code> is selected from the javafx drop down menu, an expense list will be generated for that specific country, this
+implementation is to ease categorising and sorting.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -976,19 +999,19 @@ The GUI also collaborate with Model Class directly, which will be changed to onl
 <div class="content">
 <img src="images/AddressModelClassDiagram.png" alt="AddressModelClassDiagram">
 </div>
-<div class="title">Figure 15. Model Diagram of the AddressBook feature</div>
+<div class="title">Figure 16. Model Diagram of the AddressBook feature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AddressLogicClassDiagram.png" alt="AddressLogicClassDiagram">
 </div>
-<div class="title">Figure 16. Logic Diagram of the AddressBook feature</div>
+<div class="title">Figure 17. Logic Diagram of the AddressBook feature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
 </div>
-<div class="title">Figure 17. Sequence Diagram for the <code>Delete 1</code> Command</div>
+<div class="title">Figure 18. Sequence Diagram for the <code>Delete 1</code> Command</div>
 </div>
 </div>
 <div class="sect2">
@@ -997,19 +1020,19 @@ The GUI also collaborate with Model Class directly, which will be changed to onl
 <div class="content">
 <img src="images/AchievementsModelClassDiagram.png" alt="AchievementsModelClassDiagram">
 </div>
-<div class="title">Figure 18. Model Diagram of the Achievements feature</div>
+<div class="title">Figure 19. Model Diagram of the Achievements feature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AchievementsLogicClassDiagram.png" alt="AchievementsLogicClassDiagram">
 </div>
-<div class="title">Figure 19. Logic Diagram of the Achievements feature</div>
+<div class="title">Figure 20. Logic Diagram of the Achievements feature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AchievementsPage.png" alt="AchievementsPage">
 </div>
-<div class="title">Figure 20. Sequence Diagram of the Statistics Model</div>
+<div class="title">Figure 21. Sequence Diagram of the Statistics Model</div>
 </div>
 </div>
 </div>
@@ -1631,4 +1654,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-23 21:52:50 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-24 06:46:14 UTC</div></div></div></body></html>
