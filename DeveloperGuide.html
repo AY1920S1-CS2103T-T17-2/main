@@ -939,10 +939,10 @@ based on the specific search condition and only the filtered list will be given 
 <div class="sect2">
 <h3 id="financial-tracker"><a class="link" href="#financial-tracker">4.4. Financial Tracker</a></h3>
 <div class="paragraph">
-<p>The financial tracker feature in TravEzy allows users to keep track of their financial expenses with appropriate categorized expenditure and country.</p>
+<p>The Financial Tracker feature in TravEzy allows users to keep track of their financial expenses with appropriate categorized expenditure and country.</p>
 </div>
 <div class="paragraph">
-<p>Current, the itinerary feature supports the basic commands of add, delete and summary.</p>
+<p><strong>Architecture:</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -952,14 +952,16 @@ based on the specific search condition and only the filtered list will be given 
 </div>
 <div class="paragraph">
 <p>The Architecture Diagram given above explains the high-level design of the financial tracker feature.
-Inputs given by the user are channeled from the text UI and parsed by Command Parser before different commands are formed which generates
-the model and updates the FinancialTracker object which contains the expense list.</p>
+Inputs given by the user are channeled from the <code>textUI</code> and parsed by <code>CommandParser</code> before different commands are formed which generates
+the <code>Model</code> and updates the <code>FinancialTracker</code> object which contains the expense list.</p>
 </div>
 <div class="paragraph">
-<p>The text UI, log centre and storage all stem from the common package of the main TravEzy application.
-However, in the parser package of itinerary, it contains various parser objects for the different command.
+<p>The <code>textUI</code>, <code>Log Centre</code> and <code>Storage</code> all stem from the common package of the main TravEzy application.
 This is to ensure that each command in financial tracker have only one parser validating the command.
-The GUI also collaborate with Model Class directly, which will be changed to only communicate with Logic class in later time.</p>
+The GUI also collaborate with <code>Model</code> Class directly, which will be changed to only communicate with <code>Logic</code> class in later time.</p>
+</div>
+<div class="paragraph">
+<p><strong>Financial Tracker Class Diagram</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -988,6 +990,31 @@ implementation is to ease categorising and sorting.
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p><strong>Sequence Diagram example</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/FinancialTrackerSummaryCommandDiagram.png" alt="FinancialTrackerSummaryCommandDiagram">
+</div>
+<div class="title">Figure 16. Sequence Diagram of the Financial Tracker feature</div>
+</div>
+<div class="paragraph">
+<p>The above sequence diagram shows the sequence of events that will take place when a user calls <code>Summary</code> command.
+Note that that above sequence of events are very likely to those for the other commands in Financial Tracker feature.</p>
+</div>
+<div class="paragraph">
+<p><strong>Activity Diagram example</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/FinancialTrackerActivityDiagram.png" alt="FinancialTrackerActivityDiagram">
+</div>
+<div class="title">Figure 17. Activity Diagram of the Financial Tracker feature</div>
+</div>
+<div class="paragraph">
+<p>The above activity shows how <code>edits</code> command works.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="diary"><a class="link" href="#diary">4.5. Diary</a></h3>
@@ -999,19 +1026,19 @@ implementation is to ease categorising and sorting.
 <div class="content">
 <img src="images/AddressModelClassDiagram.png" alt="AddressModelClassDiagram">
 </div>
-<div class="title">Figure 16. Model Diagram of the AddressBook feature</div>
+<div class="title">Figure 18. Model Diagram of the AddressBook feature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AddressLogicClassDiagram.png" alt="AddressLogicClassDiagram">
 </div>
-<div class="title">Figure 17. Logic Diagram of the AddressBook feature</div>
+<div class="title">Figure 19. Logic Diagram of the AddressBook feature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
 </div>
-<div class="title">Figure 18. Sequence Diagram for the <code>Delete 1</code> Command</div>
+<div class="title">Figure 20. Sequence Diagram for the <code>Delete 1</code> Command</div>
 </div>
 </div>
 <div class="sect2">
@@ -1020,19 +1047,19 @@ implementation is to ease categorising and sorting.
 <div class="content">
 <img src="images/AchievementsModelClassDiagram.png" alt="AchievementsModelClassDiagram">
 </div>
-<div class="title">Figure 19. Model Diagram of the Achievements feature</div>
+<div class="title">Figure 21. Model Diagram of the Achievements feature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AchievementsLogicClassDiagram.png" alt="AchievementsLogicClassDiagram">
 </div>
-<div class="title">Figure 20. Logic Diagram of the Achievements feature</div>
+<div class="title">Figure 22. Logic Diagram of the Achievements feature</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AchievementsPage.png" alt="AchievementsPage">
 </div>
-<div class="title">Figure 21. Sequence Diagram of the Statistics Model</div>
+<div class="title">Figure 23. Sequence Diagram of the Statistics Model</div>
 </div>
 </div>
 </div>
@@ -1654,4 +1681,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-28 11:56:25 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-28 13:20:05 UTC</div></div></div></body></html>
