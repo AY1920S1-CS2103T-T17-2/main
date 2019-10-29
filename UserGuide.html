@@ -17,33 +17,103 @@
 <ul class="sectlevel1">
 <li><a href="#introduction">1. Introduction</a></li>
 <li><a href="#quickstart">2. Quickstart</a></li>
-<li><a href="#features">3. Features</a>
+<li><a href="#preface">3. Preface</a></li>
+<li><a href="#main">4. Main</a>
 <ul class="sectlevel2">
-<li><a href="#financial-tracker">3.1. Financial Tracker</a></li>
-<li><a href="#friend-contact-list">3.2. Friend Contact List</a></li>
-<li><a href="#calendar">3.3. Calendar</a></li>
-<li><a href="#event-itinerary">3.4. Event Itinerary</a></li>
-<li><a href="#travel-diary-with-pictures">3.5. Travel Diary with pictures</a></li>
+<li><a href="#go-to-command">4.1. Go To Command</a></li>
+<li><a href="#exit-command">4.2. Exit Command</a></li>
 </ul>
 </li>
-<li><a href="#additional-features-coming-in-v2-0">4. Additional Features (Coming in V2.0)</a>
+<li><a href="#calendar">5. Calendar</a></li>
+<li><a href="#itinerary">6. Itinerary</a></li>
+<li><a href="#address-book">7. Address Book</a>
 <ul class="sectlevel2">
-<li><a href="#trivago-price-comparison">4.1. TRIVAGO, Price comparison</a></li>
-<li><a href="#travel-recommendations">4.2. Travel Recommendations</a></li>
-<li><a href="#nus-trips">4.3. NUS trips</a></li>
-<li><a href="#engaging-notifications">4.4. Engaging Notifications</a></li>
+<li><a href="#financial-tracker">7.1. Financial Tracker</a></li>
 </ul>
 </li>
-<li><a href="#faq">5. FAQ</a></li>
-<li><a href="#command-summary">6. Command Summary</a></li>
+<li><a href="#diary">8. Diary</a>
+<ul class="sectlevel2">
+<li><a href="#parameters">8.1. Parameters</a></li>
+<li><a href="#add-command">8.2. Add Command</a></li>
+<li><a href="#delete-command">8.3. Delete Command</a></li>
+<li><a href="#list-command">8.4. List Command</a></li>
+</ul>
+</li>
+<li><a href="#achievements">9. Achievements</a>
+<ul class="sectlevel2">
+<li><a href="#trivago-price-comparison">9.1. TRIVAGO, Price comparison</a></li>
+<li><a href="#travel-recommendations">9.2. Travel Recommendations</a></li>
+<li><a href="#nus-trips">9.3. NUS trips</a></li>
+<li><a href="#engaging-notifications">9.4. Engaging Notifications</a></li>
+</ul>
+</li>
+<li><a href="#faq">10. FAQ</a></li>
+<li><a href="#command-summary">11. Command Summary</a></li>
 </ul>
 </div>
 </div>
 <div class="sect1">
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/images/traveEzyLogo.png" alt="traveEzyLogo">
+</div>
+</div>
 <div class="paragraph">
-<p>Welcome and thank you for choosing The Traveller Diary (TTD) to store precious memories of your overseas trips. This travelling diary is well suited for <strong>NUS students who are passionate about travelling across the globe</strong> and <strong>prefer to use a desktop app for managing their trips abroad</strong>. If you can type fast, TTD can help you <strong>store, customize and manage your posts effectively</strong>. Not only that, TTD can <strong>access your contacts with their details</strong> done faster than traditional GUI apps. But wait, there’s more! TTD also has a built in <strong>financial tracker to track your expenses during each trip</strong> to ensure you spend wisely. What are you waiting for? Hop on to this user guide and we will travel to <u>Section 2, “Quick Start”</u> to get a copy of your TTD and get started with it. Enjoy! 😊</p>
+<p>Welcome to <strong>TravEzy</strong>! 😊</p>
+</div>
+<div class="paragraph">
+<p>Firstly, thank you for downloading our application. We greatly appreciate your support and
+we <strong>promise</strong> to make travel easy, with TravEzy.</p>
+</div>
+<div class="paragraph">
+<p>So, is TravEzy for you?</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Are you a busy university student with a passion for travelling?</p>
+</li>
+<li>
+<p>Are your summers and winters filled with internships, projects and CCA activities?</p>
+</li>
+<li>
+<p>Do your numerous commitments get in the way of your travel plans?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>IF you answered yes to the questions above, then <em>yes</em> it is. If not, it still is :)</p>
+</div>
+<div class="paragraph">
+<p>What is Travezy? TravEzy is a desktop application with a command line interface (CLI) which is <strong>perfect</strong> for NUS students who love travelling as much as we do. What&#8217;s more, with a (CLI), you will be able to type in your commands much faster than similar applications which require you to keep using your mouse</p>
+</div>
+<div class="paragraph">
+<p>TravEzy is perfect for:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Managing your busy calendar and finding the optimal period (<em>after your finals</em>) to take that much needed holiday!</p>
+</li>
+<li>
+<p>Creating the ideal itinerary for your 3 day shopping trip to Bangkok :)</p>
+</li>
+<li>
+<p>Tracking your expenses during your trip, so that you have enough money left for the trip home</p>
+</li>
+<li>
+<p>Journaling in your travel diary and effortlessly looking at old entries to recall your exchange trip to Sweden.</p>
+</li>
+<li>
+<p>Calling old and new friends using the address book in TravEzy</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>What are you waiting for? Hop on to this user guide and we will
+travel to <u>Section 2, “Quick Start”</u> to start TravEzy 😊</p>
 </div>
 </div>
 </div>
@@ -53,33 +123,41 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
+<p>Grab a cup of coffee</p>
+</li>
+<li>
 <p>Ensure that you have Java 11 or above installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest TravellerDiary.jar</p>
+<p>Download the latest
+<a href="https://github.com/AY1920S1-CS2103T-T17-2/main/releases">TravEzy.jar</a></p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Traveller Diary.</p>
+<p>Copy the file to the folder you want to use as the home folder for TravEzy.</p>
 </li>
 <li>
-<p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
+<p>Double-click the file to start the app.
+The GUI (Graphical User Interface) should appear in a few seconds.</p>
 </li>
 <li>
-<p>Type the command in the command box and press <strong>&lt;Enter&gt; *to execute it.
-E.g. typing *help</strong> and pressing <strong>&lt;Enter&gt;</strong> will open the help window.</p>
+<p>You are now in the Main Page of TravEzy.</p>
+</li>
+<li>
+<p>At the bottom of the screen, type the command in the command box and press <strong>&lt;Enter&gt;</strong> on your keyboard to execute it.
+E.g. typing <strong>help</strong> and pressing <strong>&lt;Enter&gt;</strong> will open the help window.</p>
 </li>
 <li>
 <p>Examples commands you may try:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><strong>listContact</strong> : List all contacts that are in your address book</p>
+<p><strong>goto diary</strong> : Open up the diary portion of TravEzy</p>
 </li>
 <li>
-<p><strong>openCalendar</strong> : Navigate and opens up the calendar page</p>
+<p><strong>list</strong> : Shows all the entries in your diary</p>
 </li>
 <li>
-<p><strong>deleteEvent 3</strong> : deletes the 3rd event shown in the itinerary</p>
+<p><strong>delete 3</strong> : deletes the 3rd entry in the diary book</p>
 </li>
 <li>
 <p><strong>exit</strong>: exits the app</p>
@@ -95,96 +173,176 @@ E.g. typing *help</strong> and pressing <strong>&lt;Enter&gt;</strong> will open
 </div>
 </div>
 <div class="sect1">
-<h2 id="features"><a class="link" href="#features">3. Features</a></h2>
+<h2 id="preface"><a class="link" href="#preface">3. Preface</a></h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="financial-tracker"><a class="link" href="#financial-tracker">3.1. Financial Tracker</a></h3>
 <div class="paragraph">
-<p>Keep track of your travelling expenses.</p>
+<p>Nobody likes to read long documents, especially when you have something as
+exciting as TravEzy to start using. So, we&#8217;re going to give you a simple structure
+that you can use to make using this user guide a TravEzy experience 😊:</p>
 </div>
 <div class="paragraph">
-<p><code>addFin</code>    : add a new expense <br></p>
-</div>
-<div class="paragraph">
-<p><code>updateFin</code> : update an existing expense<br></p>
-</div>
-<div class="paragraph">
-<p><code>showFin</code>   : show all your expenses<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteFin</code> : delete an expense<br></p>
-</div>
-<div class="paragraph">
-<p><code>calFin</code>    : calculate your total expense</p>
-</div>
-<div class="paragraph">
-<p>The Financial Tracker also provide extra extensions. <br>
-<em>(Extensions the group may want to consider)</em></p>
+<p>We&#8217;ve split up this guide into the different portions of our application, namely:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Check which friend in your contact list owes you money</strong><br>
-You can update on which friend has previously borrowed money for you. Your personal traveller diary will then keep track of it in case you forget.</p>
+<p>Main</p>
 </li>
 <li>
-<p><strong>Reminder notification when you exceed your budget</strong><br>
-Afraid of over-budget? Your personal traveller diary prevents you from doing that by prompting you that you have over spent.</p>
+<p>Calendar</p>
+</li>
+<li>
+<p>Itinerary</p>
+</li>
+<li>
+<p>Address Book</p>
+</li>
+<li>
+<p>Diary</p>
+</li>
+<li>
+<p>Achievements</p>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>In each portion, you will find the commands that you can type to begin making use of the feature.
+We have provided the word that you type into TravEzy to trigger the
+command, or the <em>Command Word</em>  in a special format, for example -  <code>Command Word</code>. With this, there
+is a short description of the command as well.</p>
+</div>
+<div class="paragraph">
+<p>After the <em>Command Word</em>, we have also included the <em>Format</em> for entering the command.
+Now, in TravEzy, along with the <em>Command Word</em>, we also have additional parameters
+that must be typed in with the <em>Command Word</em>. These parameters are made explicit with
+<em>Prefixes</em>. Each prefix will be followed by a forward slash, <code>/</code>, after which will be value that you, the user must input. If the parameter is optional, it will be surrounded by sqaure brackets,
+<code>[]</code>.</p>
+</div>
+<div class="paragraph">
+<p>Lastly, with each command, there is an example of a possible command that can be input by a user.</p>
+</div>
+<div class="paragraph">
+<p>Here, is an example from the diary:</p>
+</div>
+<div class="paragraph">
+<p>Trying to journal your trip to DisneyLand?
+<strong>Add an entry to your diary: <code>add</code></strong></p>
+</div>
+<div class="paragraph">
+<p>Adds an entry to your diary, with the parameters: title (of the diary entry), date
+(of the event you are trying to journal) , place (of the event) and memory (more info
+about the event).</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>add</code> and the prefixes are <code>t/</code> for title, <code>d/</code>
+for date, <code>p/</code> for place and <code>m/</code> for memory.
+Only title and date are compulsory.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add t/title d/date [p/place] [m/memory]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Lets take the example of my fishing trip! I can&#8217;t really remember where it was&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p><code>add t/Fishing Trip d/12/12/2019 m/Caught the biggest fish ever!</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="main"><a class="link" href="#main">4. Main</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hi!</p>
+</div>
+<div class="paragraph">
+<p>Main is the welcome screen for TravEzy. From here, you can navigate to the other pages, such as calendar,
+financial tracker, achievements etc. You can also the exit the application from here.</p>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t worry! You can also navigate to other pages
+and exit when you are already inside in a page such as itinerary.</p>
 </div>
 <div class="sect2">
-<h3 id="friend-contact-list"><a class="link" href="#friend-contact-list">3.2. Friend Contact List</a></h3>
+<h3 id="go-to-command"><a class="link" href="#go-to-command">4.1. Go To Command</a></h3>
 <div class="paragraph">
-<p>Helps you to keep track of your friends’ contact information.</p>
+<p>Trying to open up the achievements page? Use the <strong>Go To Command</strong>:</p>
 </div>
 <div class="paragraph">
-<p><code>addCont</code>    : add a new friend to the contact information<br></p>
+<p><strong>Go To another page: <code>goto</code></strong></p>
 </div>
 <div class="paragraph">
-<p><code>updateCont</code> : update friend information in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>showCont</code>   : show all friends in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteCont</code> : delete friends in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>listCont</code>   : list all friends in the contact list</p>
-</div>
-<div class="paragraph">
-<p>The friend contact list feature also provide certain extra extensions. <br>
-<em>(Extensions the group may want to consider)</em></p>
+<p>Allows you to navigate to different pages (from any page), with the possible pages being:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>duplicateContacts</strong><br>
-The program does not allow duplicate contacts. Contacts with the same information cannot be added to the contact list. The program may display a possible warning alert when user tries to add duplicate contact information.</p>
+<p>main</p>
 </li>
 <li>
-<p><strong>tag / label</strong><br>
-The program supports tagging / labelling of contacts. The user can tag a contact as ‘ close friends’ for example. This allows the user to identify different contact with similar contact information by tag / label. These tags / label can be color-coded or display icons.</p>
+<p>calendar</p>
 </li>
 <li>
-<p><strong>categories</strong><br>
-The user can also categorize a particular contact into categories. This may be useful to differentiate between friends from <em>‘school’</em> category or _‘work’ _category.</p>
+<p>itinerary</p>
 </li>
 <li>
-<p><strong>profilePicture</strong><br>
-A user profile picture can be added into the contact list. This allow the user to customize a profile picture for a particular contact.</p>
+<p>address_book</p>
 </li>
 <li>
-<p><strong>stickersPack</strong><br>
-A way for the user to beautify the appearance for the contact list. <em>e.g. Putting a crown / tiara / emoticons / sticker pack to beautify the standard contact layout in the contact list.</em></p>
+<p>financial_tracker</p>
+</li>
+<li>
+<p>diary</p>
+</li>
+<li>
+<p>achievements</p>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>goto</code> and the parameter can be any of the pages listed above. There is no
+need for a <em>Prefix</em>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>goto page</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Let&#8217;s say I want to go back to the main page to see the beautiful TravEzy logo -</p>
+</div>
+<div class="paragraph">
+<p><code>goto main</code></p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="calendar"><a class="link" href="#calendar">3.3. Calendar</a></h3>
+<h3 id="exit-command"><a class="link" href="#exit-command">4.2. Exit Command</a></h3>
+<div class="paragraph">
+<p>It&#8217;s time to catch your flight! Better exit TravEzy using the <strong>Exit Command</strong> and
+start your trip!</p>
+</div>
+<div class="paragraph">
+<p><strong>Exit TravEzy: <code>exit</code></strong></p>
+</div>
+<div class="paragraph">
+<p>Allows you to exit from any page</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>exit</code> and there are no additonal parameters.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>exit</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Let&#8217;s say I have to exit the calendar page -</p>
+</div>
+<div class="paragraph">
+<p><code>exit</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="calendar"><a class="link" href="#calendar">5. Calendar</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Gives you an overview of when you will be free to travel and recommends when will be a suitable time to travel.</p>
 </div>
@@ -270,8 +428,10 @@ Informs user of public holidays and adds them to the calendar without requiring 
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="event-itinerary"><a class="link" href="#event-itinerary">3.4. Event Itinerary</a></h3>
+</div>
+<div class="sect1">
+<h2 id="itinerary"><a class="link" href="#itinerary">6. Itinerary</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Helps you to plan how exactly you want to spend each hour of your trip. Each event will be numbered numerically in increasing order.</p>
 </div>
@@ -354,51 +514,89 @@ The user can get recommended activities to fill in gaps in the itinerary. The da
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="travel-diary-with-pictures"><a class="link" href="#travel-diary-with-pictures">3.5. Travel Diary with pictures</a></h3>
+</div>
+<div class="sect1">
+<h2 id="address-book"><a class="link" href="#address-book">7. Address Book</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><code>addImage</code>         : add new images to the specified entry conveniently<br></p>
+<p>Helps you to keep track of your friends’ contact information.</p>
 </div>
 <div class="paragraph">
-<p><code>appendToEntry</code>    : appends text to the specified entry</p>
+<p><code>addCont</code>    : add a new friend to the contact information<br></p>
 </div>
 <div class="paragraph">
-<p><code>createEntry</code>      : creates a new entry in your diary<br></p>
+<p><code>updateCont</code> : update friend information in the contact list<br></p>
 </div>
 <div class="paragraph">
-<p><code>deleteEntry</code>      : deletes the specified entry of your diary<br></p>
+<p><code>showCont</code>   : show all friends in the contact list<br></p>
 </div>
 <div class="paragraph">
-<p><code>editEntry</code>        : edit the specified entry of your diary<br></p>
+<p><code>deleteCont</code> : delete friends in the contact list<br></p>
 </div>
 <div class="paragraph">
-<p><code>filterEntries</code>    : filters the entries by looking out for the specified expression<br></p>
+<p><code>listCont</code>   : list all friends in the contact list</p>
 </div>
 <div class="paragraph">
-<p><code>filterByTag</code>      : filters the entries by the specified tag<br></p>
-</div>
-<div class="paragraph">
-<p><code>sortEntries</code>      : sorts your entries in chronological order<br></p>
-</div>
-<div class="paragraph">
-<p><code>sortEntriesByTag</code> : sorts your entries by tags<br></p>
-</div>
-<div class="paragraph">
-<p><code>tagEntry</code>         : tags your entry with the specified tag(s)</p>
-</div>
-<div class="paragraph">
-<p>The Travel Diary feature also provides  certain extra extensions. <br>
+<p>The friend contact list feature also provide certain extra extensions. <br>
 <em>(Extensions the group may want to consider)</em></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>memories</strong><br>
-Reminds the user of entries s/he made a year ago.</p>
+<p><strong>duplicateContacts</strong><br>
+The program does not allow duplicate contacts. Contacts with the same information cannot be added to the contact list. The program may display a possible warning alert when user tries to add duplicate contact information.</p>
 </li>
 <li>
-<p><strong>milestones</strong><br>
-Congratulates the user when s/he met certain milestones (travelling to a continent that s/he has not previously visited, visiting one of the seven wonders of the world, etc.)</p>
+<p><strong>tag / label</strong><br>
+The program supports tagging / labelling of contacts. The user can tag a contact as ‘ close friends’ for example. This allows the user to identify different contact with similar contact information by tag / label. These tags / label can be color-coded or display icons.</p>
+</li>
+<li>
+<p><strong>categories</strong><br>
+The user can also categorize a particular contact into categories. This may be useful to differentiate between friends from <em>‘school’</em> category or _‘work’ _category.</p>
+</li>
+<li>
+<p><strong>profilePicture</strong><br>
+A user profile picture can be added into the contact list. This allow the user to customize a profile picture for a particular contact.</p>
+</li>
+<li>
+<p><strong>stickersPack</strong><br>
+A way for the user to beautify the appearance for the contact list. <em>e.g. Putting a crown / tiara / emoticons / sticker pack to beautify the standard contact layout in the contact list.</em></p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="financial-tracker"><a class="link" href="#financial-tracker">7.1. Financial Tracker</a></h3>
+<div class="paragraph">
+<p>Keep track of your travelling expenses.</p>
+</div>
+<div class="paragraph">
+<p><code>addFin</code>    : add a new expense <br></p>
+</div>
+<div class="paragraph">
+<p><code>updateFin</code> : update an existing expense<br></p>
+</div>
+<div class="paragraph">
+<p><code>showFin</code>   : show all your expenses<br></p>
+</div>
+<div class="paragraph">
+<p><code>deleteFin</code> : delete an expense<br></p>
+</div>
+<div class="paragraph">
+<p><code>calFin</code>    : calculate your total expense</p>
+</div>
+<div class="paragraph">
+<p>The Financial Tracker also provide extra extensions. <br>
+<em>(Extensions the group may want to consider)</em></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Check which friend in your contact list owes you money</strong><br>
+You can update on which friend has previously borrowed money for you. Your personal traveller diary will then keep track of it in case you forget.</p>
+</li>
+<li>
+<p><strong>Reminder notification when you exceed your budget</strong><br>
+Afraid of over-budget? Your personal traveller diary prevents you from doing that by prompting you that you have over spent.</p>
 </li>
 </ol>
 </div>
@@ -406,10 +604,145 @@ Congratulates the user when s/he met certain milestones (travelling to a contine
 </div>
 </div>
 <div class="sect1">
-<h2 id="additional-features-coming-in-v2-0"><a class="link" href="#additional-features-coming-in-v2-0">4. Additional Features (Coming in V2.0)</a></h2>
+<h2 id="diary"><a class="link" href="#diary">8. Diary</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The sweetest part of any holiday is looking back at your fond memories. TravEzy&#8217;s
+Diary allows you to do just that!</p>
+</div>
+<div class="paragraph">
+<p>Each entry in your diary has 4 key sections:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Title</p>
+</li>
+<li>
+<p>Date</p>
+</li>
+<li>
+<p>Place</p>
+</li>
+<li>
+<p>Memory</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The title is the name of your entry, followed by the date of your memory, the place and finally
+a short description of the memory you want to keep. In the Diary, you will be able to add, delete,
+list and show your entries. There are also a few more special tasks that you can do with your diary.
+Enjoy!</p>
+</div>
+<div class="sect2">
+<h3 id="parameters"><a class="link" href="#parameters">8.1. Parameters</a></h3>
+<div class="paragraph">
+<p>Let&#8217;s shed some light on the parameters and how exactly you can type them in to begin creating
+your diary entries:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Title</strong> &#8594; <strong>COMPULSORY</strong> Each diary entry must have a title. This title can be anything! The corresponding <em>PREFIX</em> is <code>t/</code>. For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>t/My Birthday</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Date</strong> &#8594; <strong>COMPULSORY</strong> Each diary entry must have a date and time. The <em>PREFIX</em> is <code>d/</code>. There is one way to input your date and time, but don&#8217;t worry! It&#8217;s really simple. You will have to enter it in this format:   <code>dd/MM/yyyy HHmm</code>. Let&#8217;s say your birthday was celebrated on 27th January, 1997 at 11.59PM. Then, you would input:</p>
+<div class="literalblock">
+<div class="content">
+<pre>d/ 27/01/1997 2359</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Place</strong>  &#8594; <strong>OPTIONAL</strong>. Now, you may not remember each and every place that you did
+something memorable, but if you do, you can add it into your entry with the <em>PREFIX</em> <code>p/</code>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>p/Sweet Home Alabama</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Memory</strong>  &#8594; <strong>OPTIONAL</strong>. Not all memories can be expressed in words. If you can, just add a short note of your memory using the <em>PREFIX</em> <code>m/</code>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>m/Rode a bike for the first time</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="add-command"><a class="link" href="#add-command">8.2. Add Command</a></h3>
+<div class="paragraph">
+<p>Trying to journal your trip to DisneyLand?
+<strong>Add an entry to your diary: <code>add</code></strong></p>
+</div>
+<div class="paragraph">
+<p>Adds an entry to your diary, with the parameters: title (of the diary entry), date
+(of the event you are trying to journal) , place (of the event) and memory (more info
+about the event).</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>add</code> and the prefixes are <code>t/</code> for title, <code>d/</code>
+for date, <code>p/</code> for place and <code>m/</code> for memory.
+Only title and date are compulsory.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add t/title d/date [p/place] [m/memory]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Lets take the example of my fishing trip! I can&#8217;t really remember where it was&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p><code>add t/Fishing Trip d/12/12/2019 m/Caught the biggest fish ever!</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="delete-command"><a class="link" href="#delete-command">8.3. Delete Command</a></h3>
+<div class="paragraph">
+<p>For some memories, it&#8217;s best to forget them :(</p>
+</div>
+<div class="paragraph">
+<p><strong>Delete an entry from your diary: <code>delete</code></strong></p>
+</div>
+<div class="paragraph">
+<p>Deletes an entry from your diary with the only parameter being the index of the entry you want to
+delete. The index must be an integer which is more than or equal to 1 and corresponds to ID of the
+entry you want to delete</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>delete</code> and the only parameter is the index.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>delete index</code></p>
+</div>
+<div class="paragraph">
+<p>Example: I lost my wallet at the amusement park in Genting, I don&#8217;t want to remember
+that trip ever again :(</p>
+</div>
+<div class="paragraph">
+<p><code>delete 5</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-command"><a class="link" href="#list-command">8.4. List Command</a></h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="achievements"><a class="link" href="#achievements">9. Achievements</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="trivago-price-comparison"><a class="link" href="#trivago-price-comparison">4.1. TRIVAGO, Price comparison</a></h3>
+<h3 id="trivago-price-comparison"><a class="link" href="#trivago-price-comparison">9.1. TRIVAGO, Price comparison</a></h3>
 <div class="paragraph">
 <p>Helps to compare the prices between two particular goods or services. Can be used to compare prices of lodging,</p>
 </div>
@@ -457,7 +790,7 @@ Based on the different taggings given by the user, it will help to sort the data
 </div>
 </div>
 <div class="sect2">
-<h3 id="travel-recommendations"><a class="link" href="#travel-recommendations">4.2. Travel Recommendations</a></h3>
+<h3 id="travel-recommendations"><a class="link" href="#travel-recommendations">9.2. Travel Recommendations</a></h3>
 <div class="paragraph">
 <p>Gives travel suggestions to the user.</p>
 </div>
@@ -491,7 +824,7 @@ The user can store preferred sources for trips, such as travel websites or perso
 </div>
 </div>
 <div class="sect2">
-<h3 id="nus-trips"><a class="link" href="#nus-trips">4.3. NUS trips</a></h3>
+<h3 id="nus-trips"><a class="link" href="#nus-trips">9.3. NUS trips</a></h3>
 <div class="paragraph">
 <p>Helps you get recommendations from NUS societies.</p>
 </div>
@@ -531,7 +864,7 @@ The user can filter societies based on preferences such as cost, duration and ty
 </div>
 </div>
 <div class="sect2">
-<h3 id="engaging-notifications"><a class="link" href="#engaging-notifications">4.4. Engaging Notifications</a></h3>
+<h3 id="engaging-notifications"><a class="link" href="#engaging-notifications">9.4. Engaging Notifications</a></h3>
 <div class="paragraph">
 <p>New notifications will be used to alert the user. Notifications can be used to alert the user in the following circumstances:</p>
 </div>
@@ -594,7 +927,7 @@ After setting the notification, the user can snooze the notification or reminder
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">5. FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">10. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q:</strong> How do I backup my data onto cloud storage?<br>
@@ -631,7 +964,7 @@ After setting the notification, the user can snooze the notification or reminder
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">6. Command Summary</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">11. Command Summary</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Here is a summary for the list of features available:</p>
@@ -782,35 +1115,34 @@ After setting the notification, the user can snooze the notification or reminder
 <p><code>selectSoc</code>   : select a certain society to load trips</p>
 </div>
 <div class="paragraph">
-<p>Travel Diary with pictures:<br>
-<code>addImage</code>         : add new images to the specified entry conveniently<br></p>
+<p>Travel Diary with pictures:<br></p>
 </div>
-<div class="paragraph">
-<p><code>appendToEntry</code>    : appends text to the specified entry<br></p>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Diary Commands Summary</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add a diary entry to the diary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add t/title d/date [p/place] [m/memory]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete a certain entry from the diary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete index</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="paragraph">
-<p><code>createEntry</code>      : creates a new entry in your diary<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteEntry</code>      : deletes the specified entry of your diary<br></p>
-</div>
-<div class="paragraph">
-<p><code>editEntry</code>        : edit the specified entry of your diary<br></p>
-</div>
-<div class="paragraph">
-<p><code>filterEntries</code>    : filters the entries by looking out for the specified expression<br></p>
-</div>
-<div class="paragraph">
-<p><code>filterByTag</code>      : filters the entries by the specified tag<br></p>
-</div>
-<div class="paragraph">
-<p><code>sortEntries</code>      : sorts your entries in chronological order<br></p>
-</div>
-<div class="paragraph">
-<p><code>sortEntriesByTag</code> : sorts your entries by tags<br></p>
-</div>
-<div class="paragraph">
-<p><code>tagEntry</code>         : tags your entry with the specified tag(s)</p>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-29 06:52:21 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-29 17:52:17 UTC</div></div></div></body></html>
