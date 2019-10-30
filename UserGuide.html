@@ -28,27 +28,46 @@
 <li><a href="#itinerary">6. Itinerary</a></li>
 <li><a href="#address-book">7. Address Book</a>
 <ul class="sectlevel2">
-<li><a href="#financial-tracker">7.1. Financial Tracker</a></li>
+<li><a href="#viewing-help-code-help-code">7.1. Viewing help : <code>help</code></a></li>
+<li><a href="#adding-a-person-code-add-code">7.2. Adding a person: <code>add</code></a></li>
+<li><a href="#listing-all-persons-code-list-code">7.3. Listing all persons : <code>list</code></a></li>
+<li><a href="#editing-a-person-code-edit-code">7.4. Editing a person : <code>edit</code></a></li>
+<li><a href="#locating-persons-by-name-code-find-code">7.5. Locating persons by name: <code>find</code></a></li>
+<li><a href="#deleting-a-person-code-delete-code">7.6. Deleting a person : <code>delete</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">7.7. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">7.8. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">7.9. Saving the data</a></li>
 </ul>
 </li>
-<li><a href="#diary">8. Diary</a>
+<li><a href="#financial-tracker">8. Financial Tracker</a>
 <ul class="sectlevel2">
 <li><a href="#parameters">8.1. Parameters</a></li>
-<li><a href="#add-command">8.2. Add Command</a></li>
-<li><a href="#delete-command">8.3. Delete Command</a></li>
-<li><a href="#list-command">8.4. List Command</a></li>
+<li><a href="#helpcommand">8.2. HelpCommand</a></li>
+<li><a href="#addcommand">8.3. AddCommand</a></li>
+<li><a href="#deletecommand">8.4. DeleteCommand</a></li>
+<li><a href="#editcommand">8.5. EditCommand</a></li>
+<li><a href="#summarycommand">8.6. SummaryCommand</a></li>
 </ul>
 </li>
-<li><a href="#achievements">9. Achievements</a>
+<li><a href="#diary">9. Diary</a>
 <ul class="sectlevel2">
-<li><a href="#trivago-price-comparison">9.1. TRIVAGO, Price comparison</a></li>
-<li><a href="#travel-recommendations">9.2. Travel Recommendations</a></li>
-<li><a href="#nus-trips">9.3. NUS trips</a></li>
-<li><a href="#engaging-notifications">9.4. Engaging Notifications</a></li>
+<li><a href="#parameters-2">9.1. Parameters</a></li>
+<li><a href="#add-command">9.2. Add Command</a></li>
+<li><a href="#delete-command">9.3. Delete Command</a></li>
+<li><a href="#list-command">9.4. List Command</a></li>
 </ul>
 </li>
-<li><a href="#faq">10. FAQ</a></li>
-<li><a href="#command-summary">11. Command Summary</a></li>
+<li><a href="#achievements">10. Achievements</a>
+<ul class="sectlevel2">
+<li><a href="#address-book-achievements">10.1. Address Book Achievements</a></li>
+<li><a href="#calendar-achievements-coming-in-v1-4">10.2. Calendar Achievements (Coming in v1.4)</a></li>
+<li><a href="#diary-achievements-coming-in-v1-4">10.3. Diary Achievements (Coming in v1.4)</a></li>
+<li><a href="#financial-tracker-achievements-coming-in-v1-4">10.4. Financial Tracker Achievements (Coming in v1.4)</a></li>
+<li><a href="#itinerary-achievements-coming-in-v1-4">10.5. Itinerary Achievements (Coming in v1.4)</a></li>
+</ul>
+</li>
+<li><a href="#faq">11. FAQ</a></li>
+<li><a href="#command-summary">12. Command Summary</a></li>
 </ul>
 </div>
 </div>
@@ -337,6 +356,18 @@ start your trip!</p>
 <div class="paragraph">
 <p><code>exit</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Note: Both Goto Command and Exit Command are implemented in every features  respectively to provide you a smooth navigating experience!
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -519,92 +550,416 @@ The user can get recommended activities to fill in gaps in the itinerary. The da
 <h2 id="address-book"><a class="link" href="#address-book">7. Address Book</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Helps you to keep track of your friends’ contact information.</p>
-</div>
-<div class="paragraph">
-<p><code>addCont</code>    : add a new friend to the contact information<br></p>
-</div>
-<div class="paragraph">
-<p><code>updateCont</code> : update friend information in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>showCont</code>   : show all friends in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteCont</code> : delete friends in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>listCont</code>   : list all friends in the contact list</p>
-</div>
-<div class="paragraph">
-<p>The friend contact list feature also provide certain extra extensions. <br>
-<em>(Extensions the group may want to consider)</em></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>duplicateContacts</strong><br>
-The program does not allow duplicate contacts. Contacts with the same information cannot be added to the contact list. The program may display a possible warning alert when user tries to add duplicate contact information.</p>
-</li>
-<li>
-<p><strong>tag / label</strong><br>
-The program supports tagging / labelling of contacts. The user can tag a contact as ‘ close friends’ for example. This allows the user to identify different contact with similar contact information by tag / label. These tags / label can be color-coded or display icons.</p>
-</li>
-<li>
-<p><strong>categories</strong><br>
-The user can also categorize a particular contact into categories. This may be useful to differentiate between friends from <em>‘school’</em> category or _‘work’ _category.</p>
-</li>
-<li>
-<p><strong>profilePicture</strong><br>
-A user profile picture can be added into the contact list. This allow the user to customize a profile picture for a particular contact.</p>
-</li>
-<li>
-<p><strong>stickersPack</strong><br>
-A way for the user to beautify the appearance for the contact list. <em>e.g. Putting a crown / tiara / emoticons / sticker pack to beautify the standard contact layout in the contact list.</em></p>
-</li>
-</ol>
+<p>Helps you to keep track of your friends’ contact information from different countries.</p>
 </div>
 <div class="sect2">
-<h3 id="financial-tracker"><a class="link" href="#financial-tracker">7.1. Financial Tracker</a></h3>
+<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">7.1. Viewing help : <code>help</code></a></h3>
 <div class="paragraph">
-<p>Keep track of your travelling expenses.</p>
+<p>Format: <code>help</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">7.2. Adding a person: <code>add</code></a></h3>
+<div class="paragraph">
+<p>Adds a person to the address book<br>
+Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG] [r/REMARK][c/COUNTRY]</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+A person can have any number of tags (including 0)
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p><code>addFin</code>    : add a new expense <br></p>
+<p>Examples:</p>
 </div>
-<div class="paragraph">
-<p><code>updateFin</code> : update an existing expense<br></p>
-</div>
-<div class="paragraph">
-<p><code>showFin</code>   : show all your expenses<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteFin</code> : delete an expense<br></p>
-</div>
-<div class="paragraph">
-<p><code>calFin</code>    : calculate your total expense</p>
-</div>
-<div class="paragraph">
-<p>The Financial Tracker also provide extra extensions. <br>
-<em>(Extensions the group may want to consider)</em></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p><strong>Check which friend in your contact list owes you money</strong><br>
-You can update on which friend has previously borrowed money for you. Your personal traveller diary will then keep track of it in case you forget.</p>
+<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
 </li>
 <li>
-<p><strong>Reminder notification when you exceed your budget</strong><br>
-Afraid of over-budget? Your personal traveller diary prevents you from doing that by prompting you that you have over spent.</p>
+<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal r/Best friend c/Singapore</code></p>
 </li>
-</ol>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">7.3. Listing all persons : <code>list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all persons in the address book.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">7.4. Editing a person : <code>edit</code></a></h3>
+<div class="paragraph">
+<p>Edits an existing person in the address book.<br>
+Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [r/REMARK] [c/COUNTRY]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+<li>
+<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
+</li>
+<li>
+<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
+</li>
+<li>
+<p>You can remove the person&#8217;s remark by typing <code>r/</code> without specifying any remark after it.</p>
+</li>
+<li>
+<p>You can remove the person&#8217;s country by typing <code>c/</code> without specifying any country after it.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
+Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
+</li>
+<li>
+<p><code>edit 2 n/Betsy Crower t/</code><br>
+Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
+</li>
+<li>
+<p><code>edit 3 n/Alexander Bell c/</code><br>
+Clear the country of the 3rd person to be <code>Alexander Bell</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">7.5. Locating persons by name: <code>find</code></a></h3>
+<div class="paragraph">
+<p>Finds persons whose names contain any of the given keywords.<br>
+Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+</li>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
+</li>
+<li>
+<p>Only the name is searched.</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
+</li>
+<li>
+<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find John</code><br>
+Returns <code>john</code> and <code>John Doe</code></p>
+</li>
+<li>
+<p><code>find Betsy Tim John</code><br>
+Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">7.6. Deleting a person : <code>delete</code></a></h3>
+<div class="paragraph">
+<p>Deletes the specified person from the address book.<br>
+Format: <code>delete INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the person at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed person list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>delete 2</code><br>
+Deletes the 2nd person in the address book.</p>
+</li>
+<li>
+<p><code>find Betsy</code><br>
+<code>delete 1</code><br>
+Deletes the 1st person in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">7.7. Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all entries from the address book.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">7.8. Exiting the program : <code>exit</code></a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">7.9. Saving the data</a></h3>
+<div class="paragraph">
+<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="diary"><a class="link" href="#diary">8. Diary</a></h2>
+<h2 id="financial-tracker"><a class="link" href="#financial-tracker">8. Financial Tracker</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scare that you&#8217;re gonna overspend whenever you&#8217;re on a trip? Afraid no more! TravEzy&#8217;s Financial Tracker allow you to track your
+expenses seamlessly!</p>
+</div>
+<div class="paragraph">
+<p>Each entry in your expense has 6 key sections:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Date</p>
+</li>
+<li>
+<p>Time</p>
+</li>
+<li>
+<p>Amount</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+<li>
+<p>Type of expenditure</p>
+</li>
+<li>
+<p>Country</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The Date and Time specify when you spend your expenses, followed by the amount, description, types of expenditure and country where you&#8217;re current travelling at. Example of the types of expenditure are food, entertainment, healthcare, etc. You name it, TravEzy track it! In Financial Tracker, you will be able to add, delete and edit your expenses easily.</p>
+</div>
+<div class="sect2">
+<h3 id="parameters"><a class="link" href="#parameters">8.1. Parameters</a></h3>
+<div class="paragraph">
+<p>Let&#8217;s understand how to use your parameters first!</p>
+</div>
+<div class="paragraph">
+<p>In an expense, every fields are <strong>compulsory</strong>. However, the <strong>date</strong> and <strong>time</strong> fields need not be specified, it&#8217;ll be recorded down automatically based on the date and time you recorded the expense. Convenient enough, right?</p>
+</div>
+<div class="paragraph">
+<p>Below are the <em>PREFIX</em> convention that TravEzy&#8217;s Financial Tracker will be using.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Date. The <em>PREFIX</em> is <code>date/</code>. Note that the format TravEzy&#8217;s Financial Tracker using is "ddMMyyyy". For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>date/30102019</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Time. The <em>PREFIX</em> is <code>time/</code>. Note that the format TravEzy&#8217;s Financial Tracker using is 24-Hour format. For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>time/1359</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Amount. The <em>PREFIX</em> is <code>/a</code>. Let&#8217;s say you&#8217;ve spent 3.50 dollars. You would enter:</p>
+<div class="literalblock">
+<div class="content">
+<pre>a/3.5</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Description. The <em>PREFIX</em> is <code>/d</code>. You can type in a sentence or a phrase.</p>
+<div class="literalblock">
+<div class="content">
+<pre>d/Breakfast     or     d/Mala at the Deck</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Type of expenditure. The <em>PREFIX</em> is <code>/t</code>. Specify which type of expenditure you are spending.</p>
+<div class="literalblock">
+<div class="content">
+<pre>t/food</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Country. You can select from the dropdown menu to select which countries you&#8217;re currently in. The default country every time you launch the application is <strong>Singapore</strong>. There is no prefix for country field and you&#8217;re not allowed to edit it :(</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="helpcommand"><a class="link" href="#helpcommand">8.2. HelpCommand</a></h3>
+<div class="paragraph">
+<p>At anytime, not sure what to do?</p>
+</div>
+<div class="paragraph">
+<p><strong>Simply ask for help!:</strong> <code>help</code></p>
+</div>
+<div class="paragraph">
+<p>Pops out a help window to guide you how to use the commands in Financial Tracker.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>help</code> without further parameters.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>help</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="addcommand"><a class="link" href="#addcommand">8.3. AddCommand</a></h3>
+<div class="paragraph">
+<p>Adding what you&#8217;ve spent at the nice coffee shop you stopped by?</p>
+</div>
+<div class="paragraph">
+<p><strong>Add an entry to your financial tracker:</strong> <code>add</code></p>
+</div>
+<div class="paragraph">
+<p>Adds an expense to your diary, with the parameters: amount, description, type, date and time.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>add</code> and the prefixes are <code>a/</code> for amount, <code>d/</code>
+for description, <code>t/</code> for type of expenditure.
+Date <code>date/</code> and time <code>time/</code> are optional.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add a/AMOUNT d/DESCRIPTION t/TYPE_OF_EXPENDITURE [date/DATE] [time/TIME]</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>add a/4 t/dinner at Vivocity t/food</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deletecommand"><a class="link" href="#deletecommand">8.4. DeleteCommand</a></h3>
+<div class="paragraph">
+<p>Added a wrong expense? Of course you can delete it if you want to :)</p>
+</div>
+<div class="paragraph">
+<p><strong>Delete an expense:</strong> <code>delete</code></p>
+</div>
+<div class="paragraph">
+<p>Deletes an expense from your Financial Tracker with the only parameter being the index of the expense you want to delete. The index must be an integer which is greater than 1 and corresponds to ID of the expense you want to delete.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>delete</code> with an parameter index.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>delete INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Delete the first expense you saw on your expense list.</p>
+</div>
+<div class="paragraph">
+<p><code>delete 1</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editcommand"><a class="link" href="#editcommand">8.5. EditCommand</a></h3>
+<div class="paragraph">
+<p>Add a wrong expense? Why not edit it instead!</p>
+</div>
+<div class="paragraph">
+<p><strong>Edit an expense:</strong> <code>edit</code></p>
+</div>
+<div class="paragraph">
+<p>Edit an expense in your Financial Tracker with the only parameter being the index of the expense you want to edit. The index must be an integer which is greater than 1 and corresponds to ID of the expense you want to edit.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>edit</code> with an parameter index.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>edit index</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Edit the 3rd expense you saw on your expense list.</p>
+</div>
+<div class="paragraph">
+<p><code>edit 3</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="summarycommand"><a class="link" href="#summarycommand">8.6. SummaryCommand</a></h3>
+<div class="paragraph">
+<p><strong>&#8594; COMING IN V1.4</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="diary"><a class="link" href="#diary">9. Diary</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The sweetest part of any holiday is looking back at your fond memories. TravEzy&#8217;s
@@ -636,7 +991,7 @@ list and show your entries. There are also a few more special tasks that you can
 Enjoy!</p>
 </div>
 <div class="sect2">
-<h3 id="parameters"><a class="link" href="#parameters">8.1. Parameters</a></h3>
+<h3 id="parameters-2"><a class="link" href="#parameters-2">9.1. Parameters</a></h3>
 <div class="paragraph">
 <p>Let&#8217;s shed some light on the parameters and how exactly you can type them in to begin creating
 your diary entries:</p>
@@ -680,7 +1035,7 @@ something memorable, but if you do, you can add it into your entry with the <em>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-command"><a class="link" href="#add-command">8.2. Add Command</a></h3>
+<h3 id="add-command"><a class="link" href="#add-command">9.2. Add Command</a></h3>
 <div class="paragraph">
 <p>Trying to journal your trip to DisneyLand?
 <strong>Add an entry to your diary: <code>add</code></strong></p>
@@ -706,7 +1061,7 @@ Only title and date are compulsory.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-command"><a class="link" href="#delete-command">8.3. Delete Command</a></h3>
+<h3 id="delete-command"><a class="link" href="#delete-command">9.3. Delete Command</a></h3>
 <div class="paragraph">
 <p>For some memories, it&#8217;s best to forget them :(</p>
 </div>
@@ -733,201 +1088,54 @@ that trip ever again :(</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-command"><a class="link" href="#list-command">8.4. List Command</a></h3>
+<h3 id="list-command"><a class="link" href="#list-command">9.4. List Command</a></h3>
 
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="achievements"><a class="link" href="#achievements">9. Achievements</a></h2>
+<h2 id="achievements"><a class="link" href="#achievements">10. Achievements</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Travezy provides a way for you to look through your progress within the app itself. You will be able to see the overall
+statistics of your current progress as you grow to become a top traveller!</p>
+</div>
 <div class="sect2">
-<h3 id="trivago-price-comparison"><a class="link" href="#trivago-price-comparison">9.1. TRIVAGO, Price comparison</a></h3>
+<h3 id="address-book-achievements"><a class="link" href="#address-book-achievements">10.1. Address Book Achievements</a></h3>
 <div class="paragraph">
-<p>Helps to compare the prices between two particular goods or services. Can be used to compare prices of lodging,</p>
-</div>
-<div class="paragraph">
-<p><code>addData</code>     : add a new data to be used for price comparison<br></p>
-</div>
-<div class="paragraph">
-<p><code>showData</code>    : show the prices for a selected data<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteData</code>  : delete data used for price comparison<br></p>
-</div>
-<div class="paragraph">
-<p><code>compareData</code> : compare prices between two data<br></p>
-</div>
-<div class="paragraph">
-<p><code>reviewData</code>  : review the previous few comparisons that user did<br></p>
-</div>
-<div class="paragraph">
-<p><code>listData</code>    : list out all the data that user has inputted into TTD</p>
-</div>
-<div class="paragraph">
-<p>The friend contact list feature also provide certain extra extensions. <br>
-<em>(Extensions the group may want to consider)</em></p>
+<p>In the Address Book Achievements, you will be able to see:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>setConversionRates</strong><br>
-Compare prices based on different countries’ currency and exchange rates. Allow user to also calculate the prices of goods using their home currency.</p>
+<p>Total Contacts in your  Address Book out of 200</p>
 </li>
 <li>
-<p><strong>tag</strong><br>
-The program allows users to classify each data into different categories, such as AirBnB, hotels, restaurants, shopping centre goods.</p>
-</li>
-<li>
-<p><strong>undo</strong><br>
-Allow the user to undo their previous comparison or action should they delete the wrong data using function deleteData.</p>
-</li>
-<li>
-<p><strong>sort</strong><br>
-Based on the different taggings given by the user, it will help to sort the data based on the total price of each data.</p>
+<p>Number of contacts from different country</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="travel-recommendations"><a class="link" href="#travel-recommendations">9.2. Travel Recommendations</a></h3>
-<div class="paragraph">
-<p>Gives travel suggestions to the user.</p>
-</div>
-<div class="paragraph">
-<p><code>setDates</code>    : set the dates for your proposed trip<br></p>
-</div>
-<div class="paragraph">
-<p><code>setPrice</code>    : set your price range<br></p>
-</div>
-<div class="paragraph">
-<p><code>setType</code>     : set the type of trip (Fun, educational etc)<br></p>
-</div>
-<div class="paragraph">
-<p><code>generate</code>    : generate recommendations from stored diaries</p>
-</div>
-<div class="paragraph">
-<p>The travel recommendations feature also provides  certain extra extensions.<br>
-<em>(Extensions the group may want to consider)</em></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>downloadTrips</strong><br>
-The user can download pre planned trips and locations from online sources such as AirB&amp;B Top 10 travel locations.</p>
-</li>
-<li>
-<p><strong>saveSources</strong><br>
-The user can store preferred sources for trips, such as travel websites or personal blogs.</p>
-</li>
-</ol>
-</div>
+<h3 id="calendar-achievements-coming-in-v1-4"><a class="link" href="#calendar-achievements-coming-in-v1-4">10.2. Calendar Achievements (Coming in v1.4)</a></h3>
+
 </div>
 <div class="sect2">
-<h3 id="nus-trips"><a class="link" href="#nus-trips">9.3. NUS trips</a></h3>
-<div class="paragraph">
-<p>Helps you get recommendations from NUS societies.</p>
-</div>
-<div class="paragraph">
-<p><code>loadTrips</code>   : download trips from NUS societies<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteTrips</code> : delete certain NUS trips<br></p>
-</div>
-<div class="paragraph">
-<p><code>showTrip</code>    : show your whole trip in a calendar view<br></p>
-</div>
-<div class="paragraph">
-<p><code>getSoc</code>      : get societies from NUS which organise trips<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteSoc</code>   : delete certain societies<br></p>
-</div>
-<div class="paragraph">
-<p><code>selectSoc</code>   : select a certain society to load trips</p>
-</div>
-<div class="paragraph">
-<p>The NUS trips feature also provides  certain extra extensions. <br>
-<em>(Extensions the group may want to consider)</em></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>favourite</strong><br>
-The user can choose preferred societies (NUS mountaineers, CIP clubs)  to favourite.</p>
-</li>
-<li>
-<p><strong>filter</strong><br>
-The user can filter societies based on preferences such as cost, duration and type.</p>
-</li>
-</ol>
-</div>
+<h3 id="diary-achievements-coming-in-v1-4"><a class="link" href="#diary-achievements-coming-in-v1-4">10.3. Diary Achievements (Coming in v1.4)</a></h3>
+
 </div>
 <div class="sect2">
-<h3 id="engaging-notifications"><a class="link" href="#engaging-notifications">9.4. Engaging Notifications</a></h3>
-<div class="paragraph">
-<p>New notifications will be used to alert the user. Notifications can be used to alert the user in the following circumstances:</p>
+<h3 id="financial-tracker-achievements-coming-in-v1-4"><a class="link" href="#financial-tracker-achievements-coming-in-v1-4">10.4. Financial Tracker Achievements (Coming in v1.4)</a></h3>
+
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>User set a manual reminder</p>
-</li>
-<li>
-<p>Incomplete form <em>perhaps in the itinerary</em></p>
-</li>
-<li>
-<p>Upcoming trip</p>
-</li>
-<li>
-<p>Upcoming event in the calendar</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>reminders</strong><br>
-The user can set a reminder on the calendar. When the reminder is due, there will be a new notification from the program.</p>
-</li>
-<li>
-<p><strong>colourCode</strong><br>
-The notification can have different color and design to differentiate between different types of notification. _Red _used to indicate danger while _Yellow _used to indicate warning, _Blue _for general notifications etc.</p>
-</li>
-<li>
-<p><strong>growAndShrink</strong><br>
-Grow and shrink animation for notifications.</p>
-</li>
-<li>
-<p><strong>music</strong><br>
-A music will be played when the notification appears. Different music can be used for different notification.</p>
-</li>
-<li>
-<p><strong>sendEmailNotification</strong><br>
-An email notification will be sent to the user when the notification appears. <em>Similar to LumiNUS sending user confirmation email when the post lecture survey is completed</em></p>
-</li>
-<li>
-<p><strong>customizeNotification</strong><br>
-The user can create their own custom notification. Add colours, emoticons and use different notification styling for different alerts.</p>
-</li>
-<li>
-<p><strong>popupAlerts</strong><br>
-Reminders and notifications can be displayed in the form of popup alert to alert the user if something went wrong.</p>
-</li>
-<li>
-<p><strong>snooze</strong><br>
-After setting the notification, the user can snooze the notification or reminder for the user to be reminded again.</p>
-</li>
-</ol>
-</div>
+<div class="sect2">
+<h3 id="itinerary-achievements-coming-in-v1-4"><a class="link" href="#itinerary-achievements-coming-in-v1-4">10.5. Itinerary Achievements (Coming in v1.4)</a></h3>
+
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">10. FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">11. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q:</strong> How do I backup my data onto cloud storage?<br>
@@ -964,7 +1172,7 @@ After setting the notification, the user can snooze the notification or reminder
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">11. Command Summary</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">12. Command Summary</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Here is a summary for the list of features available:</p>
@@ -986,21 +1194,60 @@ After setting the notification, the user can snooze the notification or reminder
 <p><code>calFin</code>    : calculate your total expense</p>
 </div>
 <div class="paragraph">
-<p>Friend Contact List:<br>
-<code>addCont</code>    : add a new friend to the contact information<br></p>
+<p>Address Book:<br></p>
 </div>
-<div class="paragraph">
-<p><code>updateCont</code> : update friend information in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>showCont</code>   : show all friends in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteCont</code> : delete friends in the contact list<br></p>
-</div>
-<div class="paragraph">
-<p><code>listCont</code>   : list all friends in the contact list</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Address Book Commands Summary</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a person to the address book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME p/PHONE NUMBER e/EMAIL[t/TAG] [r/REMARK] [c/COUNTRY]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clears all entries from the address book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edits an existing person in the address book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG] [r/REMARK] [c/COUNTRY]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the specified person from the address book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finds persons whose names contain any of the given keywords</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find KEYWORD [MORE_KEYWORDS]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows a list of all persons in the address book.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">View help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Calendar (Event Planner):<br>
 <code>addCommitment</code>      : adds commitment to indicate that you won’t be able to travel on a day or over a duration of time due to commitments during the public holidays/school vacation<br></p>
@@ -1118,7 +1365,7 @@ After setting the notification, the user can snooze the notification or reminder
 <p>Travel Diary with pictures:<br></p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Diary Commands Summary</caption>
+<caption class="title">Table 2. Diary Commands Summary</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1145,4 +1392,4 @@ After setting the notification, the user can snooze the notification or reminder
 </tbody>
 </table>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 02:13:21 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 12:44:51 UTC</div></div></div></body></html>

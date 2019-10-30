@@ -93,7 +93,7 @@ TravEzy is mainly a Common Line Interface (CLI) desktop application. Hence, user
 </table>
 </div>
 <div class="paragraph">
-<p><code>Main</code> has two classes called <a href="https://ay1920s1-cs2103t-t17-2.github.io/main//src/main/java/seedu/address/Main.java"><code>Main</code></a> and <a href="https://ay1920s1-cs2103t-t17-2.github.io/main//src/main/java/seedu/address/MainApp.java"><code>MainApp</code></a>. It is responsible for,</p>
+<p><code>Main</code> has two classes called <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/Main.java"><code>Main</code></a> and <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/MainApp.java"><code>MainApp</code></a>. It is responsible for,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -180,13 +180,13 @@ The following class plays an important role at the architecture level:</p>
 <div class="title">Figure 4. Structure of the UI Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://ay1920s1-cs2103t-t17-2.github.io/main//src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
+<p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://ay1920s1-cs2103t-t17-2.github.io/main//src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://ay1920s1-cs2103t-t17-2.github.io/main//src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
+<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component extends out to many different pages in TravEzy which represents the features that it has. This includes:</p>
@@ -258,7 +258,7 @@ The Calendar and Itinerary window work in tandem with each other. Due to their d
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
-<a href="https://ay1920s1-cs2103t-t17-2.github.io/main//src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
+<a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -313,7 +313,7 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 <div class="title">Figure 7. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://ay1920s1-cs2103t-t17-2.github.io/main//src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
+<p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>Model</code>,</p>
@@ -364,7 +364,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="title">Figure 8. Structure of the Storage Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://ay1920s1-cs2103t-t17-2.github.io/main//src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
+<p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>Storage</code> component,</p>
@@ -1022,44 +1022,200 @@ Note that that above sequence of events are very likely to those for the other c
 </div>
 <div class="sect2">
 <h3 id="address-book"><a class="link" href="#address-book">4.6. Address Book</a></h3>
-<div class="imageblock">
-<div class="content">
-<img src="images/AddressModelClassDiagram.png" alt="AddressModelClassDiagram">
-</div>
-<div class="title">Figure 18. Model Diagram of the AddressBook feature</div>
-</div>
-<div class="imageblock">
+<div class="sect3">
+<h4 id="logic-component"><a class="link" href="#logic-component">4.6.1. Logic Component</a></h4>
+<div id="fig-LogicClassDiagram" class="imageblock">
 <div class="content">
 <img src="images/AddressLogicClassDiagram.png" alt="AddressLogicClassDiagram">
 </div>
-<div class="title">Figure 19. Logic Diagram of the AddressBook feature</div>
+<div class="title">Figure 18. Structure of the Logic Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> :
+<a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/address/logic/AddressBookLogic.java"><code>AddressBookLogic.java</code></a></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>AddressBookLogicManager</code> uses the <code>AddressBookParser</code> class to parse the user command.</p>
+</li>
+<li>
+<p>This results in a <code>Command</code> object which is executed by the <code>AddressBookLogicManager</code>.</p>
+</li>
+<li>
+<p>The command execution can affect the <code>AddressBookModel</code> (e.g. adding a person).</p>
+</li>
+<li>
+<p>The result of the command execution is encapsulated as a <code>CommandResult</code> object which is passed back to the <code>Ui</code>.</p>
+</li>
+<li>
+<p>In addition, the <code>CommandResult</code> object can also instruct the <code>AddressBookPage</code> to perform certain actions, such as displaying help to the user.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
 </div>
-<div class="title">Figure 20. Sequence Diagram for the <code>Delete 1</code> Command</div>
+<div class="title">Figure 19. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>DeleteCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Design-Model"><a class="link" href="#Design-Model">4.6.2. Model component</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressModelClassDiagram.png" alt="AddressModelClassDiagram">
+</div>
+<div class="title">Figure 20. Structure of the Model Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/address/model/AddressBookModel.java"><code>AddressBookModel.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Model</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stores the <code>ReadOnlyAddressBook</code> data and <code>ReadOnlyUserPrefs</code>.</p>
+</li>
+<li>
+<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
+</li>
+<li>
+<p>does not depend on any of the other three components.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book</code>, which <code>Person</code> can reference. This would allow <code>Address Book</code> to only require one <code>Tag</code> object per unique <code>Tag</code>, instead of each <code>Person</code> needing their own <code>Tag</code> object. An example of how such a model may look like is given below.<br>
+<br>
+<span class="image"><img src="images/BetterAddressBookModelClassDiagram.png" alt="BetterAddressBookModelClassDiagram"></span>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="achievements"><a class="link" href="#achievements">4.7. Achievements</a></h3>
-<div class="imageblock">
-<div class="content">
-<img src="images/AchievementsModelClassDiagram.png" alt="AchievementsModelClassDiagram">
-</div>
-<div class="title">Figure 21. Model Diagram of the Achievements feature</div>
-</div>
+<div class="sect3">
+<h4 id="logic-component-2"><a class="link" href="#logic-component-2">4.7.1. Logic Component</a></h4>
 <div class="imageblock">
 <div class="content">
 <img src="images/AchievementsLogicClassDiagram.png" alt="AchievementsLogicClassDiagram">
 </div>
-<div class="title">Figure 22. Logic Diagram of the Achievements feature</div>
+<div class="title">Figure 21. AchievementsLogic Diagram of the Achievements feature</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> :
+<a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/achievements/logic/AchievementsLogic.java"><code>AchievementsLogic.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>AchievementsLogic</code> is responsible for generating statistics for the different components in Travezy</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>AchievementsLogicManager</code> uses the <code>Supplier&lt;StatisticsModel&gt;</code> to supply the <code>StatisticsModel</code>.</p>
+</li>
+<li>
+<p>Getting the <code>StatisticsModel</code> from the <code>Supplier&lt;StatisticsModel&gt;</code> constructs a new <code>StatisticsModel</code> that gets the statistics data from a Model from another feature e.g. <code>AddressBookModel</code> that is visible within <code>ModelManager</code></p>
+</li>
+<li>
+<p><code>AchievementsLogicManager</code> returns the resultant data from the <code>StatisticsModel</code> that is lazily created.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The <code>AchievementsLogic</code> parses <code>Command</code> as well to enable navigation to other <code>Page</code> within Travezy.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>AchievementsLogicManager</code> uses the <code>AchievementsParser</code> class to parse the user command.</p>
+</li>
+<li>
+<p>This results in a <code>Command</code> object which is executed by the <code>AchievementsLogicManager</code>.</p>
+</li>
+<li>
+<p>The command execution can affect the <code>Model</code> (e.g. adding a person).</p>
+</li>
+<li>
+<p>The result of the command execution is encapsulated as a <code>CommandResult</code> object which is passed back to the <code>Ui</code>.</p>
+</li>
+<li>
+<p>In addition, the <code>CommandResult</code> object can also instruct the <code>Ui</code> to perform certain actions, such as displaying help to the user.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Given below is the sequence diagram for generating the <code>StatisticsModel</code> lazily:</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AchievementsPage.png" alt="AchievementsPage">
 </div>
-<div class="title">Figure 23. Sequence Diagram of the Statistics Model</div>
+<div class="title">Figure 22. Sequence Diagram of the Statistics Model</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>StatisticsModel</code> is lazily created. Hence, the statistics will only be retrieved from each model only when it is evaluated when loading the <code>AchievementsPage</code> scene.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="model-component-2"><a class="link" href="#model-component-2">4.7.2. Model Component</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/AchievementsModelClassDiagram.png" alt="AchievementsModelClassDiagram">
+</div>
+<div class="title">Figure 23. StatisticsModel Diagram of the Achievements feature</div>
+</div>
+<div class="paragraph">
+<p>The <code>StatisticsModel</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>is constructed from the statistics data from a model of another feature e.g. <code>AddressBookModel</code> during instantiation</p>
+</li>
+<li>
+<p>contains the statistics data that is generated from a model from another feature e.g. <code>AddressBookModel</code></p>
+</li>
+<li>
+<p>does not depend on any of the models from other features / packages e.g. <code>AddressBookModel</code></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -1681,4 +1837,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 02:13:21 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 12:44:51 UTC</div></div></div></body></html>
