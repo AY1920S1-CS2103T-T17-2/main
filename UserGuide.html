@@ -87,8 +87,12 @@
 <li><a href="#faq">11. FAQ</a></li>
 <li><a href="#command-summary">12. Command Summary</a>
 <ul class="sectlevel2">
-<li><a href="#itinerary-planner-br">12.1. Itinerary planner:<br></a></li>
-<li><a href="#travel-diary-with-pictures-br">12.2. Travel Diary with pictures:<br></a></li>
+<li><a href="#calendar-2">12.1. Calendar</a></li>
+<li><a href="#itinerary-2">12.2. Itinerary</a></li>
+<li><a href="#address-book-2">12.3. Address Book</a></li>
+<li><a href="#financial-tracker-2">12.4. Financial Tracker</a></li>
+<li><a href="#travel-diary">12.5. Travel Diary</a></li>
+<li><a href="#trivago-coming-in-v2-0">12.6. TRIVAGO (Coming in V2.0)</a></li>
 </ul>
 </li>
 </ul>
@@ -1264,10 +1268,10 @@ expenses seamlessly!</p>
 <p>Adding what you&#8217;ve spent at the nice coffee shop you stopped by?</p>
 </div>
 <div class="paragraph">
-<p><strong>Add an entry to your financial tracker:</strong> <code>add</code></p>
+<p><strong>Add an entry to your Financial Tracker:</strong> <code>add</code></p>
 </div>
 <div class="paragraph">
-<p>Adds an expense to your diary, with the parameters: amount, description, type, date and time.</p>
+<p>Adds an expense to your Financial Tracker, with the parameters: amount, description, type, date and time.</p>
 </div>
 <div class="paragraph">
 <p>The <em>Command Word</em> is <code>add</code> and the prefixes are <code>a/</code> for amount, <code>d/</code>
@@ -1572,80 +1576,10 @@ application for users to discuss and discover. Hope that you have fun finding th
 <div class="paragraph">
 <p>Here is a summary for the list of features available:</p>
 </div>
+<div class="sect2">
+<h3 id="calendar-2"><a class="link" href="#calendar-2">12.1. Calendar</a></h3>
 <div class="paragraph">
-<p>Financial Tracker:<br>
-<code>addFin</code>    : add a new expense<br></p>
-</div>
-<div class="paragraph">
-<p><code>updateFin</code> : update an existing expense<br></p>
-</div>
-<div class="paragraph">
-<p><code>showFin</code>   : show all your expenses<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteFin</code> : delete an expense<br></p>
-</div>
-<div class="paragraph">
-<p><code>calFin</code>    : calculate your total expense</p>
-</div>
-<div class="paragraph">
-<p>Address Book:<br></p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Address Book Commands Summary</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Command</th>
-<th class="tableblock halign-left valign-top">Function</th>
-<th class="tableblock halign-left valign-top">Syntax</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a person to the address book</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME p/PHONE NUMBER e/EMAIL[t/TAG] [r/REMARK] [c/COUNTRY]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Clears all entries from the address book</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Edits an existing person in the address book</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG] [r/REMARK] [c/COUNTRY]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the specified person from the address book</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Finds persons whose names contain any of the given keywords</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find KEYWORD [MORE_KEYWORDS]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Shows a list of all persons in the address book.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">View help</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Calendar (Event Planner):<br>
-<code>addCommitment</code>      : adds commitment to indicate that you won’t be able to travel on a day or over a duration of time due to commitments during the public holidays/school vacation<br></p>
+<p><code>addCommitment</code>      : adds commitment to indicate that you won’t be able to travel on a day or over a duration of time due to commitments during the public holidays/school vacation<br></p>
 </div>
 <div class="paragraph">
 <p><code>addCommitments</code>     : similar to the above, but we can add multiple commitments at once<br></p>
@@ -1686,10 +1620,11 @@ application for users to discuss and discover. Hope that you have fun finding th
 <div class="paragraph">
 <p><code>suggestDate</code>         : suggests when you can travel for numDays</p>
 </div>
+</div>
 <div class="sect2">
-<h3 id="itinerary-planner-br"><a class="link" href="#itinerary-planner-br">12.1. Itinerary planner:<br></a></h3>
+<h3 id="itinerary-2"><a class="link" href="#itinerary-2">12.2. Itinerary</a></h3>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Itinerary Commands Summary</caption>
+<caption class="title">Table 1. Itinerary Commands Summary</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1762,9 +1697,104 @@ application for users to discuss and discover. Hope that you have fun finding th
 </table>
 </div>
 <div class="sect2">
-<h3 id="travel-diary-with-pictures-br"><a class="link" href="#travel-diary-with-pictures-br">12.2. Travel Diary with pictures:<br></a></h3>
+<h3 id="address-book-2"><a class="link" href="#address-book-2">12.3. Address Book</a></h3>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 3. Diary Commands Summary</caption>
+<caption class="title">Table 2. Address Book Commands Summary</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a person to the address book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME p/PHONE NUMBER e/EMAIL[t/TAG] [r/REMARK] [c/COUNTRY]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clears all entries from the address book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edits an existing person in the address book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG] [r/REMARK] [c/COUNTRY]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the specified person from the address book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finds persons whose names contain any of the given keywords</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find KEYWORD [MORE_KEYWORDS]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows a list of all persons in the address book.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">View help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="financial-tracker-2"><a class="link" href="#financial-tracker-2">12.4. Financial Tracker</a></h3>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Financial Tracker Commands Summary</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds an expense to the Financial Tracker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add a/AMOUNT d/DESCRIPTION t/TYPE_OF_EXPENDITURE [date/DATE] [time/TIME]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edits an existing expense in the Financial Tracker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [a/AMOUNT] [d/DESCRIPTION] [t/TYPE_OF_EXPENDITURE] [date/DATE] [time/TIME]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the specified expense from the Financial Tracker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">View Help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="travel-diary"><a class="link" href="#travel-diary">12.5. Travel Diary</a></h3>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 4. Diary Commands Summary</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1790,9 +1820,11 @@ application for users to discuss and discover. Hope that you have fun finding th
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="trivago-coming-in-v2-0"><a class="link" href="#trivago-coming-in-v2-0">12.6. TRIVAGO (Coming in V2.0)</a></h3>
 <div class="paragraph">
-<p>TRIVAGO, price comparison:<br>
-<code>addData</code>     : add a new data to be used for price comparison<br></p>
+<p><code>addData</code>     : add a new data to be used for price comparison<br></p>
 </div>
 <div class="paragraph">
 <p><code>showData</code>    : show the prices for a selected data<br></p>
@@ -1843,4 +1875,4 @@ application for users to discuss and discover. Hope that you have fun finding th
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 15:23:26 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 15:50:47 UTC</div></div></div></body></html>
