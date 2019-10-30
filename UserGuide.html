@@ -25,7 +25,25 @@
 </ul>
 </li>
 <li><a href="#calendar">5. Calendar</a></li>
-<li><a href="#itinerary">6. Itinerary</a></li>
+<li><a href="#itinerary">6. Itinerary</a>
+<ul class="sectlevel2">
+<li><a href="#parameter">6.1. Parameter</a></li>
+<li><a href="#helpcommand">6.2. HelpCommand</a></li>
+<li><a href="#addcommand">6.3. AddCommand</a></li>
+<li><a href="#deletecommand">6.4. DeleteCommand</a></li>
+<li><a href="#editcommand">6.5. EditCommand</a></li>
+<li><a href="#donecommand">6.6. DoneCommand</a></li>
+<li><a href="#listcommand">6.7. ListCommand</a></li>
+<li><a href="#clear">6.8. Clear</a></li>
+<li><a href="#greetcommand">6.9. GreetCommand</a></li>
+<li><a href="#historycommand">6.10. HistoryCommand</a></li>
+<li><a href="#searchcommand">6.11. SearchCommand</a></li>
+<li><a href="#sortcommand">6.12. SortCommand</a></li>
+<li><a href="#undocommand">6.13. UndoCommand</a></li>
+<li><a href="#redocommand">6.14. RedoCommand</a></li>
+<li><a href="#wishcommand">6.15. WishCommand</a></li>
+</ul>
+</li>
 <li><a href="#address-book">7. Address Book</a>
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">7.1. Viewing help : <code>help</code></a></li>
@@ -42,10 +60,10 @@
 <li><a href="#financial-tracker">8. Financial Tracker</a>
 <ul class="sectlevel2">
 <li><a href="#parameters">8.1. Parameters</a></li>
-<li><a href="#helpcommand">8.2. HelpCommand</a></li>
-<li><a href="#addcommand">8.3. AddCommand</a></li>
-<li><a href="#deletecommand">8.4. DeleteCommand</a></li>
-<li><a href="#editcommand">8.5. EditCommand</a></li>
+<li><a href="#helpcommand-2">8.2. HelpCommand</a></li>
+<li><a href="#addcommand-2">8.3. AddCommand</a></li>
+<li><a href="#deletecommand-2">8.4. DeleteCommand</a></li>
+<li><a href="#editcommand-2">8.5. EditCommand</a></li>
 <li><a href="#summarycommand">8.6. SummaryCommand</a></li>
 </ul>
 </li>
@@ -469,85 +487,444 @@ Informs user of public holidays and adds them to the calendar without requiring 
 <h2 id="itinerary"><a class="link" href="#itinerary">6. Itinerary</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Helps you to plan how exactly you want to spend each hour of your trip. Each event will be numbered numerically in increasing order.</p>
+<p>It&#8217;s always good to plan ahead for each day of your trip. Start planning your schedule with TravEzy Itinerary planner today and be amazed by
+the increase in your day&#8217;s productivity!</p>
 </div>
 <div class="paragraph">
-<p><code>addEvent [title]</code>   : add a new event to your day, title no more than 50 chars<br></p>
-</div>
-<div class="paragraph">
-<p><code>listEvent</code>          : show all the events for that day<br></p>
-</div>
-<div class="paragraph">
-<p><code>showEvent [index]</code>  : show all the events for that day<br></p>
-</div>
-<div class="paragraph">
-<p><code>updateEvent [index]</code>: update an event in your day based on the index<br></p>
-</div>
-<div class="paragraph">
-<p><code>sort [type]</code>        : sort events based on the type (time, tag)<br></p>
-</div>
-<div class="paragraph">
-<p><code>checkTimeslot</code>      : checks current itinerary and shows empty time slots<br></p>
-</div>
-<div class="paragraph">
-<p><code>repeatEvent [index]</code>: repeat the event in your day based on the index<br></p>
-</div>
-<div class="paragraph">
-<p><code>doneEvent [index]</code>  : mark the event as done for the day<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteEvent [index]</code>: delete an event in your day based on the index<br></p>
-</div>
-<div class="paragraph">
-<p><code>exitEvent   [index]</code>: exit the current event being chosen</p>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Customize within each event selected:</p>
-</div>
-<div class="paragraph">
-<p><code>addTime</code>        : add the time for the event<br></p>
-</div>
-<div class="paragraph">
-<p><code>addDescription</code> : add a description for the event<br></p>
-</div>
-<div class="paragraph">
-<p><code>addLocation</code>    : add the location of the event<br></p>
-</div>
-<div class="paragraph">
-<p><code>addNotes</code>       : add additional notes / details for the event<br></p>
-</div>
-<div class="paragraph">
-<p><code>addTag</code>         : add a tag to the event for categorization purposes<br></p>
-</div>
-<div class="paragraph">
-<p><code>delete [field]</code> : delete the specified field for that particular event</p>
-</div>
-<div class="paragraph">
-<p>The event itinerary feature also provides  certain extra extensions. <br>
-<em>(Extensions the group may want to consider)</em></p>
+<p>Each entry in your Itinerary has 6 key sections:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>repeatEvent</strong><br>
-The program allows the user to repeat events such as tours or planned activities</p>
+<p>Title</p>
 </li>
 <li>
-<p><strong>tag</strong><br>
-The program allows the user to tag and highlight events based on type, such as fun, educational, commute etc. This feature will also colour code the events so that the different types of events can be seen clearly on the calendar.</p>
+<p>Date</p>
 </li>
 <li>
-<p><strong>archive</strong><br>
-The user can archive events that he/she is unsure of and wants to review later.</p>
+<p>Time</p>
 </li>
 <li>
-<p><strong>recommend</strong><br>
-The user can get recommended activities to fill in gaps in the itinerary. The database for these recommended activities will be derived from the archive function.</p>
+<p>Location</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+<li>
+<p>Tag</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>The title is the name of the event. This is followed by the date and time for the execution of that event.
+Lastly, the location and description are additional details of the event. Example of your events could include
+hiking Mt. Everest, visiting Tokyo Disneyland, or even doing CS2103T user guide! Be amazed with how much you can actually
+do within the 24 hours you are given everyday. Let&#8217;s stop skiving and dive right into productivity.</p>
+</div>
+<div class="sect2">
+<h3 id="parameter"><a class="link" href="#parameter">6.1. Parameter</a></h3>
+<div class="paragraph">
+<p>Let&#8217;s start off with understanding how each parameter work first!</p>
+</div>
+<div class="paragraph">
+<p>When inputting an event into the Itinerary, every fields are <strong>compulsory</strong>. However, the <strong>location</strong> and
+<strong>description</strong> fields need not be specified. If you did not indicate the <strong>location</strong> and <strong>description</strong> field, the default
+value "-" will be used instead.</p>
+</div>
+<div class="paragraph">
+<p>Below are the <em>PREFIX</em> convention that TravEzy&#8217;s Itinerary will be using.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Title: The <em>PREFIX</em> is <code>title/</code>. This is the crux of every event as it provides a name to the event that you
+intend to do. For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>title/Do CS2103T developer guide</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Date: The <em>PREFIX</em> is <code>date/</code>. Note that the format TravEzy&#8217;s Itinerary using is "ddMMyyyy". For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>date/30102019</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Time: The <em>PREFIX</em> is <code>time/</code>. Note that the format TravEzy&#8217;s Itinerary is using is 24-Hour format. However,
+TravEzy Itinerary will reformat the time into 12 hour format when shown on the card. For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>time/0000</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Location: The <em>PREFIX</em> is <code>l/</code>. This is the place where your event is happening at it could be a country or just
+a venue. For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>location/Singapore      or      location/Outer Space</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Description: The <em>PREFIX</em> is <code>d/</code>. You can type in just a word, phrase or sentence.</p>
+<div class="literalblock">
+<div class="content">
+<pre>d/pen       or      d/pen pineapple apple pen</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Tag: You can select from the dropdown menu to select the importance of each event is through the various priority tagging
+available. The default priority tagging is set to <strong>Priority: None</strong>. There is no prefix for the tagging field and you&#8217;re
+not allowed to edit it :(</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="helpcommand"><a class="link" href="#helpcommand">6.2. HelpCommand</a></h3>
+<div class="paragraph">
+<p>Unsure on how to navigate your way through the TravEzy Itinerary feature? Don&#8217;t worry we got your back!</p>
+</div>
+<div class="paragraph">
+<p>Just call for <code>help</code> and the help window will come to the rescue!</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is help without further parameters.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can click on the <strong>copy</strong> button beside each feature to copy onto your own clipboard the syntax for calling each feature
+in the TravEzy Itinerary page.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>help</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="addcommand"><a class="link" href="#addcommand">6.3. AddCommand</a></h3>
+<div class="paragraph">
+<p>Plan to go Disneyland tomorrow? Add some rides that you plan to take then!</p>
+</div>
+<div class="paragraph">
+<p><strong>Add an entry to your Itinerary:</strong> <code>add</code></p>
+</div>
+<div class="paragraph">
+<p>Adds an event to your itinerary, with the parameters: title, date, time, location, description.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>add</code> and the prefixes are <code>title/</code> for title, <code>date/</code> for date, <code>time/</code> for time,
+<code>l/</code> for location and <code>d/</code> for description. Location <code>l/</code> and Description <code>d/</code> are optional.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add title/TITLE date/DATE time/TIME l/LOCATION d/DESCRIPTION</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>add title/awesome title date/30102019 time/2359 l/Singapore d/I love TravEzy!</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deletecommand"><a class="link" href="#deletecommand">6.4. DeleteCommand</a></h3>
+<div class="paragraph">
+<p>Added a wrong event? Don&#8217;t worry you can always remove it from the list. Awesome Possum!</p>
+</div>
+<div class="paragraph">
+<p><strong>Delete an event</strong>: <code>delete</code></p>
+</div>
+<div class="paragraph">
+<p>Deletes an event from your Itinerary with the only parameter being the index of the event you want to delete.
+The index must be an integer which is greater than 1 and corresponds to ID of the event you want to delete.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>delete</code> with an parameter index.
+Format: <code>delete INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Delete the first event you saw on your event list.</p>
+</div>
+<div class="paragraph">
+<p><code>delete 1</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editcommand"><a class="link" href="#editcommand">6.5. EditCommand</a></h3>
+<div class="paragraph">
+<p>Had a change in plans? Let&#8217;s us edit our previous event then!</p>
+</div>
+<div class="paragraph">
+<p><strong>Edit an event:</strong> <code>edit</code></p>
+</div>
+<div class="paragraph">
+<p>Edit an event in your Itinerary with the only parameter being the index of the event you want to edit.
+The index must be an integer which is greater than 1 and corresponds to ID of the event you want to edit.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>edit</code> with an parameter index.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>edit index</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Edit the 3rd event you plan to do in your event list.</p>
+</div>
+<div class="paragraph">
+<p><code>edit 3</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="donecommand"><a class="link" href="#donecommand">6.6. DoneCommand</a></h3>
+<div class="paragraph">
+<p>Impressive! You have completed the event you have planned for the day. Let us check it for you!</p>
+</div>
+<div class="paragraph">
+<p><strong>Mark as done an event:</strong> <code>done</code></p>
+</div>
+<div class="paragraph">
+<p>Mark as done an event in your Itinerary with the only parameter being the index of the event you want to check.
+The index must be an integer which is greater than 1 and corresponds to ID of the event you want to check.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>done</code> with an parameter index.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>done index</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Check the 100th event that you have accomplished today.</p>
+</div>
+<div class="paragraph">
+<p><code>done 100</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listcommand"><a class="link" href="#listcommand">6.7. ListCommand</a></h3>
+<div class="paragraph">
+<p>Awesome! You have planned your schedule, now we give you a way to list out all your events that you have planned out
+in a single list.</p>
+</div>
+<div class="paragraph">
+<p><strong>List all events in the Itinerary:</strong> <code>list</code></p>
+</div>
+<div class="paragraph">
+<p>List out all the events that are currently in the event list. Good for organizing your schedule and have a broad overview
+of all the events that you have planned for yourself. Congratulations, you are one step closer to having a more productive day.
+Give yourself a pat on the back! :)</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>list</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>list</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Listing all the events that you planned</p>
+</div>
+<div class="paragraph">
+<p><code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clear"><a class="link" href="#clear">6.8. Clear</a></h3>
+<div class="paragraph">
+<p>Want a quick an easy way to wipe off all your events from the face of this Earth? Use the clear command to do so!</p>
+</div>
+<div class="paragraph">
+<p><strong>Clear all events in the Itinerary:</strong> <code>clear</code></p>
+</div>
+<div class="paragraph">
+<p>Removes all the event in the list so as to reduce the hassle for users to continuously call the delete command multiple
+times in order to remove all events in the list.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The clear function removes <strong>ALL</strong> the events that you have planned in your event itinerary. This action <strong>CANNOT</strong> be
+undone. Hence, only click on the <strong>Proceed</strong> button if you are sure that you want to clear the list.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>clear</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>clear</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Clear all the events that you have planned in the event list.</p>
+</div>
+<div class="paragraph">
+<p><code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="greetcommand"><a class="link" href="#greetcommand">6.9. GreetCommand</a></h3>
+<div class="paragraph">
+<p>🌚🌚🌚 Greetings fellow traveller! 🌚🌚🌚</p>
+</div>
+<div class="paragraph">
+<p><strong>Greet the user with the current time and show the events they have for that day:</strong> <code>greet</code></p>
+</div>
+<div class="paragraph">
+<p>TravEzy Itinerary will greet the user by providing them with the current time and the date today. We will also filter
+your event list to show only the events that you have for thee day.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>greet</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>greet</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Greeting TravEzy for your daily event list</p>
+</div>
+<div class="paragraph">
+<p><code>greet</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="historycommand"><a class="link" href="#historycommand">6.10. HistoryCommand</a></h3>
+<div class="paragraph">
+<p>Curious on what inputs you have entered to the Itinerary page? We also help you keep track of that too in the Itinerary
+page!</p>
+</div>
+<div class="paragraph">
+<p><strong>History of the previous command will be shown:</strong> <code>history</code></p>
+</div>
+<div class="paragraph">
+<p>TravEzy Itinerary will keep track of the previous inputs that you have called in the Itinerary page.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>history</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>history</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can press the <strong>↑</strong> up and <strong>↓</strong> down arrow keys to toggle between the previous commands that you have called in the
+Itinerary page during that session.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example: Let&#8217;s say you are curious on what are the previous commands that you have called.</p>
+</div>
+<div class="paragraph">
+<p><code>history</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="searchcommand"><a class="link" href="#searchcommand">6.11. SearchCommand</a></h3>
+<div class="paragraph">
+<p>Is your event list too cluttered up with events? Use the search command to zoom in to specific events that you are
+looking for.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If your event list is too cluttered up, try using the <code>clear</code> command instead to reset the whole event list
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Search and filter out events that meets the search condition:</strong> <code>search</code></p>
+</div>
+<div class="paragraph">
+<p>The search feature is especially useful when you want to filter out and zoom into specific events that you have in mind
+and want to check those out.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>search</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>search title/TITLE | date/DATE | time/TIME | l/LOCATION | tag/(Use the dropdown menu)</code></p>
+</div>
+<div class="paragraph">
+<p>Example: If you want to search for events that are dated 10/10/1010 (Wedding theme song :D)</p>
+</div>
+<div class="paragraph">
+<p><code>search date/10101010</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sortcommand"><a class="link" href="#sortcommand">6.12. SortCommand</a></h3>
+<div class="paragraph">
+<p>TravEzy Itinerary will help you sort out your life!</p>
+</div>
+<div class="paragraph">
+<p><strong>Sorts all the event in the event list based on the condition given:</strong> <code>sort</code></p>
+</div>
+<div class="paragraph">
+<p>The sort feature is useful when you want to sort all your events out to a particular condition such as in chronological
+order or in order of importance of the event.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>sort</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>sort by/TITLE | LOCATION | CHRONOLOGICAL | COMPLETION | PRIORITY</code></p>
+</div>
+<div class="paragraph">
+<p>Example: After a hard day&#8217;s work, you wish to view all your completed tasks grouped together and admire your fruits
+of labour.</p>
+</div>
+<div class="paragraph">
+<p><code>sort by/completion</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="undocommand"><a class="link" href="#undocommand">6.13. UndoCommand</a></h3>
+<div class="paragraph">
+<p><strong>&#8594; Coming up in v2.0</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redocommand"><a class="link" href="#redocommand">6.14. RedoCommand</a></h3>
+<div class="paragraph">
+<p><strong>&#8594; Coming up in v2.0</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wishcommand"><a class="link" href="#wishcommand">6.15. WishCommand</a></h3>
+<div class="paragraph">
+<p><strong>&#8594; Coming up in v2.0</strong></p>
+</div>
 </div>
 </div>
 </div>
@@ -861,7 +1238,7 @@ expenses seamlessly!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="helpcommand"><a class="link" href="#helpcommand">8.2. HelpCommand</a></h3>
+<h3 id="helpcommand-2"><a class="link" href="#helpcommand-2">8.2. HelpCommand</a></h3>
 <div class="paragraph">
 <p>At anytime, not sure what to do?</p>
 </div>
@@ -882,7 +1259,7 @@ expenses seamlessly!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="addcommand"><a class="link" href="#addcommand">8.3. AddCommand</a></h3>
+<h3 id="addcommand-2"><a class="link" href="#addcommand-2">8.3. AddCommand</a></h3>
 <div class="paragraph">
 <p>Adding what you&#8217;ve spent at the nice coffee shop you stopped by?</p>
 </div>
@@ -908,7 +1285,7 @@ Date <code>date/</code> and time <code>time/</code> are optional.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deletecommand"><a class="link" href="#deletecommand">8.4. DeleteCommand</a></h3>
+<h3 id="deletecommand-2"><a class="link" href="#deletecommand-2">8.4. DeleteCommand</a></h3>
 <div class="paragraph">
 <p>Added a wrong expense? Of course you can delete it if you want to :)</p>
 </div>
@@ -932,7 +1309,7 @@ Date <code>date/</code> and time <code>time/</code> are optional.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editcommand"><a class="link" href="#editcommand">8.5. EditCommand</a></h3>
+<h3 id="editcommand-2"><a class="link" href="#editcommand-2">8.5. EditCommand</a></h3>
 <div class="paragraph">
 <p>Add a wrong expense? Why not edit it instead!</p>
 </div>
@@ -1466,4 +1843,4 @@ application for users to discuss and discover. Hope that you have fun finding th
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 14:06:49 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 14:51:25 UTC</div></div></div></body></html>
