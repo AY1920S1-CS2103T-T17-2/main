@@ -24,7 +24,13 @@
 <li><a href="#exit-command">4.2. Exit Command</a></li>
 </ul>
 </li>
-<li><a href="#calendar">5. Calendar</a></li>
+<li><a href="#calendar">5. Calendar</a>
+<ul class="sectlevel2">
+<li><a href="#interface">5.1. Interface</a></li>
+<li><a href="#parameters">5.2. Parameters</a></li>
+<li><a href="#add-command">5.3. Add Command</a></li>
+</ul>
+</li>
 <li><a href="#itinerary">6. Itinerary</a>
 <ul class="sectlevel2">
 <li><a href="#parameter">6.1. Parameter</a></li>
@@ -59,7 +65,7 @@
 </li>
 <li><a href="#financial-tracker">8. Financial Tracker</a>
 <ul class="sectlevel2">
-<li><a href="#parameters">8.1. Parameters</a></li>
+<li><a href="#parameters-2">8.1. Parameters</a></li>
 <li><a href="#helpcommand-2">8.2. HelpCommand</a></li>
 <li><a href="#addcommand-2">8.3. AddCommand</a></li>
 <li><a href="#deletecommand-2">8.4. DeleteCommand</a></li>
@@ -69,8 +75,8 @@
 </li>
 <li><a href="#diary">9. Diary</a>
 <ul class="sectlevel2">
-<li><a href="#parameters-2">9.1. Parameters</a></li>
-<li><a href="#add-command">9.2. Add Command</a></li>
+<li><a href="#parameters-3">9.1. Parameters</a></li>
+<li><a href="#add-command-2">9.2. Add Command</a></li>
 <li><a href="#delete-command">9.3. Delete Command</a></li>
 <li><a href="#list-command">9.4. List Command</a></li>
 </ul>
@@ -133,7 +139,7 @@ we <strong>promise</strong> to make travel easy, with TravEzy.</p>
 <p>IF you answered yes to the questions above, then <em>yes</em> it is. If not, it still is :)</p>
 </div>
 <div class="paragraph">
-<p>What is Travezy? TravEzy is a desktop application with a command line interface (CLI) which is <strong>perfect</strong> for NUS students who love travelling as much as we do. What&#8217;s more, with a (CLI), you will be able to type in your commands much faster than similar applications which require you to keep using your mouse</p>
+<p>What is TravEzy? TravEzy is a desktop application with a command line interface (CLI) and is <strong>perfect</strong> for NUS students who love travelling as much as we do. What&#8217;s more, with a (CLI), you will be able to type in your commands much faster than similar applications which require you to keep using your mouse</p>
 </div>
 <div class="paragraph">
 <p>TravEzy is perfect for:</p>
@@ -252,7 +258,7 @@ that you can use to make using this user guide a TravEzy experience 😊:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>In each portion, you will find the commands that you can type to begin making use of the feature.
+<p>In each section, you will find the commands that you can type to begin making use of the features.
 We have provided the word that you type into TravEzy to trigger the
 command, or the <em>Command Word</em>  in a special format, for example -  <code>Command Word</code>. With this, there
 is a short description of the command as well.</p>
@@ -402,7 +408,254 @@ Note: Both Goto Command and Exit Command are implemented in every features  resp
 <h2 id="calendar"><a class="link" href="#calendar">5. Calendar</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Gives you an overview of when you will be free to travel and recommends when will be a suitable time to travel.</p>
+<p>We have all been there. It&#8217;s the end of the semester but we still have orientation camps to plan, upcoming projects for our CCA, hackathons to attend, internships to complete, family commitments, etc. However, we have worked so hard and <strong>really</strong> want to go for a trip with our friends and unwind. Sounds like you this semester?</p>
+</div>
+<div class="paragraph">
+<p>Well, TravEzy has got you covered. Simply inform TravEzy of your schedule (your commitments, school breaks and public holidays) and TravEzy will suggest periods of time when you can travel! Excited to find out more? Well&#8230;&#8203; Read on!</p>
+</div>
+<div class="sect2">
+<h3 id="interface"><a class="link" href="#interface">5.1. Interface</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="parameters"><a class="link" href="#parameters">5.2. Parameters</a></h3>
+<div class="paragraph">
+<p>Let us find out what are the main parameters (or fields, just like those which you fill up in a regular form📝).</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>DAY. This refers to which day of the month (e.g. <strong>1</strong>, <strong>2</strong>, &#8230;&#8203;, <strong>31</strong> of January). To specify the day, simply place <code>d/</code> before it.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For example, if you would like to specify that is it first of January, key in:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>d/1</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>MONTH. This refers to which month (i.e. <strong>January</strong>, <strong>February</strong>, <strong>March</strong>, &#8230;&#8203;, <strong>December</strong>) you would like to refer to. To specify the month, just place <code>m</code>. Since people have different ways of specifying month, TravEzy has tried to accommodate these differences. In particular, you may choose to refer to it using numbers (with <strong>1</strong> referring to <strong>January</strong>, <strong>2</strong> referring to <strong>February</strong>, etc.) or you may choose to refer to it using words. Please type <strong>at least the first three letters</strong> of the month 😄.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Referring to the previous example, to specify that it is January, you can type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>m/1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or you can type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>m/Jan</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>m/January</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>YEAR. This refers to which year (i.e. <strong>2019</strong>, <strong>2020</strong>, &#8230;&#8203;) you are referring to. To indicate the year, prepend the year with <code>y/</code>. Since TravEzy allows you to refer to any year between 1970 and 2200 (because travelling in time is fun too!), please key in a <strong>4 digit number</strong> . If otherwise, it would be confused 😔.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For instance, if you want to specify the year 2019, just key in:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>y/2019</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>END DAY. This refers to the day of the last date. This is very similar to how you would specify the (start) DAY, as mentioned in point 1. Now, instead of using the small letter, use the capitalised version. In other words, <code>D/</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For example, if you would like to indicate that your event (i.e. commitment, holiday, school break or trip) ends on fifth of January, enter:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>D/5</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>END MONTH. This refers to the month of the last date. Again, this is very similar to how you would specify the (start) MONTH, as mentioned in point 2. Now, instead of using the small letter, use the capitalised version <code>M/</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Following from the above example, if you would like to state that your event ends (i.e. commitment, holiday, school break or trip) ends in January, just type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>M/1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, if you are more comfortable with spelling the month out in words, TravEzy also understands:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>M/Jan</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>M/January</pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+As with the above (MONTH), if you are spelling END MONTH in words, please specify it with <strong>at least the first three letters</strong> of the month.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>END YEAR. This refers to the year of the last date. Similarly, to specify the year of the last date, key in the capitalised version instead. In essence, place <code>Y/</code> before the year of the last date. How simple is that?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For instance, if your trip ends in 2020, just type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Y/2020</pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+As with the above (YEAR), please specify END YEAR using <strong>four digits</strong>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+As expected, specifying the END DAY, END MONTH and/or END YEAR is not always applicable. Hence, by default, TravEzy assumes that the END DAY, END MONTH and/or END YEAR are the same as DAY, MONTH and/or YEAR respectively.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>NAME. This refers to the name of your event (i.e. commitment, holiday, school break or trip). To indicate the name, just key in <code>n/</code> before it.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For instance, if you would like to specify that the holiday you are adding refers to Christmas 🎄 , just type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>n/Christmas</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>INFO. This refers to any additional information associated with your event (i.e. commitment, holiday, school break or trip). To include this, just type <code>i/</code> before you start typing the relevant information.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For example, if you would like to include the fact that your grandparents are coming for christmas this year to remind yourself that you definitely have to make time for them, you can do so by typing:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>i/Grandparents will be here!!</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="add-command"><a class="link" href="#add-command">5.3. Add Command</a></h3>
+<div class="paragraph">
+<p>Whew! After reading so much, it is time to find out how you can add your event, be it your commitment, holiday, school break or trip, so that TravEzy can start suggesting when you can travel! 😊</p>
+</div>
+<div class="paragraph">
+<p>*Add an event to your calendar: <code>add</code></p>
+</div>
+<div class="paragraph">
+<p>Adds an event to your calendar. Are you unable to travel on a day or over a duration of time due to commitments during the public holidays/school vacation? Well, then add an event with the EVENT TYPE <code>commitment</code>. Or is a public holiday coming up (i.e. a possibility to go for a short trip! 😃)? Add it to your calendar with the EVENT TYPE <code>holiday</code>! Or&#8230;&#8203; Is it your school break? Well, we have got that covered to! Just add it to your calendar with the EVENT TYPE <code>school_break</code>. Hmm&#8230;&#8203; Or may it is your long-coveted <strong>trip</strong>! Can you add that to your calendar too? You bet!</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add EVENT TYPE n/NAME d/START DAY [m/START MONTH] [d/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR] [i/INFO]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: To indicate that you have a commitment rom 2 Dec 2019 to 5 Dec 2019 because you are volunteering, just key in</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>add commitment n/volunteering d/2 m/dec y/2019 D/5 M/Dec Y/2019</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+As mentioned, you do not have to specify the END YEAR, END MONTH and/or END DAY if they are the same as START YEAR, START MONTH and/or START DAY, respectively.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If you leave out the month and/or year, the current month and/or year will be used. This applies to the following commands as well.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><strong>Adding a commitment: <code>addCommitment</code></strong><br>
@@ -484,6 +737,7 @@ This command suggests whether travelling at the stated duration of time is a goo
 Informs user of public holidays and adds them to the calendar without requiring the user to specify it.</p>
 </li>
 </ol>
+</div>
 </div>
 </div>
 </div>
@@ -1183,7 +1437,7 @@ expenses seamlessly!</p>
 <p>The Date and Time specify when you spend your expenses, followed by the amount, description, types of expenditure and country where you&#8217;re current travelling at. Example of the types of expenditure are food, entertainment, healthcare, etc. You name it, TravEzy track it! In Financial Tracker, you will be able to add, delete and edit your expenses easily.</p>
 </div>
 <div class="sect2">
-<h3 id="parameters"><a class="link" href="#parameters">8.1. Parameters</a></h3>
+<h3 id="parameters-2"><a class="link" href="#parameters-2">8.1. Parameters</a></h3>
 <div class="paragraph">
 <p>Let&#8217;s understand how to use your parameters first!</p>
 </div>
@@ -1377,7 +1631,7 @@ list and show your entries. There are also a few more special tasks that you can
 Enjoy!</p>
 </div>
 <div class="sect2">
-<h3 id="parameters-2"><a class="link" href="#parameters-2">9.1. Parameters</a></h3>
+<h3 id="parameters-3"><a class="link" href="#parameters-3">9.1. Parameters</a></h3>
 <div class="paragraph">
 <p>Let&#8217;s shed some light on the parameters and how exactly you can type them in to begin creating
 your diary entries:</p>
@@ -1421,7 +1675,7 @@ something memorable, but if you do, you can add it into your entry with the <em>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-command"><a class="link" href="#add-command">9.2. Add Command</a></h3>
+<h3 id="add-command-2"><a class="link" href="#add-command-2">9.2. Add Command</a></h3>
 <div class="paragraph">
 <p>Trying to journal your trip to DisneyLand?
 <strong>Add an entry to your diary: <code>add</code></strong></p>
@@ -1875,4 +2129,4 @@ application for users to discuss and discover. Hope that you have fun finding th
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 15:50:47 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 15:57:49 UTC</div></div></div></body></html>
