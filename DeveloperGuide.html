@@ -1046,7 +1046,58 @@ Note that that above sequence of events are very likely to those for the other c
 </div>
 <div class="sect2">
 <h3 id="diary"><a class="link" href="#diary">4.4. Diary</a></h3>
-
+<div class="sect3">
+<h4 id="architecture"><a class="link" href="#architecture">4.4.1. Architecture</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryArchitecture.png" alt="DiaryArchitecture">
+</div>
+<div class="title">Figure 18. Architecture Diagram for Diary Feature</div>
+</div>
+<div class="paragraph">
+<p>The architecture diagram above explains the high-level design and implementation of the Diary Feature within TravEzy.</p>
+</div>
+<div class="paragraph">
+<p><code>Diary Model</code> has multiple classes which form the basis of a Diary.
+This implementation starts at the root object, which is a <code>DiaryEntry</code>. These entries
+are stored within a <code>DiaryList</code>, which are then encapsulated within a <code>DiaryBook</code></p>
+</div>
+<div class="paragraph">
+<p>After receiving user input from <code>DiaryUi</code>, <code>DiaryParser</code>
+changes the input to a executable format, and <code>DiaryCommand</code> allows for execution of the user input.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ui-component"><a class="link" href="#ui-component">4.4.2. UI component</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUI.png" alt="DiaryUI">
+</div>
+<div class="title">Figure 19. Structure of DiaryUi</div>
+</div>
+<div class="paragraph">
+<p><code>DiaryUI</code>, which is represented above, consists of  <code>DiaryPage</code>, which encapsulates all the smaller Ui components.</p>
+</div>
+<div class="paragraph">
+<p><strong>The main components are the:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CommandBox</code> &#8594; Captures user input</p>
+</li>
+<li>
+<p><code>ResultDisplay</code> &#8594; Returns the output after the user input has passed through the DiaryCommand</p>
+</li>
+<li>
+<p><code>DiaryListPanel</code> &#8594; Shows an easily readable version of the current DiaryBook</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All of these components inherit from the abstract <code>UiPart</code> Class</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="address-book"><a class="link" href="#address-book">4.5. Address Book</a></h3>
@@ -1056,7 +1107,7 @@ Note that that above sequence of events are very likely to those for the other c
 <div class="content">
 <img src="images/AddressLogicClassDiagram.png" alt="AddressLogicClassDiagram">
 </div>
-<div class="title">Figure 18. Structure of the Logic Component</div>
+<div class="title">Figure 20. Structure of the Logic Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
@@ -1088,7 +1139,7 @@ Note that that above sequence of events are very likely to those for the other c
 <div class="content">
 <img src="images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
 </div>
-<div class="title">Figure 19. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+<div class="title">Figure 21. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1109,7 +1160,7 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 <div class="content">
 <img src="images/AddressModelClassDiagram.png" alt="AddressModelClassDiagram">
 </div>
-<div class="title">Figure 20. Structure of the Model Component</div>
+<div class="title">Figure 22. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/address/model/AddressBookModel.java"><code>AddressBookModel.java</code></a></p>
@@ -1154,7 +1205,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="content">
 <img src="images/AchievementsLogicClassDiagram.png" alt="AchievementsLogicClassDiagram">
 </div>
-<div class="title">Figure 21. AchievementsLogic Diagram of the Achievements feature</div>
+<div class="title">Figure 23. AchievementsLogic Diagram of the Achievements feature</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
@@ -1205,7 +1256,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="content">
 <img src="images/AchievementsPage.png" alt="AchievementsPage">
 </div>
-<div class="title">Figure 22. Sequence Diagram of the Statistics Model</div>
+<div class="title">Figure 24. Sequence Diagram of the Statistics Model</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1226,7 +1277,7 @@ The <code>StatisticsModel</code> is lazily created. Hence, the statistics will o
 <div class="content">
 <img src="images/AchievementsModelClassDiagram.png" alt="AchievementsModelClassDiagram">
 </div>
-<div class="title">Figure 23. StatisticsModel Diagram of the Achievements feature</div>
+<div class="title">Figure 25. StatisticsModel Diagram of the Achievements feature</div>
 </div>
 <div class="paragraph">
 <p>The <code>StatisticsModel</code>,</p>
@@ -1865,4 +1916,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 14:51:25 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 15:23:26 UTC</div></div></div></body></html>
