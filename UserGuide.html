@@ -67,7 +67,12 @@
 </ul>
 </li>
 <li><a href="#faq">11. FAQ</a></li>
-<li><a href="#command-summary">12. Command Summary</a></li>
+<li><a href="#command-summary">12. Command Summary</a>
+<ul class="sectlevel2">
+<li><a href="#itinerary-planner-br">12.1. Itinerary planner:<br></a></li>
+<li><a href="#travel-diary-with-pictures-br">12.2. Travel Diary with pictures:<br></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1147,7 +1152,9 @@ statistics of your current progress as you grow to become a top traveller!</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> Can I change the theme of the application? I prefer to work with a night theme interface.<br>
-<strong>A:</strong> You can go to <code>settings → themes → night mode</code> to toggle between day and night mode.</p>
+<strong>A:</strong> Stay tuned for TravEzy v2.0 for this features! The TravEzy theme also aims to provide user with a UI that they are
+comfortable with. Hence, we strongly believe giving users the option to personalize their theme is extremely useful
+and would greatly consider adding it for the upcoming major update on TravEzy! Stay tuned for that!</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> Who can view my travel posts in my TTD?<br>
@@ -1163,11 +1170,22 @@ statistics of your current progress as you grow to become a top traveller!</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> I’m having difficulties uploading the pictures onto the travel diary.<br>
-<strong>A:</strong> The Traveller Diary only allow uploads of pictures that are in jpg or png. Unfortunately, we do not support gif. Do ensure that your pictures are below 25MB with the dimensions no bigger than 1920px x 1080px.</p>
+<strong>A:</strong> At the moment, TravEzy does not have any feature where it allows the user to store their travel photos. However,
+this will definitely be implemented in v2.0. We intend for the pictures to be stored in the user&#8217;s local drive and
+subsequently in a cloud database which is stored online. The Traveller Diary initial uploads will only allow uploads
+of pictures that are in jpg or png. Unfortunately, we do not support gif.
+Do ensure that your pictures are below 25MB with the dimensions no bigger than 1920px x 1080px.</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> Who can I contact should there be a bug or feedback that I would like to share?<br>
 <strong>A:</strong> Feel free to send an email to the developer team: <a href="mailto:thetravellerdiary@gmail.com">thetravellerdiary@gmail.com</a> and we will access to your queries within three working days. We also value your feedback and will use it to improve TTD. Thank you and looking forward to serving you better!</p>
+</div>
+<div class="paragraph">
+<p><strong>Q:</strong> What are some of the cool features that are available in TravEzy currently?<br>
+<strong>A:</strong> TravEzy currently boast a plethora of features such as calendar, itinerary, address book, travelling diary,
+financial tracker and achievements page. All these features work in tandem with each other to give you the best and only
+the best travelling experience. Not only that, the TravEzy team also decided to spice things up and included some easter eggs scattered throughout the
+application for users to discuss and discover. Hope that you have fun finding these cool easter egg features! 🐰🐰🐰</p>
 </div>
 </div>
 </div>
@@ -1291,25 +1309,110 @@ statistics of your current progress as you grow to become a top traveller!</p>
 <div class="paragraph">
 <p><code>suggestDate</code>         : suggests when you can travel for numDays</p>
 </div>
-<div class="paragraph">
-<p>Event Itinerary:<br>
-<code>addEvent</code>    : add a new event to your day<br></p>
+<div class="sect2">
+<h3 id="itinerary-planner-br"><a class="link" href="#itinerary-planner-br">12.1. Itinerary planner:<br></a></h3>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Itinerary Commands Summary</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add an event entry to the itinerary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add title/title date/date time/time [l/location] [d/description]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete a certain entry from the itinerary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete index</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edit a certain entry from the itinerary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit index title/title date/date time/time l/location d/description t/[tag]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>done</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mark an event as done from the itinerary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>done index</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List all the events that are currently in the itinerary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clears the whole event list in the itinerary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>greet</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Give user the current time and date. Also shows the events for today</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>greet</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pops up the help window for the itinerary page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>history</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gives a list of the past user input to the itinerary page for that session</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>history</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>search</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search the whole event list and filter out events which meets the search condition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>search [title | date | time | location]/[keyword]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort the event list based on the sorting condition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort by/[title | location | chronological | completion | priority]</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="paragraph">
-<p><code>updateEvent</code> : update an event in your day<br></p>
-</div>
-<div class="paragraph">
-<p><code>showEvent</code>   : show more information about your day<br></p>
-</div>
-<div class="paragraph">
-<p><code>deleteEvent</code> : delete an event from your day<br></p>
-</div>
-<div class="paragraph">
-<p><code>compareEvent</code>: place multiple events in the same time slot for ease of comparison<br></p>
-</div>
-<div class="paragraph">
-<p><code>showTrip</code>    : show your whole trip in a calendar view</p>
-</div>
+<div class="sect2">
+<h3 id="travel-diary-with-pictures-br"><a class="link" href="#travel-diary-with-pictures-br">12.2. Travel Diary with pictures:<br></a></h3>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Diary Commands Summary</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add a diary entry to the diary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add t/title d/date [p/place] [m/memory]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete a certain entry from the diary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete index</code></p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>TRIVAGO, price comparison:<br>
 <code>addData</code>     : add a new data to be used for price comparison<br></p>
@@ -1361,35 +1464,6 @@ statistics of your current progress as you grow to become a top traveller!</p>
 <div class="paragraph">
 <p><code>selectSoc</code>   : select a certain society to load trips</p>
 </div>
-<div class="paragraph">
-<p>Travel Diary with pictures:<br></p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Diary Commands Summary</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Command</th>
-<th class="tableblock halign-left valign-top">Function</th>
-<th class="tableblock halign-left valign-top">Syntax</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add a diary entry to the diary</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add t/title d/date [p/place] [m/memory]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">delete</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete a certain entry from the diary</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete index</code></p></td>
-</tr>
-</tbody>
-</table>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 12:44:51 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 13:06:15 UTC</div></div></div></body></html>
