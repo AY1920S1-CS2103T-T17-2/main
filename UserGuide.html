@@ -28,7 +28,11 @@
 <ul class="sectlevel2">
 <li><a href="#interface">5.1. Interface</a></li>
 <li><a href="#parameters">5.2. Parameters</a></li>
-<li><a href="#add-command">5.3. Add Command</a></li>
+<li><a href="#adding-an-event-to-your-calendar-code-add-code">5.3. Adding an event to your calendar: <code>add</code></a></li>
+<li><a href="#deleting-an-event-from-your-calendar-code-delete-code">5.4. Deleting an event from your calendar: <code>delete</code></a></li>
+<li><a href="#showing-your-schedule-for-the-month-code-show-code">5.5. Showing your schedule for the month: <code>show</code></a></li>
+<li><a href="#checking-your-availability-for-a-trip-code-check-code">5.6. Checking your availability for a trip: <code>check</code></a></li>
+<li><a href="#suggesting-a-suitable-time-for-a-trip-code-suggest-code">5.7. Suggesting a suitable time for a trip: <code>suggest</code></a></li>
 </ul>
 </li>
 <li><a href="#itinerary">6. Itinerary</a>
@@ -76,7 +80,7 @@
 <li><a href="#diary">9. Diary</a>
 <ul class="sectlevel2">
 <li><a href="#parameters-3">9.1. Parameters</a></li>
-<li><a href="#add-command-2">9.2. Add Command</a></li>
+<li><a href="#add-command">9.2. Add Command</a></li>
 <li><a href="#delete-command">9.3. Delete Command</a></li>
 <li><a href="#list-command">9.4. List Command</a></li>
 <li><a href="#find-command">9.5. Find Command</a></li>
@@ -377,7 +381,7 @@ start your trip!</p>
 <p><strong>Exit TravEzy: <code>exit</code></strong></p>
 </div>
 <div class="paragraph">
-<p>Allows you to exit from any page</p>
+<p>Allows you to exit from TravEzy</p>
 </div>
 <div class="paragraph">
 <p>The <em>Command Word</em> is <code>exit</code> and there are no additonal parameters.</p>
@@ -390,18 +394,6 @@ start your trip!</p>
 </div>
 <div class="paragraph">
 <p><code>exit</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Note: Both Goto Command and Exit Command are implemented in every features  respectively to provide you a smooth navigating experience!
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -428,24 +420,17 @@ Note: Both Goto Command and Exit Command are implemented in every features  resp
 <ol class="arabic">
 <li>
 <p>DAY. This refers to which day of the month (e.g. <strong>1</strong>, <strong>2</strong>, &#8230;&#8203;, <strong>31</strong> of January). To specify the day, simply place <code>d/</code> before it.</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
-<p>For example, if you would like to specify that is it first of January, key in:</p>
+<p>For example, if you would like to specify that it is first of January, key in:</p>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>d/1</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>MONTH. This refers to which month (i.e. <strong>January</strong>, <strong>February</strong>, <strong>March</strong>, &#8230;&#8203;, <strong>December</strong>) you would like to refer to. To specify the month, just place <code>m</code>. Since people have different ways of specifying month, TravEzy has tried to accommodate these differences. In particular, you may choose to refer to it using numbers (with <strong>1</strong> referring to <strong>January</strong>, <strong>2</strong> referring to <strong>February</strong>, etc.) or you may choose to refer to it using words. Please type <strong>at least the first three letters</strong> of the month 😄.</p>
 </li>
-</ol>
-</div>
+<li>
+<p>MONTH. This refers to which month (i.e. <strong>January</strong>, <strong>February</strong>, <strong>March</strong>, &#8230;&#8203;, <strong>December</strong>) you would like to refer to. To specify the month, just place <code>m/</code> before the month. Since people have different ways of specifying month, TravEzy accommodates these differences. In particular, you may choose to refer to it using numbers (with <strong>1</strong> referring to <strong>January</strong>, <strong>2</strong> referring to <strong>February</strong>, etc.) or you may choose to refer to it using words. Please type <strong>at least the first three letters</strong> of the month 😄.</p>
 <div class="paragraph">
 <p>Referring to the previous example, to specify that it is January, you can type:</p>
 </div>
@@ -470,13 +455,9 @@ Note: Both Goto Command and Exit Command are implemented in every features  resp
 <pre>m/January</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>YEAR. This refers to which year (i.e. <strong>2019</strong>, <strong>2020</strong>, &#8230;&#8203;) you are referring to. To indicate the year, prepend the year with <code>y/</code>. Since TravEzy allows you to refer to any year between 1970 and 2200 (because travelling in time is fun too!), please key in a <strong>4 digit number</strong> . If otherwise, it would be confused 😔.</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>For instance, if you want to specify the year 2019, just key in:</p>
 </div>
@@ -485,13 +466,9 @@ Note: Both Goto Command and Exit Command are implemented in every features  resp
 <pre>y/2019</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>END DAY. This refers to the day of the last date. This is very similar to how you would specify the (start) DAY, as mentioned in point 1. Now, instead of using the small letter, use the capitalised version. In other words, <code>D/</code>.</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>For example, if you would like to indicate that your event (i.e. commitment, holiday, school break or trip) ends on fifth of January, enter:</p>
 </div>
@@ -500,13 +477,9 @@ Note: Both Goto Command and Exit Command are implemented in every features  resp
 <pre>D/5</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>END MONTH. This refers to the month of the last date. Again, this is very similar to how you would specify the (start) MONTH, as mentioned in point 2. Now, instead of using the small letter, use the capitalised version <code>M/</code>.</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>Following from the above example, if you would like to state that your event ends (i.e. commitment, holiday, school break or trip) ends in January, just type:</p>
 </div>
@@ -543,13 +516,9 @@ As with the above (MONTH), if you are spelling END MONTH in words, please specif
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>END YEAR. This refers to the year of the last date. Similarly, to specify the year of the last date, key in the capitalised version instead. In essence, place <code>Y/</code> before the year of the last date. How simple is that?</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>For instance, if your trip ends in 2020, just type:</p>
 </div>
@@ -582,13 +551,9 @@ As expected, specifying the END DAY, END MONTH and/or END YEAR is not always app
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>NAME. This refers to the name of your event (i.e. commitment, holiday, school break or trip). To indicate the name, just key in <code>n/</code> before it.</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>For instance, if you would like to specify that the holiday you are adding refers to Christmas 🎄 , just type:</p>
 </div>
@@ -597,13 +562,9 @@ As expected, specifying the END DAY, END MONTH and/or END YEAR is not always app
 <pre>n/Christmas</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>INFO. This refers to any additional information associated with your event (i.e. commitment, holiday, school break or trip). To include this, just type <code>i/</code> before you start typing the relevant information.</p>
 </li>
-</ol>
-</div>
+<li>
+<p>INFO. This refers to any additional information associated with your event (i.e. commitment, holiday, school break or trip). To include more details about the event, just type <code>i/</code> before you start typing the relevant information.</p>
 <div class="paragraph">
 <p>For example, if you would like to include the fact that your grandparents are coming for christmas this year to remind yourself that you definitely have to make time for them, you can do so by typing:</p>
 </div>
@@ -612,28 +573,141 @@ As expected, specifying the END DAY, END MONTH and/or END YEAR is not always app
 <pre>i/Grandparents will be here!!</pre>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="add-command"><a class="link" href="#add-command">5.3. Add Command</a></h3>
+</li>
+<li>
+<p>EVENT TYPE. This refers to either a commitment, holiday, school break or trip. With this parameter, you can easily differentiate the different events in your calendar!</p>
 <div class="paragraph">
-<p>Whew! After reading so much, it is time to find out how you can add your event, be it your commitment, holiday, school break or trip, so that TravEzy can start suggesting when you can travel! 😊</p>
-</div>
-<div class="paragraph">
-<p>*Add an event to your calendar: <code>add</code></p>
+<p>Are you unable to travel on a particular day or over a duration of time due to commitments? Well, indicate it with <code>commitment</code>!</p>
 </div>
 <div class="paragraph">
-<p>Adds an event to your calendar. Are you unable to travel on a day or over a duration of time due to commitments during the public holidays/school vacation? Well, then add an event with the EVENT TYPE <code>commitment</code>. Or is a public holiday coming up (i.e. a possibility to go for a short trip! 😃)? Add it to your calendar with the EVENT TYPE <code>holiday</code>! Or&#8230;&#8203; Is it your school break? Well, we have got that covered to! Just add it to your calendar with the EVENT TYPE <code>school_break</code>. Hmm&#8230;&#8203; Or may it is your long-coveted <strong>trip</strong>! Can you add that to your calendar too? You bet!</p>
-</div>
-<div class="paragraph">
-<p>Format: <code>add EVENT TYPE n/NAME d/START DAY [m/START MONTH] [d/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR] [i/INFO]</code></p>
-</div>
-<div class="paragraph">
-<p>Example: To indicate that you have a commitment rom 2 Dec 2019 to 5 Dec 2019 because you are volunteering, just key in</p>
+<p>For instance, if you have volunteered to tutor children from 2 to 5 December 2019, you can refer to it by typing:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>add commitment n/volunteering d/2 m/dec y/2019 D/5 M/Dec Y/2019</pre>
+<pre>commitment n/volunteer to tutor children d/2 m/Dec y/2019 D/5 M/Dec Y/2019</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Now, TravEzy would know that the event is in fact a commitment!</p>
+</div>
+<div class="paragraph">
+<p><br>
+<br>
+Or is there an upcoming public holiday? Then, key it in with the type <code>holiday</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, to refer to the fact that 1 May 2020 is labour day (a public holiday), just enter:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>holiday n/labour day d/1 m/May y/2020</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, TravEzy would recognise that day as a public holiday!</p>
+</div>
+<div class="paragraph">
+<p><br>
+<br>
+You might then be wondering, what if it is a school break? As you might have expected, TravEzy has got that covered too! Just indicate that the event is in fact a school break by keying in <code>school_break</code>.</p>
+</div>
+<div class="paragraph">
+<p>For instance, if you would like to refer to the fact that 8 Dec 2019 to 12 Jan 2020 is winter vacation (a school break), just type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>school_break n/winter vacation d/8 m/Dec y/2019 D/12 M/Jan Y/2020</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Yeah! Now, TravEzy know that you are referring to a school break. 😉</p>
+</div>
+<div class="paragraph">
+<p><br>
+<br>
+Last but not least, you can specify that you will be away for a trip (woo hoo!) by using the EVENT TYPE <code>trip</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, to refer to your Bali trip between 10 Dec 2019 to 13 Dec 2019, simply enter:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>trip n/Bali 3D2N d/10 m/Dec y/2019 D/13 M/Dec Y/2019</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Great! Now, TravEzy is aware that you are referring to a trip.</p>
+</div>
+</li>
+<li>
+<p>PERIOD. This refers to the number of days between the start date and end date (as specified using the above parameters).</p>
+<div class="paragraph">
+<p>For example, if you would like to indicate that it needs to be a period of 5 days, key in:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>p/5</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-an-event-to-your-calendar-code-add-code"><a class="link" href="#adding-an-event-to-your-calendar-code-add-code">5.3. Adding an event to your calendar: <code>add</code></a></h3>
+<div class="paragraph">
+<p>Whew! After reading so much, it is time to find out how you can add your event (be it your commitment, holiday, school break or trip) so that TravEzy can start suggesting when you can travel! 😊</p>
+</div>
+<div class="paragraph">
+<p><strong>Format:</strong><br>
+<code>add EVENT TYPE n/NAME d/START DAY [m/START MONTH] [d/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR] [i/INFO]</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Examples:</strong></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>To add a commitment,</p>
+<div class="literalblock">
+<div class="content">
+<pre>commitment n/volunteer to tutor children d/2 m/Dec y/2019 D/5 M/Dec Y/2019</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To add a holiday,</p>
+<div class="literalblock">
+<div class="content">
+<pre>add holiday n/labour day d/1 m/May y/2020</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To add a school break,</p>
+<div class="literalblock">
+<div class="content">
+<pre>add school_break n/winter vacation d/8 m/Dec y/2019 D/12 M/Jan Y/2020</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To add a trip,</p>
+<div class="literalblock">
+<div class="content">
+<pre>add trip n/Bali 3D2N d/10 m/Dec y/2019 D/13 M/Dec Y/2019</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step by step:</strong>
+(To indicate that you have a commitment rom 2 Dec 2019 to 5 Dec 2019 because you are volunteering, just key in&#8230;&#8203; COMING SOON)</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -659,86 +733,186 @@ If you leave out the month and/or year, the current month and/or year will be us
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-event-from-your-calendar-code-delete-code"><a class="link" href="#deleting-an-event-from-your-calendar-code-delete-code">5.4. Deleting an event from your calendar: <code>delete</code></a></h3>
 <div class="paragraph">
-<p><strong>Adding a commitment: <code>addCommitment</code></strong><br>
-Adds commitment to indicate that you won’t be able to travel on a day or over a duration of time due to commitments during the public holidays/school vacation.<br>
-Format: <code>addCommitment [date] [name] &lt;details of commitment&gt;</code></p>
+<p>Yes, we have all had that experience. We thought that next Friday is a public holiday even though it isn&#8217;t. However, you have added this holiday to TravEzy! 😧 What should you do now? Delete it!</p>
 </div>
 <div class="paragraph">
-<p><strong>Adding a public holiday: <code>addHoliday</code></strong><br>
-Adds a public holiday to your calendar so that you can view any upcoming public holidays easily.<br>
-Format: <code>addHoliday [date] [name of holiday]</code></p>
+<p>But how? Well, this is the section for you. 😀</p>
 </div>
 <div class="paragraph">
-<p><strong>Adding a school break: <code>addSchoolBreak</code></strong><br>
-Adds a school break to your calendar so that you can view when your school breaks are easily.<br>
-Format: <code>addSchoolBreak [date] [name of break]</code> or <code>addSchoolBreak [start date] [end date] [name of break]</code></p>
+<p><strong>Format:</strong><br>
+<code>delete EVENT TYPE n/NAME d/START DAY [m/START MONTH] [d/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR]</code></p>
 </div>
 <div class="paragraph">
-<p><strong>Adding a trip: <code>addTrip</code></strong><br>
-Adds your trip to the calendar. Now, you can keep track of your trip with ease.<br>
-Format: <code>addTrip [date] [name of trip]</code> or <code>addSchoolBreak [start date] [end date] [name of trip]</code></p>
+<p><strong>Examples:</strong></p>
 </div>
-<div class="paragraph">
-<p><strong>Checking your availability for a trip: <code>check</code></strong><br>
-Checks whether you would be able to travel on a specified date/for a specified duration of time.<br>
-Format: <code>check [date]</code> or <code>check [start date] [end date]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Clearing all commitments for a particular date: <code>clearAll</code></strong><br>
-Clears all of your commitments for a particular date.<br>
-Format: <code>clearAll [date]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Editing your school break: <code>editSchoolBreak</code></strong><br>
-Edits either the start or end date of your school break.<br>
-Format: <code>editSchoolBreak [original start date] [name] [original end date] [new start date] [new end date]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Editing your commitment: <code>editCommitment</code></strong><br>
-Edits your commitment. You may change the date and/or details of your commitment.<br>
-Format: <code>editCommitment [original date] [name] &lt;new date&gt; &lt;new details&gt;</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Removing a commitment: <code>removeCommitment</code></strong><br>
-Removes your commitment, as specified by the name and date of your commitment.<br>
-Format: <code>removeCommitment [date] [name]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Removing a school break: <code>deleteSchoolBreak</code></strong><br>
-Removes a school break from your calendar.<br>
-Format: <code>removeSchoolBreak [date] [name]</code> or <code>removeSchoolBreak [start date] [end date] [name]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Removing a public holiday: <code>deleteHoliday</code></strong><br>
-Removes a school break from your calendar.<br>
-Format: <code>removeHoliday [date] [name]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Showing a monthly view of your calendar: <code>show</code></strong><br>
-Shows a monthly view of your calendar. If year is not specified, the current year will be used.<br>
-Format: <code>show [viewOnlyMonth] &lt;year&gt;</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Suggesting a duration of time to travel: <code>suggest</code></strong><br>
-Suggests when you can travel for a specified number of days within a time frame (as determined by the start and end dates).<br>
-Format: <code>suggest [start date] [end date] [number of days]</code></p>
-</div>
-<div class="paragraph">
-<p>The event planner feature also provides  certain extra extensions. <br>
-<em>(Extensions the group may want to consider)</em></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
 <li>
-<p><strong>advice</strong><br>
-This command suggests whether travelling at the stated duration of time is a good idea. For instance, when exams or external commitments are around the corner, the user will be reminded of his/her responsibilities and will be asked whether he/she is sure that he/she wants to go ahead with the travelling plans.</p>
+<p>To delete a commitment,</p>
+<div class="literalblock">
+<div class="content">
+<pre>delete n/volunteer to tutor children d/2 m/Dec y/2019 D/5 M/Dec Y/2019</pre>
+</div>
+</div>
 </li>
 <li>
-<p><strong>automaticHolidayDetector</strong><br>
-Informs user of public holidays and adds them to the calendar without requiring the user to specify it.</p>
+<p>To delete a holiday,</p>
+<div class="literalblock">
+<div class="content">
+<pre>add holiday n/labour day d/1 m/May y/2020</pre>
+</div>
+</div>
 </li>
-</ol>
+<li>
+<p>To delete a school break,</p>
+<div class="literalblock">
+<div class="content">
+<pre>add school_break n/winter vacation d/8 m/Dec y/2019 D/12 M/Jan Y/2020</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To delete a trip,</p>
+<div class="literalblock">
+<div class="content">
+<pre>add trip n/Bali 3D2N d/10 m/Dec y/2019 D/13 M/Dec Y/2019</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step by step:</strong>
+(You have accidentally indicated that 13 August 2019 is an observed holiday for national day and you would like to delete it from TravEzy. MORE COMING SOON&#8230;&#8203;)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="showing-your-schedule-for-the-month-code-show-code"><a class="link" href="#showing-your-schedule-for-the-month-code-show-code">5.5. Showing your schedule for the month: <code>show</code></a></h3>
+<div class="paragraph">
+<p>After adding and deleting your events, you can have an overview of them!</p>
+</div>
+<div class="paragraph">
+<p>How easy is it?</p>
+</div>
+<div class="paragraph">
+<p><strong>Format:</strong><br>
+<code>show m/MONTH [y/YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong><br></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>show m/Dec</pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Do remember that if you leave out the month and/or year (as we have done in this example), the current month and/or year will be used. This applies to the following commands as well.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Step by step:</strong>
+(COMING SOON)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="checking-your-availability-for-a-trip-code-check-code"><a class="link" href="#checking-your-availability-for-a-trip-code-check-code">5.6. Checking your availability for a trip: <code>check</code></a></h3>
+<div class="paragraph">
+<p>It is in the middle of the semester and your friend asks you whether you would be available for a short trip during the first week of this summer. Instead of trawling through your list of appointments (i.e. commitments and trips), you simply need to ask TravEzy! TravEzy would look at your commitments, trips, school breaks and holidays before informing you whether you are available (i.e. you happen to have a school break/holiday then <strong>and</strong> do not have any commitment/trip then).</p>
+</div>
+<div class="paragraph">
+<p>But how do you do that?</p>
+</div>
+<div class="paragraph">
+<p><strong>Format:</strong><br>
+<code>check d/START DAY [m/START MONTH] [d/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Examples:</strong></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>To check whether you are available on 9 December,</p>
+<div class="literalblock">
+<div class="content">
+<pre>check d/9 m/12</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To check whether you are available from 9 December to 20 December,</p>
+<div class="literalblock">
+<div class="content">
+<pre>check d/1 m/Dec D/20 M/Dec</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step by step:</strong>
+(COMING SOON)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="suggesting-a-suitable-time-for-a-trip-code-suggest-code"><a class="link" href="#suggesting-a-suitable-time-for-a-trip-code-suggest-code">5.7. Suggesting a suitable time for a trip: <code>suggest</code></a></h3>
+<div class="paragraph">
+<p>The end of the semester is near. It is time to look for some cheap flights🛫! However, before deciding which flight to book, you need to find out whether it suits your schedule. No worries! TravEzy has got you covered. 😊</p>
+</div>
+<div class="paragraph">
+<p>How so? Just ask TravEzy to suggest a suitable time!</p>
+</div>
+<div class="paragraph">
+<p><strong>Format:</strong><br>
+<code>suggest d/START DAY [m/START MONTH] [d/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR] [p/PERIOD]</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Examples:</strong></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>To find out when you can travel between 9 December and 20 December,</p>
+<div class="literalblock">
+<div class="content">
+<pre>suggest d/1 m/Dec D/20 M/Dec</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To find out when you can travel for at least 5 days between 9 December and 20 December ,</p>
+<div class="literalblock">
+<div class="content">
+<pre>check d/1 m/Dec D/20 M/Dec p/5</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1677,7 +1851,7 @@ something memorable, but if you do, you can add it into your entry with the <em>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-command-2"><a class="link" href="#add-command-2">9.2. Add Command</a></h3>
+<h3 id="add-command"><a class="link" href="#add-command">9.2. Add Command</a></h3>
 <div class="paragraph">
 <p>Trying to journal your trip to DisneyLand?
 <strong>Add an entry to your diary: <code>add</code></strong></p>
@@ -2202,4 +2376,4 @@ application for users to discuss and discover. Hope that you have fun finding th
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-30 16:00:16 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-31 04:07:10 UTC</div></div></div></body></html>
