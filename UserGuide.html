@@ -69,12 +69,14 @@
 </li>
 <li><a href="#financial-tracker">8. Financial Tracker</a>
 <ul class="sectlevel2">
-<li><a href="#parameters-2">8.1. Parameters</a></li>
-<li><a href="#requesting-help-code-help-code">8.2. Requesting help: <code>help</code></a></li>
-<li><a href="#adding-an-expense-code-add-code">8.3. Adding an expense: <code>add</code></a></li>
-<li><a href="#deleting-an-expense-code-delete-code">8.4. Deleting an expense: <code>delete</code></a></li>
-<li><a href="#editing-an-expense-code-edit-code">8.5. Editing an expense: <code>edit</code></a></li>
-<li><a href="#generate-an-overview-of-your-spending-code-summary-code">8.6. Generate an overview of your spending: <code>summary</code></a></li>
+<li><a href="#interface-2">8.1. Interface</a></li>
+<li><a href="#parameters-2">8.2. Parameters</a></li>
+<li><a href="#requesting-help-code-help-code">8.3. Requesting help: <code>help</code></a></li>
+<li><a href="#adding-an-expense-code-add-code">8.4. Adding an expense: <code>add</code></a></li>
+<li><a href="#deleting-an-expense-code-delete-code">8.5. Deleting an expense: <code>delete</code></a></li>
+<li><a href="#editing-an-expense-code-edit-code">8.6. Editing an expense: <code>edit</code></a></li>
+<li><a href="#sort-out-your-expense-list-code-sort-code">8.7. Sort out your expense list: <code>sort</code></a></li>
+<li><a href="#generate-an-overview-of-your-spending-code-summary-code">8.8. Generate an overview of your spending: <code>summary</code></a></li>
 </ul>
 </li>
 <li><a href="#diary">9. Diary</a>
@@ -1611,10 +1613,14 @@ expenses seamlessly!</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>The Date and Time specify when you spend your expenses, followed by the amount, description, types of expenditure and country where you&#8217;re current travelling at. Example of the types of expenditure are food, entertainment, healthcare, etc. You name it, TravEzy track it! In Financial Tracker, you will be able to add, delete and edit your expenses easily.</p>
+<p>The Date and Time specify when you spend your expenses, followed by the amount, description, types of expenditure and country where you&#8217;re current travelling at. Example of the types of expenditure are food, entertainment, healthcare, etc. You name it, TravEzy tracks it! In Financial Tracker, you will be able to manage your expenses easily.</p>
 </div>
 <div class="sect2">
-<h3 id="parameters-2"><a class="link" href="#parameters-2">8.1. Parameters</a></h3>
+<h3 id="interface-2"><a class="link" href="#interface-2">8.1. Interface</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="parameters-2"><a class="link" href="#parameters-2">8.2. Parameters</a></h3>
 <div class="paragraph">
 <p>Let&#8217;s understand how to use your parameters first!</p>
 </div>
@@ -1643,7 +1649,7 @@ expenses seamlessly!</p>
 </div>
 </li>
 <li>
-<p>Amount. The <em>PREFIX</em> is <code>/a</code>. Let&#8217;s say you&#8217;ve spent 3.50 dollars. You would enter:</p>
+<p>Amount. The <em>PREFIX</em> is <code>a/</code>. Let&#8217;s say you&#8217;ve spent 3.50 dollars. You would enter:</p>
 <div class="literalblock">
 <div class="content">
 <pre>a/3.5</pre>
@@ -1651,7 +1657,7 @@ expenses seamlessly!</p>
 </div>
 </li>
 <li>
-<p>Description. The <em>PREFIX</em> is <code>/d</code>. You can type in a sentence or a phrase.</p>
+<p>Description. The <em>PREFIX</em> is <code>d/</code>. You can type in a sentence or a phrase.</p>
 <div class="literalblock">
 <div class="content">
 <pre>d/Breakfast     or     d/Mala at the Deck</pre>
@@ -1659,7 +1665,7 @@ expenses seamlessly!</p>
 </div>
 </li>
 <li>
-<p>Type of expenditure. The <em>PREFIX</em> is <code>/t</code>. Specify which type of expenditure you are spending.</p>
+<p>Type of expenditure. The <em>PREFIX</em> is <code>t/</code>. Specify which type of expenditure you are spending.</p>
 <div class="literalblock">
 <div class="content">
 <pre>t/food</pre>
@@ -1671,20 +1677,17 @@ expenses seamlessly!</p>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>(Insert Inferface)</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="requesting-help-code-help-code"><a class="link" href="#requesting-help-code-help-code">8.2. Requesting help: <code>help</code></a></h3>
+<h3 id="requesting-help-code-help-code"><a class="link" href="#requesting-help-code-help-code">8.3. Requesting help: <code>help</code></a></h3>
 <div class="paragraph">
-<p>At anytime, not sure what to do?</p>
+<p>At anytime, not sure what to do? Simply ask for help!</p>
 </div>
 <div class="paragraph">
-<p><strong>Simply ask for help!:</strong> <code>help</code></p>
-</div>
-<div class="paragraph">
-<p>Pops out a help window to guide you how to use the commands in Financial Tracker.</p>
-</div>
-<div class="paragraph">
-<p>The <em>Command Word</em> is <code>help</code> without further parameters.</p>
+<p>The <em>Command Word</em> is <code>help</code> without further parameters. A help window will pop out to guide you how to use the commands in Financial Tracker.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1694,20 +1697,14 @@ expenses seamlessly!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-an-expense-code-add-code"><a class="link" href="#adding-an-expense-code-add-code">8.3. Adding an expense: <code>add</code></a></h3>
+<h3 id="adding-an-expense-code-add-code"><a class="link" href="#adding-an-expense-code-add-code">8.4. Adding an expense: <code>add</code></a></h3>
 <div class="paragraph">
 <p>Adding what you&#8217;ve spent at the nice coffee shop you stopped by?</p>
 </div>
 <div class="paragraph">
-<p><strong>Add an entry to your Financial Tracker:</strong> <code>add</code></p>
-</div>
-<div class="paragraph">
-<p>Adds an expense to your Financial Tracker, with the parameters: amount, description, type, date and time.</p>
-</div>
-<div class="paragraph">
 <p>The <em>Command Word</em> is <code>add</code> and the prefixes are <code>a/</code> for amount, <code>d/</code>
-for description, <code>t/</code> for type of expenditure.
-Date <code>date/</code> and time <code>time/</code> are optional.</p>
+for description, <code>t/</code> for type of expenditure. Date <code>date/</code> and time <code>time/</code> are optional.<br>
+This command adds an expense to your Financial Tracker, with the parameters: amount, description, type, date and time.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>add a/AMOUNT d/DESCRIPTION t/TYPE_OF_EXPENDITURE [date/DATE] [time/TIME]</code></p>
@@ -1720,18 +1717,13 @@ Date <code>date/</code> and time <code>time/</code> are optional.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-an-expense-code-delete-code"><a class="link" href="#deleting-an-expense-code-delete-code">8.4. Deleting an expense: <code>delete</code></a></h3>
+<h3 id="deleting-an-expense-code-delete-code"><a class="link" href="#deleting-an-expense-code-delete-code">8.5. Deleting an expense: <code>delete</code></a></h3>
 <div class="paragraph">
 <p>Added a wrong expense? Of course you can delete it if you want to :)</p>
 </div>
 <div class="paragraph">
-<p><strong>Delete an expense:</strong> <code>delete</code></p>
-</div>
-<div class="paragraph">
-<p>Deletes an expense from your Financial Tracker with the only parameter being the index of the expense you want to delete. The index must be an integer which is greater than 1 and corresponds to ID of the expense you want to delete.</p>
-</div>
-<div class="paragraph">
-<p>The <em>Command Word</em> is <code>delete</code> with an parameter index.</p>
+<p>The <em>Command Word</em> is <code>delete</code> with an parameter index.<br>
+This command deletes an expense from your Financial Tracker with the only parameter being the index of the expense you want to delete. The index must be an integer which is greater than 1 and corresponds to ID of the expense you want to delete.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>delete INDEX</code></p>
@@ -1744,43 +1736,55 @@ Date <code>date/</code> and time <code>time/</code> are optional.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-an-expense-code-edit-code"><a class="link" href="#editing-an-expense-code-edit-code">8.5. Editing an expense: <code>edit</code></a></h3>
+<h3 id="editing-an-expense-code-edit-code"><a class="link" href="#editing-an-expense-code-edit-code">8.6. Editing an expense: <code>edit</code></a></h3>
 <div class="paragraph">
 <p>Add a wrong expense? Why not edit it instead!</p>
 </div>
 <div class="paragraph">
-<p><strong>Edit an expense:</strong> <code>edit</code></p>
+<p>The <em>Command Word</em> is <code>edit</code> with an parameter index.<br>
+This command edits an expense in your Financial Tracker with the only parameter being the index of the expense you want to edit. The index must be an integer which is greater than 1 and corresponds to ID of the expense you want to edit.</p>
 </div>
 <div class="paragraph">
-<p>Edit an expense in your Financial Tracker with the only parameter being the index of the expense you want to edit. The index must be an integer which is greater than 1 and corresponds to ID of the expense you want to edit.</p>
-</div>
-<div class="paragraph">
-<p>The <em>Command Word</em> is <code>edit</code> with an parameter index.</p>
-</div>
-<div class="paragraph">
-<p>Format: <code>edit index</code></p>
+<p>Format: <code>edit INDEX [a/AMOUNT] [d/DESCRIPTION] [t/TYPE_OF_EXPENDITURE] [date/DATE] [time/TIME]</code></p>
 </div>
 <div class="paragraph">
 <p>Example: Edit the 3rd expense you saw on your expense list.</p>
 </div>
 <div class="paragraph">
-<p><code>edit 3</code></p>
+<p><code>edit 3 a/29.80 d/Nike bottle</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="generate-an-overview-of-your-spending-code-summary-code"><a class="link" href="#generate-an-overview-of-your-spending-code-summary-code">8.6. Generate an overview of your spending: <code>summary</code></a></h3>
+<h3 id="sort-out-your-expense-list-code-sort-code"><a class="link" href="#sort-out-your-expense-list-code-sort-code">8.7. Sort out your expense list: <code>sort</code></a></h3>
+<div class="paragraph">
+<p>Sort your expenses according your needs!</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>sort</code> with parameters "date", "time", "amount" or "default".<br>
+"default": Sort by default, which is sorting by dates followed by time.</p>
+</div>
+<div class="paragraph">
+<p>This command sort your current expense list according to the stated specification in decensing order.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>sort date</code> | <code>sort time</code> | <code>sort amount</code> | <code>sort default</code></p>
+</div>
+<div class="paragraph">
+<p>Example: to sort by amount</p>
+</div>
+<div class="paragraph">
+<p><code>sort amount</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="generate-an-overview-of-your-spending-code-summary-code"><a class="link" href="#generate-an-overview-of-your-spending-code-summary-code">8.8. Generate an overview of your spending: <code>summary</code></a></h3>
 <div class="paragraph">
 <p>View your expenses all at once!</p>
 </div>
 <div class="paragraph">
-<p><strong>Get summary of your financial expenses:</strong> <code>summary</code></p>
-</div>
-<div class="paragraph">
-<p>Generate statistics of your financial expenses in a Pie Chart form and also in a Bar Char form.
+<p>The <em>Command Word</em> is <code>summary</code> without any parameter.<br>
+This command generate statistics of your financial expenses in a Pie Chart form and also in a Bar Char form.
 You can now view your total spending easily!</p>
-</div>
-<div class="paragraph">
-<p>The <em>Command Word</em> is <code>summary</code> without any parameter.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -2393,4 +2397,4 @@ application for users to discuss and discover. Hope that you have fun finding th
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-02 14:26:58 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-02 17:26:49 UTC</div></div></div></body></html>
