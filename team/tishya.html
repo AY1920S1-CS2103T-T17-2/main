@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Tishya Khanna - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">TravEzy</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://ay1920s1-cs2103t-t17-2.github.io/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Tishya Khanna - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="introduction"><a class="link" href="#introduction">Introduction</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This project portfolio has been written to elaborate on my
+contributions to a team-based software engineering project in the NUS Computing
+module CS2103T.In this module, my team of five was tasked to create an application, with reference to
+the <a href="https://github.com/nus-cs2103-AY1920S1/addressbook-level3">Address Book - Level 3</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="constraints"><a class="link" href="#constraints">Constraints</a></h3>
+<div class="paragraph">
+<p>We had the the following constraints:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Target Consumer:</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The product should be targeting users who can type fast and prefer typing over other means of input.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Solution</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>For this constraint, we ensured that the majority of the user&#8217;s interactions with the application are through
+the <a href="https://www.techopedia.com/definition/3337/command-line-interface-cli"><em>Command Line Interface (CLI)</em></a>, which implies that
+users have to type commands and instructions, instead of using a Graphical User Interface(GUI).</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Application requirements:</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The product has to be <a href="https://www.techopedia.com/definition/24409/brownfield"><em>Brownfield</em></a>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Solution</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>This means that we had to
+<span class="underline">morph</span> the existing <a href="https://github.com/nus-cs2103-AY1920S1/addressbook-level3">Address Book</a> into another application.
+However, we were allowed to transform the concept of the application by incrementally changing the code.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="product-travezy"><a class="link" href="#product-travezy">Product - TravEzy</a></h3>
+<div class="paragraph">
+<p>Keeping the above constraints in mind, we created <strong>TravEzy</strong>, a desktop-based CLI travel application.
+Our application <span class="underline">erases</span> the logistical nightmare that haunts regular travellers.
+Instead of having to deal with several applications to organise and document
+a single trip, users can now combine critical travel applications such as
+calendars, itinerary planners, diaries and budgeting tools into one convenient
+and intuitive interface.</p>
+</div>
+<div class="paragraph">
+<p>Our product is targeting NUS students who are avid travellers. Given their
+busy schedules and love for travelling, <strong>TravEzy</strong> is the optimal
+solution for their travel needs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="overview-of-my-contribution"><a class="link" href="#overview-of-my-contribution">Overview of my contribution</a></h3>
+<div class="paragraph">
+<p>I took up the responsibility of implementing the <em>Diary Feature</em> , end to end, in TravEzy. While this was my main task, I also
+worked on the common code base and design. In addition, I provided structure and content for critical documentation such as the User and
+Developer guides. I shall elaborate more in the following sections.</p>
+</div>
+<div class="paragraph">
+<p>In order to increase readability, I have included a legend of the formatting and symbols used in this portfolio.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+This symbol is to highlight important information
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>command</code>: Text which is contained in a grey box (as can be seen on the left) refers to <em>commands</em> that the user
+can type into the command line in order to interact with TravEzy</p>
+</div>
+<div class="paragraph">
+<p><em>Components</em>: Text which is italicised refers to technical components in the application</p>
+</div>
+<div class="paragraph">
+<p><strong>Highlight</strong> Bold text is mainly for titles</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">attention</span> Underlined text is used to highlight certain key words and phrases</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>My contributions, summarised below, have been ordered with respect to the importance and impact on the project.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Major enhancement:</strong></dt>
+<dd>
+<p><strong>Diary Feature</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What is this:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Diary Feature represents a real-life diary. In this implementation, every user has a <em>Diary Book</em> which contains a list (in the form of a <em>Diary List</em>) of all
+his/her <em>Diary Entries</em>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Why is this necessary:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>As part of our market validation process, we observed that most student travellers enjoy journaling and recording their trips in a text format.
+This feature allows for users to do exactly that, with the some additional features to increase convenience and usability.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Highlights:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Other than being able to do add, delete and display diary entries, this implementation of the diary feature also allows users to find specific
+entries, sort through entries and encrypt private memories to keep them safe.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>] <em>{give links to collated code files}</em></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Minor enhancement:</strong></dt>
+<dd>
+<p><strong>Delay Function</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added a delay function which allows users to see an exit message when leaving the application
+*</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Created and managed milestones (V1.1 - V1.3)</p>
+</li>
+<li>
+<p>Created and managed <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/labels">labels</a></p>
+</li>
+<li>
+<p>Enabled Autopublishing of documentation using Travis</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Personalised the About us, Contact, Product Website
+<a href="https://github.com/tishyakhanna97/main/commit/d49c5d2e27baefd2c33f61856c4ee2d6d5899f87">1</a>,
+<a href="https://github.com/tishyakhanna97/main/commit/4fd7f51316b6220a2235a7306c2055279b8451d6">2</a>,
+<a href="https://github.com/tishyakhanna97/main/commit/2135c8af4518e07c7f45aa8df5d4a8018ac8f062">3</a>,
+<a href="https://github.com/tishyakhanna97/main/commit/947fbe848dad7823e7ed05c5a584e056af381223">4</a>,
+<a href="https://github.com/tishyakhanna97/main/commit/d56afcb37369b9bd91363b2eb6a8e215acf4870d">5</a>,
+<a href="https://github.com/tishyakhanna97/main/commit/bdfe41963fd43d52149406c69c1cecf900e0c37e">6</a>,
+<a href="https://github.com/tishyakhanna97/main/commit/acde2a53650e9ef78d6078cb5b96f849e9f4f191">7</a></p>
+</li>
+<li>
+<p>Transformed the structure and language of the User Guide and Developer Guide to increase readability and make it more user friendly.
+<a href="https://github.com/tishyakhanna97/main/commit/f49233f32a3b2c6c841f59755d0c0fa96e8f4590">8</a>,
+<a href="https://github.com/tishyakhanna97/main/commit/341deffba3e3b00970f9160feb37a2134ffc1c22">9</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, I shall be sharing some of the portions from the <strong>TravEzy</strong> Userguide which I wrote.
+I shall be focusing on the <code>find</code>, <code>findSpecific</code> and <code>encrypt</code> commands.</p>
+</div>
+<div class="sect2">
+<h3 id="find-a-diary-entry-which-include-a-certain-word-inside-code-find-code"><a class="link" href="#find-a-diary-entry-which-include-a-certain-word-inside-code-find-code">Find a Diary Entry which include a certain word inside: <code>find</code></a></h3>
+<div class="paragraph">
+<p>"Hey, when did I go to Spain?" It can be hard to remember
+all the details of your trips. That&#8217;s why, this Diary allows you to <strong>Find</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Find entries containing a certain text: <code>find</code></strong></p>
+</div>
+<div class="paragraph">
+<p>Finds all entries which contain your input text. There is one parameter, which
+is the text that you want to find.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>find</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>list input</code></p>
+</div>
+<div class="paragraph">
+<p>Example: I want to look at an old entry, it had something to do with "Aruba"&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>The user enters the command <code>find Aruba</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DiaryFindCommand.png" alt="DiaryFindCommand">
+</div>
+</div>
+<div class="paragraph">
+<p>And gets a list of all <em>Diary Entries</em> which match the command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DiaryFindCommandResult.png" alt="DiaryFindCommandResult">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="find-a-diary-entry-by-narrowing-down-your-search-code-findspecific-code"><a class="link" href="#find-a-diary-entry-by-narrowing-down-your-search-code-findspecific-code">Find a Diary Entry by narrowing down your search <code>FindSpecific</code></a></h3>
+<div class="paragraph">
+<p>Let&#8217;s narrow down your search!</p>
+</div>
+<div class="paragraph">
+<p><strong>Find entries containing a certain text in a specific field : <code>findSpecific</code></strong></p>
+</div>
+<div class="paragraph">
+<p>Finds all entries which contain your input text, in the highlighted field. There is one parameter, which
+is the text that you want to find, with the relevant <em>PREFIX</em>.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>findSpecific</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>list input</code></p>
+</div>
+<div class="paragraph">
+<p>Example: I remember that i titled the trip "Temp", but I cant remember where I went on those trips&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>The user enters the command <code>find Temp</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DiaryFindSpecificCommand.png" alt="DiaryFindSpecificCommand">
+</div>
+</div>
+<div class="paragraph">
+<p>And gets a list of all <em>Diary Entries</em> which match the command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DiaryFindSpecificCommandResult.png" alt="DiaryFindSpecificCommandResult">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The <code>find</code> and <code>findSpecific</code> commands can&#8217;t be used for empty parameters!
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="diary"><a class="link" href="#diary">Diary</a></h3>
+<div class="sect3">
+<h4 id="architecture"><a class="link" href="#architecture">Architecture</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DiaryArchitecture.png" alt="DiaryArchitecture">
+</div>
+<div class="title">Figure 1. Architecture Diagram for Diary Feature</div>
+</div>
+<div class="paragraph">
+<p>The architecture diagram above explains the high-level design and implementation of the Diary Feature within TravEzy.</p>
+</div>
+<div class="paragraph">
+<p><code>Diary Model</code> has multiple classes which form the basis of a Diary.
+This implementation starts at the root object, which is a <code>DiaryEntry</code>. These entries
+are stored within a <code>DiaryList</code>, which are then encapsulated within a <code>DiaryBook</code></p>
+</div>
+<div class="paragraph">
+<p>After receiving user input from <code>DiaryUi</code>, <code>DiaryParser</code>
+changes the input to a executable format, and <code>DiaryCommand</code> allows for execution of the user input.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ui-component"><a class="link" href="#ui-component">UI component</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DiaryUI.png" alt="DiaryUI">
+</div>
+<div class="title">Figure 2. Structure of DiaryUi</div>
+</div>
+<div class="paragraph">
+<p><code>DiaryUI</code>, which is represented above, consists of  <code>DiaryPage</code>, which encapsulates all the smaller Ui components.</p>
+</div>
+<div class="paragraph">
+<p><strong>The main components are the:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CommandBox</code> &#8594; Captures user input</p>
+</li>
+<li>
+<p><code>ResultDisplay</code> &#8594; Returns the output after the user input has passed through the DiaryCommand</p>
+</li>
+<li>
+<p><code>DiaryListPanel</code> &#8594; Shows an easily readable version of the current DiaryBook</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All of these components inherit from the abstract <code>UiPart</code> Class</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-03 06:34:48 UTC</div></div></div></body></html>
