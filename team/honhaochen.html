@@ -13,7 +13,7 @@
 <p>My team of 4 software engineering students and I were tasked with enhancing a basic <a href="https://searchwindowsserver.techtarget.com/definition/command-line-interface-CLI">Command Line Interface (CLI)</a> desktop addressbook application for our Software Engineering project. Our constraint is that we have to target users who are able to type fast and prefer typing over other means of input.</p>
 </div>
 <div class="paragraph">
-<p>With the stated constraint in mind, we choose to morph the given addressbook application into an travelling companion application which synthesis various kinds of features including financial tracker, diary, itinerary planner, contacts and much more. This enhanced application allows users who love to travel to plan their trip beforehand, record down their expenses and write down their precious memories during travel. We ensured that the users have to type commands and instructions for all of the added features.</p>
+<p>With the stated constraint in mind, we choose to morph the given addressbook application into an travelling companion application which synthesis various kinds of features including financial tracker, diary, itinerary planner, contacts and achievement. This enhanced application allows users who love to travel to plan their trip beforehand, record down their expenses and write down their precious memories during travel. We ensured that the users have to type commands and instructions for all of the added features.</p>
 </div>
 <div class="paragraph">
 <p>This is what our project looks like:<br></p>
@@ -85,10 +85,10 @@ travelling. Therefore, this financial tracker feature allows our target users to
 <div class="ulist">
 <ul>
 <li>
-<p>Started implementing Ui components and link them to FXML. This provides skeletal codes for the rest of my teammates to adapt.</p>
+<p>Started implementing Ui components and link them to FXML. This provides skeletal codes for the rest of my teammates to adapt with.</p>
 </li>
 <li>
-<p>Modify Command Class to be generic so that the class can take in various Model classes.</p>
+<p>Modified command Command class to be generic so that the other Command classes in other features can take in their own Model classes.</p>
 </li>
 </ul>
 </div>
@@ -130,6 +130,63 @@ travelling. Therefore, this financial tracker feature allows our target users to
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="switching-between-countries-code-switch-code"><a class="link" href="#switching-between-countries-code-switch-code">Switching between countries: <code>switch</code></a></h3>
+<div class="paragraph">
+<p>Currently in somewhere else? Switch to that expense list instead!</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>switch</code> followed by a country field. This command switched your current view of expense list to the country specified. Note that the list of countries that are valid is only shown on the <em>countries drop down menu</em>.<br>
+Do realise that you can always use the drop down menu instead!</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>switch Japan</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Illustration:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type <code>switch Japan</code> in the command box and press <em>Enter</em>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSwitch1.png" alt="FinancialTrackerSwitch1">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>The result box will display the message "Expense list switched".</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSwitch2.png" alt="FinancialTrackerSwitch2">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Now your expense list has been switched to that which is in Japan!</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSwitch3.png" alt="FinancialTrackerSwitch3">
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="requesting-help-code-help-code"><a class="link" href="#requesting-help-code-help-code">Requesting help: <code>help</code></a></h3>
 <div class="paragraph">
@@ -403,4 +460,4 @@ Note that that above sequence of events are very likely to those for the other c
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-07 01:13:12 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-07 08:41:13 UTC</div></div></div></body></html>
