@@ -17,10 +17,10 @@ travellers to easily plan their trips, manage their expenses and record their fa
 <div class="sectionbody">
 <div class="paragraph">
 <p><em>TravEzy</em> is an application developed by my team of five during our software engineering module (CS2103T),
-and is morphed from this address book application [link here].</p>
+and is morphed from  <a href="https://github.com/nus-cs2103-AY1920S1/addressbook-level3">this address book application</a>.</p>
 </div>
 <div class="ulist">
-<div class="title">To fulfil the requirements for the module, we had to ensure that TravEzy &#8230;&#8203;</div>
+<div class="title">To fulfil the requirements of the module, we had to ensure that <em>TravEzy</em> &#8230;&#8203;</div>
 <ul>
 <li>
 <p>uses <a href="https://www.defit.org/?s=desktop+application">command line interface (CLI)</a> as the primary mode of input
@@ -42,8 +42,106 @@ of their favourite travel-related applications. This would give them easy access
 </div>
 </div>
 </div>
-<h1 id="travezy-s-main-features" class="sect0"><a class="link" href="#travezy-s-main-features">TravEzy&#8217;s Main Features</a></h1>
+<div class="sect1">
+<h2 id="em-travezy-em-s-main-features"><a class="link" href="#em-travezy-em-s-main-features"><em>TravEzy</em>'s Main Features</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><em>TravEzy</em> brings together essential features of popular travel-related applications: it is a one-stop solution
-that makes it easier for travellers to plan their trips, manage their expenses and record their memorable moments.</p>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-08 08:04:12 UTC</div></div></div></body></html>
+that makes it easier for travellers to <strong>plan their trips</strong>, <strong>manage their expenses</strong> and <strong>record their memorable moments</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The main features of our application are the <strong>calendar</strong>, <strong>itinerary</strong>, <strong>address book</strong>, <strong>financial tracker</strong> and <strong>diary</strong>.</p>
+</div>
+</div>
+</div>
+<h1 id="reading-this-document" class="sect0"><a class="link" href="#reading-this-document">Reading This Document</a></h1>
+<div class="paragraph">
+<p>This section describes the symbols and formats that are used in this document.</p>
+</div>
+<h1 id="summary-of-contributions" class="sect0"><a class="link" href="#summary-of-contributions">Summary of Contributions</a></h1>
+<div class="paragraph">
+<p>This section provides an overview of my contributions to this project. As I was primarily responsible for implementing the calendar feature, this section will mainly focus on my contributions to this feature.</p>
+</div>
+<div class="sect1">
+<h2 id="major-highlights-of-the-calendar"><a class="link" href="#major-highlights-of-the-calendar">Major Highlights of the Calendar</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="design"><a class="link" href="#design">Design</a></h3>
+<div class="paragraph">
+<p>To enable users to visualise their schedule for the month and plan their trips accordingly, I designed the calendar user interface as follows:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/calendarScreenshots/calendarInterface.png" alt="Calendar interface">
+</div>
+<div class="title">Figure 1. Calendar interface</div>
+</div>
+<div class="paragraph">
+<p></p>
+</div>
+<div class="paragraph">
+<p>Whenever users add a new type of event (a <em>commitment</em>, <em>trip</em>, <em>school break</em> or <em>holiday</em>) to a particular day, it will be reflected on the calendar as a new <em>label</em>. These <em>labels</em> are also colour coded (as shown in figure 2) so that users can easily identify the types of event they have for the day.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="suggestion-functionality"><a class="link" href="#suggestion-functionality">Suggestion Functionality</a></h3>
+<div class="paragraph">
+<p>Finding a suitable time to travel can be especially difficult for NUS (National University of Singapore) students who have a packed schedule. Thus, I decided to implement a suggestion functionality that recommends the users suitable periods to travel. This is done by comparing their <em>school break</em> and <em>holiday</em> schedule with their <em>commitments</em> and <em>trips</em> schedule.</p>
+</div>
+<div class="paragraph">
+<p>With this feature, users no longer have to manually look for free blocks. Instead, they just need to use the command <code>suggest</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="check-availability-functionality"><a class="link" href="#check-availability-functionality">Check Availability Functionality</a></h3>
+<div class="paragraph">
+<p>Determining whether it is possible to travel at a specific period of time can be a hassle for users. Hence, I chose to implement a check availability functionality that makes this task simpler.</p>
+</div>
+<div class="paragraph">
+<p>Instead of having to switch to the relevant month view to determine their availability, users simply need to use the command <code>check</code>. This can be especially helpful when users are interested in multiple trips but are unsure of whether they will be available to go for them.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="other-highlights"><a class="link" href="#other-highlights">Other Highlights</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to the above, I enhanced a few basic functionalities as follows:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/calendarScreenshots/otherContributions.png" alt="Other functionalities and their enhancements">
+</div>
+<div class="title">Figure 2. Summary of enhancements</div>
+</div>
+<div class="paragraph">
+<p></p>
+</div>
+<div class="paragraph">
+<p>To view my code in more detail:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="other-contributions"><a class="link" href="#other-contributions">Other contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">In addition to the above, I also&#8230;&#8203;</div>
+<ul>
+<li>
+<p>implemented the common command goto. This enables the user to easily navigate from one feature to another without having to open multiple windows. (Pull requests <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/pull/32">#32</a>, <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/pull/37">#37</a>)</p>
+</li>
+<li>
+<p>reviewed pull request and provided suggestions for improvements (Pull request <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/pull/39">#39</a>)</p>
+</li>
+<li>
+<p>managed the release of TravEzy version 1.1 and 1.2</p>
+</li>
+<li>
+<p>made the user guide more reader-friendly (Pull requests <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/pull/104">#104</a>, <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/pull/108">#108</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-08 09:55:12 UTC</div></div></div></body></html>
