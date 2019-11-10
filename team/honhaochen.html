@@ -136,6 +136,240 @@ travelling. Therefore, this financial tracker feature allows our target users to
 <p>Currently in somewhere else? Switch to that expense list instead!</p>
 </div>
 <div class="paragraph">
+<p>The <em>Command Word</em> is <code>switch</code> followed by a country field. This command switched your current view of expense list to the country specified. Note that the list of countries that are valid is only shown on the <em>countries drop down menu</em>.<br>
+Do realise that you can always use the drop down menu instead!</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>switch Japan</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Illustration:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type <code>switch Japan</code> in the command box and press <em>Enter</em>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSwitch1.png" alt="FinancialTrackerSwitch1">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>The result box will display the message "Expense list switched".</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSwitch2.png" alt="FinancialTrackerSwitch2">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Now your expense list has been switched to that which is in Japan!</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSwitch3.png" alt="FinancialTrackerSwitch3">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="requesting-help-code-help-code"><a class="link" href="#requesting-help-code-help-code">Requesting help: <code>help</code></a></h3>
+<div class="paragraph">
+<p>At anytime, not sure what to do? Simply ask for help!</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>help</code> without further parameters. A help window will pop out to guide you how to use the commands in Financial Tracker.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>help</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Illustration:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type <code>help</code> in the command box and press <em>Enter</em>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerHelp1.png" alt="FinancialTrackerHelp1">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>The result box will display the message "Currently viewing the financial tracker help window".</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerHelp2.png" alt="FinancialTrackerHelp2">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>As you should have noticed, the help window has been popped out for your reference!</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerHelp3.png" alt="FinancialTrackerHelp3">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sort-out-your-expense-list-code-sort-code"><a class="link" href="#sort-out-your-expense-list-code-sort-code">Sort out your expense list: <code>sort</code></a></h3>
+<div class="paragraph">
+<p>Sort your expenses according your needs!</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>sort</code> with parameters "date", "time", "amount", "type" or "default".<br>
+"default": Sort by default, which is sorting by dates followed by time.</p>
+</div>
+<div class="paragraph">
+<p>This command sort your current expense list according to the stated specification in decensing order.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>sort date</code> | <code>sort time</code> | <code>sort amount</code> | <code>sort type</code> | <code>sort default</code></p>
+</div>
+<div class="paragraph">
+<p>Example: to sort by amount</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sort amount</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Illustration:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Notice the amount field in each expenses are currently not in order. Now, type <code>sort amount</code> in the command box and press <em>Enter</em>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSort1.png" alt="FinancialTrackerSort1">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>The result box will display the message "Expense List sorted!".</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSort2.png" alt="FinancialTrackerSort2">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Now all your expenses are sorted in descending order of your amount!</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSort3.png" alt="FinancialTrackerSort3">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="generate-an-overview-of-your-spending-code-summary-code"><a class="link" href="#generate-an-overview-of-your-spending-code-summary-code">Generate an overview of your spending: <code>summary</code></a></h3>
+<div class="paragraph">
+<p>View your expenses all at once!</p>
+</div>
+<div class="paragraph">
+<p>The <em>Command Word</em> is <code>summary</code> without any parameter.<br>
+This command generate statistics of your financial expenses in a Pie Chart form and also in a Bar Char form.
+You can now view your total spending easily!</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>summary</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Illustration:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type <code>summary</code> in the command box and press <em>Enter</em>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSort1.png" alt="FinancialTrackerSort1">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>The result box will display the message "Currently viewing the Summary Window".</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSummary2.png" alt="FinancialTrackerSummary2">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>As you should have noticed, the Summary Window has been popped out showing you statistics of your expenses in a nice-looking pie chart and bar chart form!</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/FinancialTrackerSummary3.png" alt="FinancialTrackerSummary3">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="switching-between-countries-code-switch-code-2"><a class="link" href="#switching-between-countries-code-switch-code-2">Switching between countries: <code>switch</code></a></h3>
+<div class="paragraph">
+<p>Currently in somewhere else? Switch to that expense list instead!</p>
+</div>
+<div class="paragraph">
 <p><strong>Format:</strong> <code>switch COUNTRY</code></p>
 </div>
 <div class="admonitionblock tip">
@@ -194,7 +428,7 @@ You can only type in countries which are only listed from the <em>Countries drop
 </div>
 </div>
 <div class="sect2">
-<h3 id="requesting-help-code-help-code"><a class="link" href="#requesting-help-code-help-code">Requesting help: <code>help</code></a></h3>
+<h3 id="requesting-help-code-help-code-2"><a class="link" href="#requesting-help-code-help-code-2">Requesting help: <code>help</code></a></h3>
 <div class="paragraph">
 <p>At anytime, not sure what to do? Simply ask for help!</p>
 </div>
@@ -233,7 +467,7 @@ You can only type in countries which are only listed from the <em>Countries drop
 </div>
 </div>
 <div class="sect2">
-<h3 id="sort-out-your-expense-list-code-sort-code"><a class="link" href="#sort-out-your-expense-list-code-sort-code">Sort out your expense list: <code>sort</code></a></h3>
+<h3 id="sort-out-your-expense-list-code-sort-code-2"><a class="link" href="#sort-out-your-expense-list-code-sort-code-2">Sort out your expense list: <code>sort</code></a></h3>
 <div class="paragraph">
 <p>The default sorting way of the expense list is not your thing? Just sort your expense list according your needs!</p>
 </div>
@@ -287,7 +521,7 @@ All of the sorting is done in reversed order :)
 </div>
 </div>
 <div class="sect2">
-<h3 id="generate-an-overview-of-your-spending-code-summary-code"><a class="link" href="#generate-an-overview-of-your-spending-code-summary-code">Generate an overview of your spending: <code>summary</code></a></h3>
+<h3 id="generate-an-overview-of-your-spending-code-summary-code-2"><a class="link" href="#generate-an-overview-of-your-spending-code-summary-code-2">Generate an overview of your spending: <code>summary</code></a></h3>
 <div class="paragraph">
 <p>Do you ever have difficulty summarising your spending? Afraid not! You can view you expenses statistics easily!</p>
 </div>
@@ -421,4 +655,4 @@ Note that that above sequence of events are very likely to those for the other c
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 10:19:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 10:34:05 UTC</div></div></div></body></html>
