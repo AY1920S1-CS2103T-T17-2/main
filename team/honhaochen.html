@@ -316,10 +316,13 @@ All of the sorting is done in reversed order :)
 <div class="sect2">
 <h3 id="financial-tracker"><a class="link" href="#financial-tracker">Financial Tracker</a></h3>
 <div class="paragraph">
-<p>The Financial Tracker feature in TravEzy allows users to keep track of their financial expenses with appropriate categorized expenditure and country.</p>
+<p>The Financial Tracker feature in TravEzy allows users to keep track of their financial expenses with appropriate categorized expenditure by different countries.</p>
 </div>
 <div class="paragraph">
 <p><strong>Architecture:</strong></p>
+</div>
+<div class="paragraph">
+<p>The Architecture Diagram given below explains the high-level design of the financial tracker feature.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -328,17 +331,14 @@ All of the sorting is done in reversed order :)
 <div class="title">Figure 1. Architecture Diagram of the Financial Tracker feature</div>
 </div>
 <div class="paragraph">
-<p>The Architecture Diagram given above explains the high-level design of the financial tracker feature.
-Inputs given by the user are channeled from the <code>textUI</code> and parsed by <code>CommandParser</code> before different commands are formed which generates
+<p>Inputs given by the user are channeled from the <code>textUI</code> and handled by <code>Logic</code> before different commands are formed which execute on
 the <code>Model</code> and updates the <code>FinancialTracker</code> object which contains the expense list.</p>
 </div>
 <div class="paragraph">
-<p>The <code>textUI</code>, <code>Log Centre</code> and <code>Storage</code> all stem from the common package of the main TravEzy application.
-This is to ensure that each command in financial tracker have only one parser validating the command.
-The GUI also collaborate with <code>Model</code> Class directly, which will be changed to only communicate with <code>Logic</code> class in later time.</p>
+<p>The <code>textUI</code> and <code>Log Centre</code> stem from the common package of the main TravEzy application while <code>Logic</code>, <code>Model,</code> and <code>Storage</code> all have similar architecture design with the other features (Calendar, Itinerary, etc.).</p>
 </div>
 <div class="paragraph">
-<p><strong>Financial Tracker Class Diagram</strong></p>
+<p><strong>Financial Tracker Class Diagram:</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -347,12 +347,10 @@ The GUI also collaborate with <code>Model</code> Class directly, which will be c
 <div class="title">Figure 2. Class Diagram of the Financial Tracker feature</div>
 </div>
 <div class="paragraph">
-<p>The Model,
-stores the <code>FinancialTracker</code> data which includes the <code>ExpenseList</code> which keeps track of all the expenses
-that are included by the user and stores it into the storage in a JSON file.</p>
+<p>The <code>Model</code> stores the <code>FinancialTracker</code> data which includes several <code>ExpenseList</code> each associated with a country that keeps track of all the expenses.</p>
 </div>
 <div class="paragraph">
-<p>It exposes an unmodifiable <code>ObservableList&lt;Expense&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
+<p><code>Financial Tracker</code> exposes an unmodifiable <code>ObservableMap&lt;String, ExpenseList&gt;</code> that can be observed. The UI is bound to the <code>Model</code> whereby the <code>Model</code> returns an expense list associated with the current <code>Country</code> of the <code>Financial Tracker</code> and updates when the querying <code>Country</code> changed.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -361,14 +359,16 @@ that are included by the user and stores it into the storage in a JSON file.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Each time a new <code>Country</code> is selected from the javafx drop down menu, an expense list will be generated for that specific country, this
-implementation is to ease categorising and sorting.
+Each time a new <code>Country</code> is selected from the Countries dropdown box, the respective expense list will be returned for that specific country, this implementation is to ease categorising and sorting.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Sequence Diagram example</strong></p>
+<p><strong>Sequence Diagram example:</strong></p>
+</div>
+<div class="paragraph">
+<p>The sequence diagram below shows the sequence of events that will take place when a user calls <code>Summary</code> command.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -377,11 +377,13 @@ implementation is to ease categorising and sorting.
 <div class="title">Figure 3. Sequence Diagram of the Financial Tracker feature</div>
 </div>
 <div class="paragraph">
-<p>The above sequence diagram shows the sequence of events that will take place when a user calls <code>Summary</code> command.
-Note that that above sequence of events are very likely to those for the other commands in Financial Tracker feature.</p>
+<p>The sequence of events are very likely to those of the other commands in Financial Tracker feature.</p>
 </div>
 <div class="paragraph">
-<p><strong>Activity Diagram example</strong></p>
+<p><strong>Activity Diagram example:</strong></p>
+</div>
+<div class="paragraph">
+<p>The activity diagram below shows how <code>edits</code> command works.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -389,9 +391,6 @@ Note that that above sequence of events are very likely to those for the other c
 </div>
 <div class="title">Figure 4. Activity Diagram of the Financial Tracker feature</div>
 </div>
-<div class="paragraph">
-<p>The above activity shows how <code>edits</code> command works.</p>
 </div>
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 20:24:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 23:54:02 UTC</div></div></div></body></html>
