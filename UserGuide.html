@@ -58,20 +58,19 @@
 </li>
 <li><a href="#address-book">7. Address Book</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code-2">7.1. Viewing help : <code>help</code></a></li>
+<li><a href="#interface-3">7.1. Interface</a></li>
 <li><a href="#adding-a-person-code-add-code">7.2. Adding a person: <code>add</code></a></li>
 <li><a href="#listing-all-persons-code-list-code">7.3. Listing all persons : <code>list</code></a></li>
 <li><a href="#editing-a-person-code-edit-code">7.4. Editing a person : <code>edit</code></a></li>
 <li><a href="#locating-persons-by-name-code-find-code">7.5. Locating persons by name: <code>find</code></a></li>
 <li><a href="#deleting-a-person-code-delete-code">7.6. Deleting a person : <code>delete</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code-2">7.7. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">7.8. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">7.9. Saving the data</a></li>
+<li><a href="#saving-the-data">7.8. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#financial-tracker">8. Financial Tracker</a>
 <ul class="sectlevel2">
-<li><a href="#interface-3">8.1. Interface</a></li>
+<li><a href="#interface-4">8.1. Interface</a></li>
 <li><a href="#adding-an-expense-code-add-code">8.2. Adding an expense: <code>add</code></a></li>
 <li><a href="#deleting-an-expense-code-delete-code">8.3. Deleting an expense: <code>delete</code></a></li>
 <li><a href="#editing-an-expense-code-edit-code">8.4. Editing an expense: <code>edit</code></a></li>
@@ -115,6 +114,7 @@
 <li><a href="#trivago-coming-in-v2-0">12.6. TRIVAGO (Coming in V2.0)</a></li>
 </ul>
 </li>
+<li><a href="#glossary">13. Glossary</a></li>
 </ul>
 </div>
 </div>
@@ -1484,19 +1484,45 @@ TravEzy has helped sorted out your life!"</p>
 <h2 id="address-book"><a class="link" href="#address-book">7. Address Book</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Helps you to keep track of your friends’ contact information from different countries.</p>
+<p>You are heading to a different country for a trip this holiday and you want to let your friends in other countries know
+that you are coming over. The troubles of managing contacts from many different countries can be overwhelming with a
+large number of contacts. Looking for a better contacts management application?</p>
+</div>
+<div class="paragraph">
+<p><em>TravEzy</em> is the better contact management you are looking for. <em>TrazvEzy</em> allows you to add your contacts information
+specifying your contact&#8217;s country. How does <em>TravEzy</em> do it? Read on to find our more.</p>
 </div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code-2"><a class="link" href="#viewing-help-code-help-code-2">7.1. Viewing help : <code>help</code></a></h3>
+<h3 id="interface-3"><a class="link" href="#interface-3">7.1. Interface</a></h3>
 <div class="paragraph">
-<p>Format: <code>help</code></p>
+<p>Navigating around the address book page:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookInterface.png" alt="AddressBookInterface" width="800">
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">7.2. Adding a person: <code>add</code></a></h3>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG] [r/REMARK][c/COUNTRY]</code></p>
+<p>Met a new friend in a new foreign country during your holiday trip? Add him / her to your <em>TravEzy</em> address book.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format:</strong><br>
+<code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG] [r/REMARK][c/COUNTRY]</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Address Book does not allow duplicate contacts. A person should not have the same <code>NAME</code>, <code>PHONE</code> and <code>EMAIL</code>
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1505,7 +1531,255 @@ Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG] [r/REMARK][c/C
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
+Tags are useful ways to categorize your contacts. For example, tag a person with:<br>
+<br>
+<code>add n/Alice p/918273645 e/alice@example.com t/friend</code>,
+the <code>t/</code> prefix is used for tagging.<br>
+<br>
 A person can have any number of tags (including 0)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Examples:</strong></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>To add a person into the address book,</p>
+<div class="literalblock">
+<div class="content">
+<pre>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To add a person into the address book specifying a tag and country,</p>
+<div class="literalblock">
+<div class="content">
+<pre>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal r/Best friend c/Singapore</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step by Step:</strong></p>
+</div>
+<div class="paragraph">
+<p>Step 1. Type <code>add n/Alice p/918273645 e/alice@example.com a/566,Yishun Ring Road, #14-113</code> in the <em>command box</em> and
+click <em>Enter</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookAdd1.png" alt="AddressBookAdd1" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2. In the <em>persons list panel</em>, you can now see that Alice has been added into the address book.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>result box</em> will also display a message that your contact has been added.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookAdd2.png" alt="AddressBookAdd2" width="600">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">7.3. Listing all persons : <code>list</code></a></h3>
+<div class="paragraph">
+<p>After adding your contacts, you may want to see an overview of your contact information in the address book.
+See everyone in your address book with one command!</p>
+</div>
+<div class="paragraph">
+<p><strong>Format:</strong><br>
+<code>list</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Examples:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To list your contacts,</p>
+<div class="literalblock">
+<div class="content">
+<pre>list</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step by Step:</strong></p>
+</div>
+<div class="paragraph">
+<p>Step 1. Type <code>list</code> in the <em>command box</em> and click <em>Enter</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookList1.png" alt="AddressBookList1">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2. See the overview of your contact information in the <em>persons list panel</em></p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>result box</em> will also display a message that all your contact information has been listed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookList2.png" alt="AddressBookList2" width="600">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">7.4. Editing a person : <code>edit</code></a></h3>
+<div class="paragraph">
+<p>Oh no, you have added a wrong contact into the address book! Edit all your contact information in the address book
+inside <em>TravEzy</em>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format:</strong><br>
+<code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [r/REMARK] [c/COUNTRY]</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;<br>
+<br>
+At least one of the optional fields must be provided.<br>
+<br>
+ Existing values will be updated to the input values.<br>
+<br>
+When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+ You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.<br>
+<br>
+ You can remove the person&#8217;s remark by typing <code>r/</code> without specifying any remark after it.<br>
+<br>
+ You can remove the person&#8217;s country by typing <code>c/</code> without specifying any country after it.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To edit a 1st person&#8217;s phone number and email address to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.<br></p>
+<div class="literalblock">
+<div class="content">
+<pre>edit 1 p/91234567 e/johndoe@example.com</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To edit the name of the 2nd person to be <code>Betsy Crower</code> and clears all exisiting tags.</p>
+<div class="literalblock">
+<div class="content">
+<pre>edit 2 n/Betsy Crower t/</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To edit the name of the 3rd person to be <code>Alexander Bell</code> and clears all existing country information.</p>
+<div class="literalblock">
+<div class="content">
+<pre>edit 3 n/Alexander Bell c/</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step by Step:</strong></p>
+</div>
+<div class="paragraph">
+<p>Step 1. Type <code>edit7 p/9082373645</code> to edit Alice&#8217;s phone number to reflect the correct phone number <code>908237645</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookEdit1.png" alt="AddressBookEdit1" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2. The <em>persons list panel</em> will now display the updated information for Alice after the edit</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>result box</em> will display a message that the person has been edited if successful.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookEdit2.png" alt="AddressBookEdit2">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">7.5. Locating persons by name: <code>find</code></a></h3>
+<div class="paragraph">
+<p>Your address book have many contacts and you would need to have a way to find your contacts information with keywords.<br></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+ The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code><br>
+<br>
+ The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code><br>
+<br>
+ Only the name is searched.<br>
+<br>
+ Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code><br>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code>
 </td>
 </tr>
 </table>
@@ -1513,185 +1787,178 @@ A person can have any number of tags (including 0)
 <div class="paragraph">
 <p>Examples:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
-</li>
-<li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal r/Best friend c/Singapore</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">7.3. Listing all persons : <code>list</code></a></h3>
-<div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
-Shows a list of all persons in the address book.<br>
-Format: <code>list</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">7.4. Editing a person : <code>edit</code></a></h3>
-<div class="paragraph">
-<p>Edits an existing person in the address book.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [r/REMARK] [c/COUNTRY]</code></p>
-</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>At least one of the optional fields must be provided.</p>
-</li>
-<li>
-<p>Existing values will be updated to the input values.</p>
-</li>
-<li>
-<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
-</li>
-<li>
-<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
-</li>
-<li>
-<p>You can remove the person&#8217;s remark by typing <code>r/</code> without specifying any remark after it.</p>
-</li>
-<li>
-<p>You can remove the person&#8217;s country by typing <code>c/</code> without specifying any country after it.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
-Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
-</li>
-<li>
-<p><code>edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
-</li>
-<li>
-<p><code>edit 3 n/Alexander Bell c/</code><br>
-Clear the country of the 3rd person to be <code>Alexander Bell</code>.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">7.5. Locating persons by name: <code>find</code></a></h3>
-<div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
-</div>
-<div class="sidebarblock">
+<p>To find <code>John</code>,</p>
+<div class="literalblock">
 <div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+<pre>find John</pre>
+</div>
+</div>
 </li>
 <li>
-<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
-</li>
-<li>
-<p>Only the name is searched.</p>
-</li>
-<li>
-<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
-</li>
-<li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>To return any person having names <code>Besty</code>, <code>Time</code> or <code>John</code>,</p>
+<div class="literalblock">
+<div class="content">
+<pre>find Betsy Tim John</pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Step by Step</strong></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>find John</code><br>
-Returns <code>john</code> and <code>John Doe</code></p>
-</li>
-<li>
-<p><code>find Betsy Tim John</code><br>
-Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Step 1. Type <code>find Alice</code> in the <em>command box</em> and click <em>Enter</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookFind1.png" alt="AddressBookFind1" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2. The found results will be displayed at the <em>persons list panel</em>.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>result box</em> will also display a message to indicate the number of matching results found.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookFind2.png" alt="AddressBookFind2" width="600">
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">7.6. Deleting a person : <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
-Format: <code>delete INDEX</code></p>
+<p>While organizing your <em>TravEzy</em> address book, you want to clear your old contacts.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format:</strong><br>
+ <code>delete INDEX</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The index refers to the index number shown in the displayed person list.<br>
+<br>
+The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;
+</td>
+</tr>
+</table>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Deletes the person at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed person list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 <div class="paragraph">
 <p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+<p>Delete the 2nd person in the address book.<br></p>
+<div class="literalblock">
+<div class="content">
+<pre>delete 2</pre>
+</div>
+</div>
 </li>
 <li>
-<p><code>find Betsy</code><br>
-<code>delete 1</code><br>
-Deletes the 1st person in the results of the <code>find</code> command.</p>
+<p>Deletes the 1st person in the results of the <code>find</code> command.<br></p>
+<div class="literalblock">
+<div class="content">
+<pre>find Betsy
+delete 1</pre>
+</div>
+</div>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Step By Step:</strong></p>
+</div>
+<div class="paragraph">
+<p>Step 1. Type <code>delete 7</code> in the <em>command box</em> and click <em>Enter</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookDelete1.png" alt="AddressBookDelete1" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2. The <em>persons list panel</em> will display the updated address book after deleting the specified contact</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>result box</em> will also display a message to notify that the person has been deleted from the contact book.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressbookDelete2.png" alt="AddressbookDelete2" width="600">
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="clearing-all-entries-code-clear-code-2"><a class="link" href="#clearing-all-entries-code-clear-code-2">7.7. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
-Format: <code>clear</code></p>
+<p>Your address book is in a mess, and you would like to clear all exisiting entries in the address book and restart from scratch<br></p>
+</div>
+<div class="paragraph">
+<p>Format:<br>
+<code>clear</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+You will not be able to undo this operation. Think twice before entering this command!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Step by step:</strong></p>
+</div>
+<div class="paragraph">
+<p>Step 1. Type <code>clear</code> into the <em>command box</em> and click <em>Enter</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookClear1.png" alt="AddressBookClear1" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2. The <em>persons list panel</em> is now cleared. You will see an empty <em>persons list panel</em>.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <em>result box</em> will display a message that tells you that the address book has been cleared.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddressBookClear2.png" alt="AddressBookClear2" width="600">
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">7.8. Exiting the program : <code>exit</code></a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">7.8. Saving the data</a></h3>
 <div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
+<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">7.9. Saving the data</a></h3>
 <div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
-There is no need to save manually.</p>
+<p>There is no need to save manually.</p>
 </div>
 </div>
 </div>
@@ -1731,7 +1998,7 @@ There is no need to save manually.</p>
 <p>The Date and Time specify when you spend your expenses, followed by the amount, description, types of expenditure and country where you&#8217;re current travelling at. Example of the types of expenditure are food, entertainment, health care, etc. You name it, TravEzy tracks it! In Financial Tracker, you will be able to manage your expenses easily.</p>
 </div>
 <div class="sect2">
-<h3 id="interface-3"><a class="link" href="#interface-3">8.1. Interface</a></h3>
+<h3 id="interface-4"><a class="link" href="#interface-4">8.1. Interface</a></h3>
 <div class="paragraph">
 <p>This is what you will see when navigated to the financial tracker:</p>
 </div>
@@ -2906,4 +3173,10 @@ application for users to discuss and discover. Hope that you have fun finding th
 </div>
 </div>
 </div>
-</div></div><div id="footnotes"><hr><div class="footnote" id="_footnote_1"><a href="#_footnoteref_1">1</a>. A parameter is like a field in your regular form. Just replace it and fill it up with anything appropriate. 😊</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 12:27:11 UTC</div></div></div></body></html>
+</div>
+<div class="sect1">
+<h2 id="glossary"><a class="link" href="#glossary">13. Glossary</a></h2>
+<div class="sectionbody">
+
+</div>
+</div></div><div id="footnotes"><hr><div class="footnote" id="_footnote_1"><a href="#_footnoteref_1">1</a>. A parameter is like a field in your regular form. Just replace it and fill it up with anything appropriate. 😊</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 13:09:52 UTC</div></div></div></body></html>
