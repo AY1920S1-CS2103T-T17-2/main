@@ -78,9 +78,8 @@
 <li><a href="#clears-an-expense-list-code-clear-code">8.5. Clears an expense list: <code>clear</code></a></li>
 <li><a href="#undo-your-previous-action-code-undo-code">8.6. Undo your previous action: <code>undo</code></a></li>
 <li><a href="#switching-between-countries-code-switch-code">8.7. Switching between countries: <code>switch</code></a></li>
-<li><a href="#requesting-help-code-help-code">8.8. Requesting help: <code>help</code></a></li>
-<li><a href="#sort-out-your-expense-list-code-sort-code">8.9. Sort out your expense list: <code>sort</code></a></li>
-<li><a href="#generate-an-overview-of-your-spending-code-summary-code">8.10. Generate an overview of your spending: <code>summary</code></a></li>
+<li><a href="#sort-out-your-expense-list-code-sort-code">8.8. Sort out your expense list: <code>sort</code></a></li>
+<li><a href="#generate-an-overview-of-your-spending-code-summary-code">8.9. Generate an overview of your spending: <code>summary</code></a></li>
 </ul>
 </li>
 <li><a href="#diary">9. Diary</a>
@@ -1738,9 +1737,8 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerInterface.png" alt="FinancialTrackerInterface">
+<img src="images/FinancialTrackerInterface.png" alt="Financial Tracker interface" width="800">
 </div>
-<div class="title">Figure 1. Financial Tracker Interface</div>
 </div>
 </div>
 <div class="sect2">
@@ -1748,8 +1746,23 @@ There is no need to save manually.</p>
 <div class="paragraph">
 <p>Adding the expense of milk you&#8217;ve bought at the grocery shop you stopped by?</p>
 </div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+You can only add a total maximum amount of one trillion!
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p><strong>Format:</strong> <code>add a/AMOUNT d/DESCRIPTION t/TYPE OF EXPENDITURE [date/DATE] [time/TIME]</code></p>
+<p><strong>Format:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>add a/AMOUNT d/DESCRIPTION t/TYPE OF EXPENDITURE [date/DATE] [time/TIME]</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example:</strong></p>
@@ -1767,7 +1780,7 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerAdd1.png" alt="FinancialTrackerAdd1">
+<img src="images/FinancialTrackerAdd1.png" alt="FinancialTrackerAdd1" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -1778,7 +1791,7 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerAdd2.png" alt="FinancialTrackerAdd2">
+<img src="images/FinancialTrackerAdd2.png" alt="FinancialTrackerAdd2" width="600">
 </div>
 </div>
 </div>
@@ -1788,7 +1801,10 @@ There is no need to save manually.</p>
 <p>Added a wrong expense? Of course you can delete it if you want to :)</p>
 </div>
 <div class="paragraph">
-<p><strong>Format:</strong> <code>delete INDEX</code></p>
+<p><strong>Format:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>delete INDEX</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example:</strong> Delete the first expense you saw on your expense list.</p>
@@ -1806,7 +1822,7 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerDelete1.png" alt="FinancialTrackerDelete1">
+<img src="images/FinancialTrackerDelete1.png" alt="FinancialTrackerDelete1" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -1814,7 +1830,7 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerDelete2.png" alt="FinancialTrackerDelete2">
+<img src="images/FinancialTrackerDelete2.png" alt="FinancialTrackerDelete2" width="600">
 </div>
 </div>
 </div>
@@ -1824,7 +1840,10 @@ There is no need to save manually.</p>
 <p>Add a wrong expense? Why not edit it instead!</p>
 </div>
 <div class="paragraph">
-<p><strong>Format:</strong> <code>edit INDEX [a/AMOUNT] [d/DESCRIPTION] [t/TYPE_OF_EXPENDITURE] [date/DATE] [time/TIME]</code></p>
+<p><strong>Format:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>edit INDEX [a/AMOUNT] [d/DESCRIPTION] [t/TYPE OF EXPENDITURE] [date/DATE] [time/TIME]</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example:</strong> Edit the 1st expense you saw on your expense list.</p>
@@ -1845,7 +1864,7 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerEdit1.png" alt="FinancialTrackerEdit1">
+<img src="images/FinancialTrackerEdit1.png" alt="FinancialTrackerEdit1" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -1856,7 +1875,7 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerEdit2.png" alt="FinancialTrackerEdit2">
+<img src="images/FinancialTrackerEdit2.png" alt="FinancialTrackerEdit2" width="600">
 </div>
 </div>
 </div>
@@ -1866,7 +1885,10 @@ There is no need to save manually.</p>
 <p>Messed up your expense list? Don&#8217;t worry, just clear it!</p>
 </div>
 <div class="paragraph">
-<p><strong>Format:</strong> <code>clear</code></p>
+<p><strong>Format:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>clear</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example:</strong> Clears your current country&#8217;s expense list.</p>
@@ -1884,7 +1906,7 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerClear1.png" alt="FinancialTrackerClear1">
+<img src="images/FinancialTrackerClear1.png" alt="FinancialTrackerClear1" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -1895,7 +1917,7 @@ There is no need to save manually.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerClear2.png" alt="FinancialTrackerClear2">
+<img src="images/FinancialTrackerClear2.png" alt="FinancialTrackerClear2" width="600">
 </div>
 </div>
 </div>
@@ -1917,7 +1939,10 @@ You can only undo your previous <code>add</code>, <code>edit</code>, <code>delet
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Format:</strong> <code>undo</code></p>
+<p><strong>Format:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>undo</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example:</strong> Undo your previous <code>clear</code> command.</p>
@@ -1935,7 +1960,7 @@ You can only undo your previous <code>add</code>, <code>edit</code>, <code>delet
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerUndo1.png" alt="FinancialTrackerUndo1">
+<img src="images/FinancialTrackerUndo1.png" alt="FinancialTrackerUndo1" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -1946,7 +1971,7 @@ You can only undo your previous <code>add</code>, <code>edit</code>, <code>delet
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerUndo2.png" alt="FinancialTrackerUndo2">
+<img src="images/FinancialTrackerUndo2.png" alt="FinancialTrackerUndo2" width="600">
 </div>
 </div>
 </div>
@@ -1956,7 +1981,10 @@ You can only undo your previous <code>add</code>, <code>edit</code>, <code>delet
 <p>Currently in somewhere else? Switch to that expense list instead!</p>
 </div>
 <div class="paragraph">
-<p><strong>Format:</strong> <code>switch COUNTRY</code></p>
+<p><strong>Format:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>switch COUNTRY</code></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1998,7 +2026,7 @@ You can only type in countries which are only listed from the <em>Countries drop
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerSwitch1.png" alt="FinancialTrackerSwitch1">
+<img src="images/FinancialTrackerSwitch1.png" alt="FinancialTrackerSwitch1" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -2009,51 +2037,12 @@ You can only type in countries which are only listed from the <em>Countries drop
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerSwitch2.png" alt="FinancialTrackerSwitch2">
+<img src="images/FinancialTrackerSwitch2.png" alt="FinancialTrackerSwitch2" width="600">
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="requesting-help-code-help-code"><a class="link" href="#requesting-help-code-help-code">8.8. Requesting help: <code>help</code></a></h3>
-<div class="paragraph">
-<p>At anytime, not sure what to do? Simply ask for help!</p>
-</div>
-<div class="paragraph">
-<p><strong>Format:</strong> <code>help</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>help</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Step by step:</strong></p>
-</div>
-<div class="paragraph">
-<p>Step 1. Type <code>help</code> in the <em>Command box</em> and press <em>Enter</em>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/FinancialTrackerHelp1.png" alt="FinancialTrackerHelp1">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 2. The <em>Result box</em> will display the message "Currently viewing the financial tracker help window".</p>
-</div>
-<div class="paragraph">
-<p>Step 3. As you should have noticed, the help window has been popped out for your reference!</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/FinancialTrackerHelp2.png" alt="FinancialTrackerHelp2">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sort-out-your-expense-list-code-sort-code"><a class="link" href="#sort-out-your-expense-list-code-sort-code">8.9. Sort out your expense list: <code>sort</code></a></h3>
+<h3 id="sort-out-your-expense-list-code-sort-code"><a class="link" href="#sort-out-your-expense-list-code-sort-code">8.8. Sort out your expense list: <code>sort</code></a></h3>
 <div class="paragraph">
 <p>The default sorting way of the expense list is not your thing? Just sort your expense list according your needs!</p>
 </div>
@@ -2070,7 +2059,13 @@ All of the sorting is done in reversed order :)
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Format:</strong> <code>sort date</code> | <code>sort time</code> | <code>sort amount</code> | <code>sort type</code> | <code>sort default</code></p>
+<p><strong>Format:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>sort CRITERIA</code></p>
+</div>
+<div class="paragraph">
+<p>Where <code>CRITERIA</code> can be <code>amount</code>, <code>date</code>, <code>time</code>, <code>type</code> and <code>default</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example:</strong> to sort by amount</p>
@@ -2091,7 +2086,7 @@ All of the sorting is done in reversed order :)
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerSort1.png" alt="FinancialTrackerSort1">
+<img src="images/FinancialTrackerSort1.png" alt="FinancialTrackerSort1" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -2102,17 +2097,20 @@ All of the sorting is done in reversed order :)
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerSort2.png" alt="FinancialTrackerSort2">
+<img src="images/FinancialTrackerSort2.png" alt="FinancialTrackerSort2" width="600">
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="generate-an-overview-of-your-spending-code-summary-code"><a class="link" href="#generate-an-overview-of-your-spending-code-summary-code">8.10. Generate an overview of your spending: <code>summary</code></a></h3>
+<h3 id="generate-an-overview-of-your-spending-code-summary-code"><a class="link" href="#generate-an-overview-of-your-spending-code-summary-code">8.9. Generate an overview of your spending: <code>summary</code></a></h3>
 <div class="paragraph">
 <p>Do you ever have difficulty summarising your spending? Afraid not! You can view you expenses statistics easily!</p>
 </div>
 <div class="paragraph">
-<p><strong>Format:</strong> <code>summary</code></p>
+<p><strong>Format:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>summary</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example:</strong></p>
@@ -2130,7 +2128,7 @@ All of the sorting is done in reversed order :)
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerSummary1.png" alt="FinancialTrackerSummary1">
+<img src="images/FinancialTrackerSummary1.png" alt="FinancialTrackerSummary1" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -2141,7 +2139,7 @@ All of the sorting is done in reversed order :)
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerSummary2.png" alt="FinancialTrackerSummary2">
+<img src="images/FinancialTrackerSummary2.png" alt="FinancialTrackerSummary2" width="600">
 </div>
 </div>
 </div>
@@ -2541,47 +2539,39 @@ statistics of your current progress as you grow to become a top traveller!</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q:</strong> How do I backup my data onto cloud storage?<br>
-<strong>A:</strong> Locate The Traveller Diary folder in your local drive and compact it into a zip file before uploading it onto a cloud storage online.</p>
+<strong>A:</strong> Locate the <code>data</code> folder in the same directory where you saved you jar file. Compact it into zip file before uploading it onto cloud storage.</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> How do I transfer my data onto another computer?<br>
-<strong>A:</strong> Install The Traveller Diary in the other computer and overwrite the empty data file it creates with during start up with the file that contains the data of your previous TTD. Alternatively, you can store it in a cloud storage it first before retrieving it and transferring it into your new computer.</p>
+<strong>A:</strong> Backup your data first. Then, download TravEzy in the other computer and put your <code>data</code> folder on the same directory where you saved the jar file. Execute TravEzy and you should see your data has been safely transferred.</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> Can I change the theme of the application? I prefer to work with a night theme interface.<br>
-<strong>A:</strong> Stay tuned for TravEzy v2.0 for this features! The TravEzy theme also aims to provide user with a UI that they are
-comfortable with. Hence, we strongly believe giving users the option to personalize their theme is extremely useful
-and would greatly consider adding it for the upcoming major update on TravEzy! Stay tuned for that!</p>
+<strong>A:</strong> Stay tuned for TravEzy v2.0 for this features! The TravEzy theme also aims to provide user with a UI that they are comfortable with. Hence, we strongly believe giving users the option to personalize their theme is extremely useful and would greatly consider adding it for the upcoming major update on TravEzy! Stay tuned for that!</p>
 </div>
 <div class="paragraph">
-<p><strong>Q:</strong> Who can view my travel posts in my TTD?<br>
-<strong>A:</strong> As TTD is a single user application, it is not opened to the public, and unable to be viewed by others. Hence, it is called “diary” for a reason, which stores discrete entries reporting events that happened throughout the day. Users can however, showcase their application in front of their friends to show off their overseas trips.<br></p>
+<p><strong>Q:</strong> Who can view my travel posts in my TravEzy?<br>
+<strong>A:</strong> As TravEzy is a single user application, it is not opened to the public, and unable to be viewed by others. You can however, showcase your application in front of your friends to show off your overseas trips.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> Is it possible to connect to social media such as Facebook, Snapchat, Instagram?<br>
-<strong>A:</strong> Currently, it is not possible to connect to social media using TTD. However, we will consider implementing this feature in the future! Stay tuned for that! 😉</p>
+<strong>A:</strong> Currently, it is not possible to connect to social media using TravEzy. However, we will consider implementing this feature in the future! Stay tuned for that! 😉</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> Is there any in-app purchase for this application?<br>
-<strong>A:</strong> NO there isn’t. TTD is created from a non-profit organization and we are not here to milk any of your gold coins! It is absolutely free! It cost nothing, zilch, nada, 零, nil, kosong. So what are you waiting for get TTD today!</p>
+<strong>A:</strong> NO there isn’t. TravEzy is created from a non-profit organization and we are not here to milk any of your gold coins! It is absolutely free! It cost nothing, zilch, nada, 零, nil, kosong. So what are you waiting for get?  Get TravEzy today!</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> I’m having difficulties uploading the pictures onto the travel diary.<br>
-<strong>A:</strong> At the moment, TravEzy does not have any feature where it allows the user to store their travel photos. However,
-this will definitely be implemented in v2.0. We intend for the pictures to be stored in the user&#8217;s local drive and
-subsequently in a cloud database which is stored online. The Traveller Diary initial uploads will only allow uploads
-of pictures that are in jpg or png. Unfortunately, we do not support gif.
-Do ensure that your pictures are below 25MB with the dimensions no bigger than 1920px x 1080px.</p>
+<strong>A:</strong> At the moment, TravEzy does not have any feature where it allows the user to store their travel photos. However, this will definitely be implemented in v2.0. We intend for the pictures to be stored in the user&#8217;s local drive and subsequently in a cloud database which is stored online.</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> Who can I contact should there be a bug or feedback that I would like to share?<br>
-<strong>A:</strong> Feel free to send an email to the developer team: <a href="mailto:thetravellerdiary@gmail.com">thetravellerdiary@gmail.com</a> and we will access to your queries within three working days. We also value your feedback and will use it to improve TTD. Thank you and looking forward to serving you better!</p>
+<strong>A:</strong> Feel free to send an email to the developer team: <a href="mailto:thetravellerdiary@gmail.com">thetravellerdiary@gmail.com</a> and we will access to your queries within three working days. We also value your feedback and will use it to improve TravEzy. Thank you and we looking forward to serving you better!</p>
 </div>
 <div class="paragraph">
 <p><strong>Q:</strong> What are some of the cool features that are available in TravEzy currently?<br>
-<strong>A:</strong> TravEzy currently boast a plethora of features such as calendar, itinerary, address book, travelling diary,
-financial tracker and achievements page. All these features work in tandem with each other to give you the best and only
-the best travelling experience. Not only that, the TravEzy team also decided to spice things up and included some easter eggs scattered throughout the
+<strong>A:</strong> TravEzy currently boast a plethora of features such as calendar, itinerary, address book, travelling diary, financial tracker and achievements page. All these features work in tandem with each other to give you the best and only the best travelling experience. Not only that, the TravEzy team also decided to spice things up and included some easter eggs scattered throughout the
 application for users to discuss and discover. Hope that you have fun finding these cool easter egg features! 🐰🐰🐰</p>
 </div>
 </div>
@@ -2792,12 +2782,12 @@ application for users to discuss and discover. Hope that you have fun finding th
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Adds an expense to the Financial Tracker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add a/AMOUNT d/DESCRIPTION t/TYPE_OF_EXPENDITURE [date/DATE] [time/TIME]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add a/AMOUNT d/DESCRIPTION t/TYPE OF EXPENDITURE [date/DATE] [time/TIME]</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Edits an existing expense in the Financial Tracker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [a/AMOUNT] [d/DESCRIPTION] [t/TYPE_OF_EXPENDITURE] [date/DATE] [time/TIME]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [a/AMOUNT] [d/DESCRIPTION] [t/TYPE OF EXPENDITURE] [date/DATE] [time/TIME]</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
@@ -2805,9 +2795,29 @@ application for users to discuss and discover. Hope that you have fun finding th
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">View Help</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clears all your expenses in your current country&#8217;s expense list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Undo your previous action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>switch</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Switch to another country&#8217;s expense list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>switch COUNTRY</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort your expense list based on amount, type, date, time or default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort CRITERIA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>summary</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate an overview of your expenses statistics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>summary</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2896,4 +2906,4 @@ application for users to discuss and discover. Hope that you have fun finding th
 </div>
 </div>
 </div>
-</div></div><div id="footnotes"><hr><div class="footnote" id="_footnote_1"><a href="#_footnoteref_1">1</a>. A parameter is like a field in your regular form. Just replace it and fill it up with anything appropriate. 😊</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 11:53:06 UTC</div></div></div></body></html>
+</div></div><div id="footnotes"><hr><div class="footnote" id="_footnote_1"><a href="#_footnoteref_1">1</a>. A parameter is like a field in your regular form. Just replace it and fill it up with anything appropriate. 😊</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 12:27:11 UTC</div></div></div></body></html>
