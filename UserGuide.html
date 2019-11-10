@@ -25,7 +25,7 @@
 </li>
 <li><a href="#main">4. Main</a>
 <ul class="sectlevel2">
-<li><a href="#go-to-command">4.1. Go To Command</a></li>
+<li><a href="#navigating-our-application-with">4.1. Navigating our application with</a></li>
 <li><a href="#exit-command">4.2. Exit Command</a></li>
 </ul>
 </li>
@@ -89,12 +89,15 @@
 </li>
 <li><a href="#diary">9. Diary</a>
 <ul class="sectlevel2">
-<li><a href="#parameters">9.1. Parameters</a></li>
-<li><a href="#add-command">9.2. Add Command</a></li>
-<li><a href="#delete-command">9.3. Delete Command</a></li>
-<li><a href="#list-command">9.4. List Command</a></li>
-<li><a href="#find-command">9.5. Find Command</a></li>
-<li><a href="#find-specific-command">9.6. Find Specific Command</a></li>
+<li><a href="#adding-diary-entries-to-your-diary-code-add-code">9.1. Adding diary entries to your diary <code>add</code></a></li>
+<li><a href="#deleting-diary-entries-from-your-diary-code-delete-code">9.2. Deleting diary entries from your diary <code>delete</code></a></li>
+<li><a href="#list-all-your-diary-entries-code-list-code">9.3. List all your diary entries <code>list</code></a></li>
+<li><a href="#find-diary-entries-code-find-code">9.4. Find diary entries <code>find</code></a></li>
+<li><a href="#find-specific-diary-entries-code-findspecific-code">9.5. Find specific diary entries <code>findSpecific</code></a></li>
+<li><a href="#private-personal-memories-code-private-code">9.6. Private personal memories <code>private</code></a></li>
+<li><a href="#unprivate-personal-memories-code-unprivate-code">9.7. Unprivate personal memories <code>unprivate</code></a></li>
+<li><a href="#keep-your-diary-protected-code-setdetails-code">9.8. Keep your diary protected <code>setDetails</code></a></li>
+<li><a href="#unlock-your-private-diary-entries-code-unlock-code">9.9. Unlock your private diary entries <code>unlock</code></a></li>
 </ul>
 </li>
 <li><a href="#achievements">10. Achievements</a>
@@ -145,7 +148,7 @@ we <strong>promise</strong> to make travel easy, with TravEzy.</p>
 <p>Are you a busy university student with a passion for travelling?</p>
 </li>
 <li>
-<p>Are your summers and winters filled with internships, projects and CCA activities?</p>
+<p>Are your summers and winters swamped with internships, projects and CCA activities?</p>
 </li>
 <li>
 <p>Do your numerous commitments get in the way of your travel plans?</p>
@@ -156,7 +159,11 @@ we <strong>promise</strong> to make travel easy, with TravEzy.</p>
 <p>IF you answered yes to the questions above, then <em>yes</em> it is. If not, it still is :)</p>
 </div>
 <div class="paragraph">
-<p>What is TravEzy? TravEzy is a desktop application with a command line interface (CLI) and is <strong>perfect</strong> for NUS students who love travelling as much as we do. What&#8217;s more, with a (CLI), you will be able to type in your commands much faster than similar applications which require you to keep using your mouse</p>
+<p>What is TravEzy? TravEzy is a desktop application with a command line
+interface (CLI) and is <strong>perfect</strong> for NUS students who love
+travelling as much as we do. What&#8217;s more, with a (CLI), you will be
+able to type in your commands much faster than similar applications which
+require you to keep using your mouse</p>
 </div>
 <div class="paragraph">
 <p>TravEzy is perfect for:</p>
@@ -164,19 +171,19 @@ we <strong>promise</strong> to make travel easy, with TravEzy.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Managing your busy calendar and finding the optimal period (<em>after your finals</em>) to take that much needed holiday!</p>
+<p>Managing your busy calendar and finding the optimal period <span class="line-through">during exams</span> after your finals to take that much needed holiday!</p>
 </li>
 <li>
-<p>Creating the ideal itinerary for your 3 day shopping trip to Bangkok :)</p>
+<p>Creating the ideal itinerary for your shopping trip to Bangkok :)</p>
 </li>
 <li>
 <p>Tracking your expenses during your trip, so that you have enough money left for the trip home</p>
 </li>
 <li>
-<p>Journaling in your travel diary and effortlessly looking at old entries to recall your exchange trip to Sweden.</p>
+<p>Writing about your amazing snorkeling trip to Tioman in your travel diary</p>
 </li>
 <li>
-<p>Calling old and new friends using the address book in TravEzy</p>
+<p>Looking up the details of the your new friend in your address book</p>
 </li>
 </ol>
 </div>
@@ -250,7 +257,7 @@ E.g. typing <strong>help</strong> and pressing <strong>&lt;Enter&gt;</strong> wi
 <div class="sect2">
 <h3 id="structure-of-this-document"><a class="link" href="#structure-of-this-document">3.1. Structure of this Document</a></h3>
 <div class="paragraph">
-<p>Nobody likes to read long documents, especially when you have something as exciting as TravEzy to use. So, we have organised this document such that you can easily look for what <strong>you</strong> need.</p>
+<p>There are <strong>alot</strong> of things that TravEzy can do. So, we have organised this document such that you can easily look for what <strong>you</strong> need.</p>
 </div>
 <div class="paragraph">
 <p>We&#8217;ve split up this guide into the different features of our application, namely:</p>
@@ -278,7 +285,8 @@ E.g. typing <strong>help</strong> and pressing <strong>&lt;Enter&gt;</strong> wi
 </ol>
 </div>
 <div class="paragraph">
-<p>In each of the above sections, you will be introduced to the <strong>interface</strong> of the feature, the <strong><em>parameters</em></strong> (which are just like those fields you fill up in a regular form📝) and the <strong>commands</strong> that will do the menial tasks for you.</p>
+<p>In each of the above sections, you will be introduced to the <strong>interface</strong> of the feature (how TravEzy looks), the <strong><em>parameters</em></strong> (which are just like those fields you
+fill up in a regular form📝) and the <strong>commands</strong> that will allow you to start <strong>travelling easy</strong>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -301,11 +309,11 @@ E.g. typing <strong>help</strong> and pressing <strong>&lt;Enter&gt;</strong> wi
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>italics</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An italicised text indicates that the text has a definition that is (rather) specific to the application. Do look out for the definitions of these words along the way. If not, please look at the glossary in section 13).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Italicised text indicates that the text has a definition that is specific to the application. Do look out for the definitions of these words along the way. If not, please look at the glossary in section 13).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>command</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A grey highlight means that you can type the words into <em>TravEzy</em> and it will start performing tasks for you</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A grey highlight means that you can type the words into <em>TravEzy</em> and it will start performing tasks to make travel easier for you</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MONTH</code></p></td>
@@ -321,11 +329,11 @@ E.g. typing <strong>help</strong> and pressing <strong>&lt;Enter&gt;</strong> wi
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">💡</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A light bulb indicates that what is to follow is a tip.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A light bulb indicates that the enclosed text is a tip.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">⚠️</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A warning sign indicates that what is to follow is important.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A warning sign indicates that enclosed text is important.</p></td>
 </tr>
 </tbody>
 </table>
@@ -347,7 +355,7 @@ financial tracker, achievements etc. You can also the exit the application from 
 and exit when you are already inside in a page such as itinerary.</p>
 </div>
 <div class="sect2">
-<h3 id="go-to-command"><a class="link" href="#go-to-command">4.1. Go To Command</a></h3>
+<h3 id="navigating-our-application-with"><a class="link" href="#navigating-our-application-with">4.1. Navigating our application with</a></h3>
 <div class="paragraph">
 <p>Trying to open up the achievements page? Use the <strong>Go To Command</strong>:</p>
 </div>
@@ -1396,6 +1404,7 @@ A person can have any number of tags (including 0)
 <h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">7.3. Listing all persons : <code>list</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of all persons in the address book.<br>
+Shows a list of all persons in the address book.<br>
 Format: <code>list</code></p>
 </div>
 </div>
@@ -2018,143 +2027,106 @@ All of the sorting is done in reversed order :)
 <div class="sectionbody">
 <div class="paragraph">
 <p>The sweetest part of any holiday is looking back at your fond memories. TravEzy&#8217;s
-Diary allows you to do just that!</p>
+Diary allows you to do just that! Here is our Diary!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryInterface.png" alt="DiaryInterface">
+</div>
 </div>
 <div class="paragraph">
-<p>Each entry in your diary has 4 key sections:</p>
+<p>In TravEzy, we have broken down your memories into 4 key parts, namely <em>Title</em>, <em>Date and Time</em>, <em>Place</em> and <em>Memory</em>.</p>
+</div>
+<div class="paragraph">
+<p>For example, here is a Diary Entry about our trip to Tioman</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Title</p>
+<p><em>Title</em> &#8594; First time Snorkeling</p>
 </li>
 <li>
-<p>Date</p>
+<p><em>Date and Time</em>  &#8594; 30/12/2019 0900</p>
 </li>
 <li>
-<p>Place</p>
+<p><em>Place</em> &#8594; Tioman Island</p>
 </li>
 <li>
-<p>Memory</p>
+<p><em>Memory</em> &#8594; Saw so may beautiful fish!</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>The title is the name of your entry, followed by the date of your memory, the place and finally
-a short description of the memory you want to keep. In the Diary, you will be able to add, delete,
-list and show your entries. There are also a few more special tasks that you can do with your diary.
+<p>In the Diary, you will be able to add, delete, list and show your entries. There are also a few more special tasks that you can do with your diary.
 Enjoy!</p>
 </div>
 <div class="sect2">
-<h3 id="parameters"><a class="link" href="#parameters">9.1. Parameters</a></h3>
+<h3 id="adding-diary-entries-to-your-diary-code-add-code"><a class="link" href="#adding-diary-entries-to-your-diary-code-add-code">9.1. Adding diary entries to your diary <code>add</code></a></h3>
 <div class="paragraph">
-<p>Let&#8217;s shed some light on the parameters and how exactly you can type them in to begin creating
-your diary entries:</p>
+<p>Trying to journal about your fishing trip? The Diary allows you to add entries and keep them alive in your desktop forever.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Title</strong> &#8594; <strong>COMPULSORY</strong> Each diary entry must have a title. This title can be anything! The corresponding <em>PREFIX</em> is <code>t/</code>. For example:</p>
-<div class="literalblock">
+<div class="paragraph">
+<p>Format: <code>add t/TITLE d/DATE TIME [p/PLACE] [m/MEMORY]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Lets take the example of our midnight fishing trip!</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Enter <code>add t/Fishing Trip d/12/12/2019 2300 p/Pulau Tekong m/Caught the biggest fish ever!</code></p>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre>t/My Birthday</pre>
+<img src="images/DiaryAddBefore.png" alt="DiaryAddBefore">
 </div>
 </div>
-</li>
-<li>
-<p><strong>Date</strong> &#8594; <strong>COMPULSORY</strong> Each diary entry must have a date and time. The <em>PREFIX</em> is <code>d/</code>. There is one way to input your date and time, but don&#8217;t worry! It&#8217;s really simple. You will have to enter it in this format:   <code>dd/MM/yyyy HHmm</code>. Let&#8217;s say your birthday was celebrated on 27th January, 1997 at 11.59PM. Then, you would input:</p>
-<div class="literalblock">
+<div class="paragraph">
+<p>Step 2: TravEzy will tell you if your <code>add</code> command was successful in the <em>Result Display</em></p>
+</div>
+<div class="paragraph">
+<p>Step 3: You can see you added entry in the <em>Diary List</em></p>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre>d/ 27/01/1997 2359</pre>
+<img src="images/DiaryAddAfter.png" alt="DiaryAddAfter">
 </div>
-</div>
-</li>
-<li>
-<p><strong>Place</strong>  &#8594; <strong>OPTIONAL</strong>. Now, you may not remember each and every place that you did
-something memorable, but if you do, you can add it into your entry with the <em>PREFIX</em> <code>p/</code>:</p>
-<div class="literalblock">
-<div class="content">
-<pre>p/Sweet Home Alabama</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Memory</strong>  &#8594; <strong>OPTIONAL</strong>. Not all memories can be expressed in words. If you can, just add a short note of your memory using the <em>PREFIX</em> <code>m/</code>:</p>
-<div class="literalblock">
-<div class="content">
-<pre>m/Rode a bike for the first time</pre>
-</div>
-</div>
-</li>
-</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-command"><a class="link" href="#add-command">9.2. Add Command</a></h3>
+<h3 id="deleting-diary-entries-from-your-diary-code-delete-code"><a class="link" href="#deleting-diary-entries-from-your-diary-code-delete-code">9.2. Deleting diary entries from your diary <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Trying to journal your trip to DisneyLand?
-<strong>Add an entry to your diary: <code>add</code></strong></p>
+<p>For some memories, it&#8217;s best to forget them ☹. The Diary can help you to get rid of unpleasant diary entries.</p>
 </div>
 <div class="paragraph">
-<p>Adds an entry to your diary, with the parameters: title (of the diary entry), date
-(of the event you are trying to journal) , place (of the event) and memory (more info
-about the event).</p>
-</div>
-<div class="paragraph">
-<p>The <em>Command Word</em> is <code>add</code> and the prefixes are <code>t/</code> for title, <code>d/</code>
-for date, <code>p/</code> for place and <code>m/</code> for memory.
-Only title and date are compulsory.</p>
-</div>
-<div class="paragraph">
-<p>Format: <code>add t/title d/date [p/place] [m/memory]</code></p>
-</div>
-<div class="paragraph">
-<p>Example: Lets take the example of my fishing trip! I can&#8217;t really remember where it was&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p><code>add t/Fishing Trip d/12/12/2019 m/Caught the biggest fish ever!</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="delete-command"><a class="link" href="#delete-command">9.3. Delete Command</a></h3>
-<div class="paragraph">
-<p>For some memories, it&#8217;s best to forget them :(</p>
-</div>
-<div class="paragraph">
-<p><strong>Delete an entry from your diary: <code>delete</code></strong></p>
-</div>
-<div class="paragraph">
-<p>Deletes an entry from your diary with the only parameter being the index of the entry you want to
-delete. The index must be an integer which is more than or equal to 1 and corresponds to ID of the
-entry you want to delete</p>
-</div>
-<div class="paragraph">
-<p>The <em>Command Word</em> is <code>delete</code> and the only parameter is the index.</p>
-</div>
-<div class="paragraph">
-<p>Format: <code>delete index</code></p>
+<p>Format: <code>delete INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Example: I lost my wallet at the amusement park in Genting, I don&#8217;t want to remember
 that trip ever again :(</p>
 </div>
 <div class="paragraph">
-<p><code>delete 5</code></p>
+<p>Step 1: Enter <code>delete 2</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryDeleteBefore.png" alt="DiaryDeleteBefore">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2: TravEzy will tell you if your <code>delete</code> command was successful in the <em>Result Display</em></p>
+</div>
+<div class="paragraph">
+<p>Step 3: You can see your updated <em>Diary List</em> without the horrible memory</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryDeleteAfter.png" alt="DiaryDeleteAfter">
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-command"><a class="link" href="#list-command">9.4. List Command</a></h3>
+<h3 id="list-all-your-diary-entries-code-list-code"><a class="link" href="#list-all-your-diary-entries-code-list-code">9.3. List all your diary entries <code>list</code></a></h3>
 <div class="paragraph">
-<p>What if you want to see all your memories in <em>ONE</em>, <em>CONTINUOUS</em> list? Just type <strong>List!</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>List all entries: <code>list</code></strong></p>
-</div>
-<div class="paragraph">
-<p>Lists all entries in your diary. There are no parameters.</p>
-</div>
-<div class="paragraph">
-<p>The <em>Command Word</em> is <code>list</code>.</p>
+<p>What if you want to see all your memories in <em>ONE</em>, <em>CONTINUOUS</em> list? The Diary allows you to see everything in on, convenient list!</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>list</code></p>
@@ -2163,58 +2135,237 @@ that trip ever again :(</p>
 <p>Example: I want to relive <strong>EVERYTHING</strong></p>
 </div>
 <div class="paragraph">
-<p><code>list</code></p>
+<p>Step 1: Enter <code>list</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryListBefore.png" alt="DiaryListBefore">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2: TravEzy will tell you if your <code>list</code> command was successful in the <em>Result Display</em></p>
+</div>
+<div class="paragraph">
+<p>Step 3: You can see all your entries in the <em>Diary List</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryListAfter.png" alt="DiaryListAfter">
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="find-command"><a class="link" href="#find-command">9.5. Find Command</a></h3>
+<h3 id="find-diary-entries-code-find-code"><a class="link" href="#find-diary-entries-code-find-code">9.4. Find diary entries <code>find</code></a></h3>
 <div class="paragraph">
 <p>"Hey, when did I go to Spain?" It can be hard to remember
-all the details of your trips. That&#8217;s why, this Diary allows you to <strong>Find</strong></p>
+all the details of your trips. That&#8217;s why, this Diary allows you to look through all your entries to find the ones you want!</p>
 </div>
 <div class="paragraph">
-<p><strong>Find entries containing a certain text: <code>find</code></strong></p>
+<p>Format: <code>find TARGET</code></p>
 </div>
 <div class="paragraph">
-<p>Finds all entries which contain your input text. There is one parameter, which
-is the text that you want to find.</p>
+<p>Example: I want to see what I wrote about the Rugby World Cup</p>
 </div>
 <div class="paragraph">
-<p>The <em>Command Word</em> is <code>find</code>.</p>
+<p>Step 1: Enter <code>find rugby</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryFindBefore.png" alt="DiaryFindBefore">
+</div>
 </div>
 <div class="paragraph">
-<p>Format: <code>list input</code></p>
+<p>Step 2: TravEzy will tell you if your <code>find</code> command was successful in the <em>Result Display</em></p>
 </div>
 <div class="paragraph">
-<p>Example: I want to find about my trip on 12/12/2019</p>
+<p>Step 3: You can see the matching entries in your <em>Diary List</em></p>
 </div>
-<div class="paragraph">
-<p><code>find 12/12/2019</code></p>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryFindAfter.png" alt="DiaryFindAfter">
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="find-specific-command"><a class="link" href="#find-specific-command">9.6. Find Specific Command</a></h3>
+<h3 id="find-specific-diary-entries-code-findspecific-code"><a class="link" href="#find-specific-diary-entries-code-findspecific-code">9.5. Find specific diary entries <code>findSpecific</code></a></h3>
 <div class="paragraph">
-<p>Let&#8217;s narrow down your search!</p>
+<p>Let&#8217;s narrow down your search! The diary allows you to look through specific sections of each entry to find the exact entry that you want!</p>
 </div>
 <div class="paragraph">
-<p><strong>Find entries containing a certain text in a specific field : <code>findSpecific</code></strong></p>
+<p>Format: <code>findSpecific [t/TITLE] [d/DATE TIME] [p/PLACE] [m/MEMORY]</code></p>
 </div>
 <div class="paragraph">
-<p>Finds all entries which contain your input text, in the highlighted field. There is one parameter, which
-is the text that you want to find, with the relevant <em>PREFIX</em>.</p>
+<p>Example: I know that I had a trip on the 12th of December 2019, but I cant remember what I did&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>The <em>Command Word</em> is <code>findSpecific</code>.</p>
+<p>Step 1: Enter <code>findSpecific d/12/12/2019</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryFindSpecificBefore.png" alt="DiaryFindSpecificBefore">
+</div>
 </div>
 <div class="paragraph">
-<p>Format: <code>list input</code></p>
+<p>Step 2: TravEzy will tell you if your <code>findSpecific</code> command was successful in the <em>Result Display</em></p>
 </div>
 <div class="paragraph">
-<p>Example: I want to find about my trip on 12/12/2019</p>
+<p>Step 3: You can see the specific matching entries in your <em>Diary List</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryFindSpecificAfter.png" alt="DiaryFindSpecificAfter">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="private-personal-memories-code-private-code"><a class="link" href="#private-personal-memories-code-private-code">9.6. Private personal memories <code>private</code></a></h3>
+<div class="paragraph">
+<p>There are some personal memories which are for our eyes only. The Diary can help you to private memories from prying eyes.</p>
 </div>
 <div class="paragraph">
-<p><code>find 12/12/2019</code></p>
+<p>Format: <code>private INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example: I had my first sip of wine today at the restaurant! I don&#8217;t want my mum to find out&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Enter <code>private  4</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryPrivateBefore.png" alt="DiaryPrivateBefore">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2: TravEzy will tell you if your <code>private</code> command was successful in the <em>Result Display</em></p>
+</div>
+<div class="paragraph">
+<p>Step 3: You can see your updated <em>Diary List</em>, after the memory has been hidden</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryPrivateAfter.png" alt="DiaryPrivateAfter">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unprivate-personal-memories-code-unprivate-code"><a class="link" href="#unprivate-personal-memories-code-unprivate-code">9.7. Unprivate personal memories <code>unprivate</code></a></h3>
+<div class="paragraph">
+<p>Once you know you are alone and away from prying eyes, you can look at your private memories safely. The Diary can help you to unprivate those memories.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>unprivate INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Ok!, I&#8217;m alone and I want to look at my private memories</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Enter <code>unprivate 4</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUnPrivateBefore.png" alt="DiaryUnPrivateBefore">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2: TravEzy will tell you if your <code>unprivate</code> command was successful in the <em>Result Display</em></p>
+</div>
+<div class="paragraph">
+<p>Step 3: You can see your updated <em>Diary List</em>, after the memory is visible again</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUnPrivateAfter.png" alt="DiaryUnPrivateAfter">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="keep-your-diary-protected-code-setdetails-code"><a class="link" href="#keep-your-diary-protected-code-setdetails-code">9.8. Keep your diary protected <code>setDetails</code></a></h3>
+<div class="paragraph">
+<p>You never know who may use your laptop when you&#8217;re away. The Diary can help you to password protect your memories to stop hackers from looking at your private memories.
+If you <code>setDetails</code>, you will not be able to use the <code>unprivate</code> command and will have to use the <code>unlock</code> command (See below)</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>setDetails user/USERNAME password/PASSWORD</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Better set a password to protect my memories against prying eyes</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Enter <code>setDetails user/youcanthackme password/youreallycanthackme</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiarySetDetailsBefore.png" alt="DiarySetDetailsBefore">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2: TravEzy will tell you if your <code>unprivate</code> command was successful in the <em>Result Display</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiarySetDetailsAfter.png" alt="DiarySetDetailsAfter">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 1: Lets say someone tries to hack you</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiarySetDetailsHack.png" alt="DiarySetDetailsHack">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 1: TravEzy will protect you if someone else tries to change your details</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiarySetDetailsHackFail.png" alt="DiarySetDetailsHackFail">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unlock-your-private-diary-entries-code-unlock-code"><a class="link" href="#unlock-your-private-diary-entries-code-unlock-code">9.9. Unlock your private diary entries <code>unlock</code></a></h3>
+<div class="paragraph">
+<p>With password protection, we want to ensure no one else can access our memories . The Diary can do this by ensuring only you can see the private memories.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>unlock INDEX user/USERNAME password/PASSWORD</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Time to look at all my private memories</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Enter <code>unlock 4 user/youcanthackme password/youreallycanthackme</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUnLockBefore.png" alt="DiaryUnLockBefore">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2: TravEzy will tell you if your <code>unlock</code> command was successful in the <em>Result Display</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUnLockAfter.png" alt="DiaryUnLockAfter">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 1: Lets say someone tries to hack you</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUnLockHackBefore.png" alt="DiaryUnLockHackBefore">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 1: TravEzy will protect you if someone else tries to change your details</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUnLockHackAfter.png" alt="DiaryUnLockHackAfter">
+</div>
 </div>
 </div>
 </div>
@@ -2617,4 +2768,4 @@ application for users to discuss and discover. Hope that you have fun finding th
 </div>
 </div>
 <h1 id="glossary" class="sect0"><a class="link" href="#glossary">Glossary</a></h1>
-</div><div id="footnotes"><hr><div class="footnote" id="_footnote_1"><a href="#_footnoteref_1">1</a>. Remember what this means? A parameter is merely like a field in your regular form. Just replace it and fill it up with anything appropriate. 😊</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 09:58:04 UTC</div></div></div></body></html>
+</div><div id="footnotes"><hr><div class="footnote" id="_footnote_1"><a href="#_footnoteref_1">1</a>. Remember what this means? A parameter is merely like a field in your regular form. Just replace it and fill it up with anything appropriate. 😊</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 10:08:38 UTC</div></div></div></body></html>
