@@ -180,353 +180,6 @@ that makes it easier for travellers to <strong>plan their trips</strong>, <stron
 <div class="paragraph">
 <p>This section provides a sample of the contributions I have made to the user guide. Specifically, the instructions for using <code>check</code> and <code>suggest</code>.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="calendar"><a class="link" href="#calendar">Calendar</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>It&#8217;s the end of the semester but there are still orientation camps, internships, and family commitments to attend to. However, after a long and tiring semester, the desire to unwind by travelling is just <strong>too strong</strong>. Sounds like you?</p>
-</div>
-<div class="paragraph">
-<p>Well, <em>TravEzy</em> has got you covered. Simply inform <em>TravEzy</em> of your schedule (your <em>commitments</em>, <em>school breaks</em>, public <em>holidays</em> and <em>trips</em>) and <em>TravEzy</em> will suggest periods of time when you can travel! Excited to find out more? Well&#8230;&#8203; Read on!</p>
-</div>
-<div class="sect2">
-<h3 id="interface"><a class="link" href="#interface">Interface</a></h3>
-<div class="paragraph">
-<p>This is how <em>TravEzy&#8217;s calendar</em> looks like:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/calendarInterfaceUG.png" alt="Calendar interface" width="800">
-</div>
-</div>
-<div class="paragraph">
-<p>&#160;</p>
-</div>
-<div class="paragraph">
-<p>To help you easily differentiate between various types of <em>events</em>, <em>TravEzy</em> has categorised the <em>events</em> into four types: <em>commitment</em>, <em>holiday</em>, <em>school break</em> and <em>trip</em>. Visually, <em>TravEzy</em> also uses different <em>labels</em> for the different types of <em>events</em>, as shown in the image above.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-The <em>labels</em> indicate the <strong>type</strong> of <em>event</em> you have for that particular day. It does not indicate the number of <em>events</em>.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="adding-an-event-to-your-calendar-code-add-code"><a class="link" href="#adding-an-event-to-your-calendar-code-add-code">Adding an event to your calendar: <code>add</code></a></h3>
-<div class="paragraph">
-<p>Whew! After reading so much, it is time to find out how you can add your <em>event</em> so that <em>TravEzy</em> can start suggesting when you can travel! 😊</p>
-</div>
-<div class="paragraph">
-<p><strong>Format:</strong><br>
-<code>add EVENT TYPE n/NAME d/START DAY [m/START MONTH] [y/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Examples:</strong></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>To add a <em>commitment</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>add commitment n/volunteer to tutor children d/2 m/Dec y/2019 D/5 M/Dec Y/2019</pre>
-</div>
-</div>
-</li>
-<li>
-<p>To add a <em>holiday</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>add holiday n/labour day d/1 m/May y/2020</pre>
-</div>
-</div>
-</li>
-<li>
-<p>To add a <em>school break</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>add school_break n/winter vacation d/8 m/Dec y/2019 D/12 M/Jan Y/2020</pre>
-</div>
-</div>
-</li>
-<li>
-<p>To add a <em>trip</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>add trip n/Bali 3D2N d/10 m/Dec y/2019 D/13 M/Dec Y/2019</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Step by step:</strong></p>
-</div>
-<div class="paragraph">
-<p>Step 1. Type <code>add commitment n/volunteer to tutor children d/2 m/Dec y/2019 D/5 M/Dec Y/2019</code> in the <em>command box</em> and press <em>Enter</em>.<br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/add1.png" alt="Add command" width="600">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 2. The <em>month and year panel</em> will change to "December" and the relevant view will be shown.</p>
-</div>
-<div class="paragraph">
-<p>Step 3. In the <em>month view panel</em>, you will be able to see the newly added <em>commitment labels</em>.</p>
-</div>
-<div class="paragraph">
-<p>Step 4. The <em>result box</em> will also display a message to indicate that your <em>commitment</em> has been successfully added.<br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/add2.png" alt="Add result" width="600">
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You do not have to specify the <code>END YEAR</code>, <code>END MONTH</code> and/or <code>END DAY</code> if they are the same as <code>START YEAR</code>, <code>START MONTH</code> and/or <code>START DAY</code>, respectively. This applies to the following commands as well.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-If you leave out the month and/or year, the current month and/or year will be used. This applies to the following commands as well.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deleting-an-event-from-your-calendar-code-delete-code"><a class="link" href="#deleting-an-event-from-your-calendar-code-delete-code">Deleting an event from your calendar: <code>delete</code></a></h3>
-<div class="paragraph">
-<p>Yes, we have all had that experience. We thought that next Friday is a public <em>holiday</em> even though it isn&#8217;t. However, you have added this <em>holiday</em> to <em>TravEzy</em>! 😧 What should you do now? Delete it!</p>
-</div>
-<div class="paragraph">
-<p>But how? Well, this is the section for you. 😀</p>
-</div>
-<div class="paragraph">
-<p><strong>Format:</strong><br>
-<code>delete EVENT TYPE n/NAME d/START DAY [m/START MONTH] [y/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Examples:</strong></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>To delete a <em>commitment</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>delete commitment n/volunteer to tutor children d/2 m/Dec y/2019 D/5 M/Dec Y/2019</pre>
-</div>
-</div>
-</li>
-<li>
-<p>To delete a <em>holiday</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>delete holiday n/labour day d/1 m/May y/2020</pre>
-</div>
-</div>
-</li>
-<li>
-<p>To delete a <em>school break</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>delete school_break n/winter vacation d/8 m/Dec y/2019 D/12 M/Jan Y/2020</pre>
-</div>
-</div>
-</li>
-<li>
-<p>To delete a <em>trip</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>delete trip n/Bali 3D2N d/10 m/Dec y/2019 D/13 M/Dec Y/2019</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Step by step:</strong></p>
-</div>
-<div class="paragraph">
-<p>Step 1. Type <code>delete commitment n/volunteer to tutor children d/2 m/Dec y/2019 D/5 M/Dec Y/2019</code> in the <em>command box</em> and press <em>Enter</em>.<br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/delete1.png" alt="Delete command" width="600">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 2. The <em>month and year panel</em> will change to "December" and the relevant view will be shown.</p>
-</div>
-<div class="paragraph">
-<p>Step 3. In the <em>month view panel</em>, you will be able to see that the <em>commitment labels</em> have been removed.</p>
-</div>
-<div class="paragraph">
-<p>Step 4. The <em>result box</em> will also display a message to indicate that your <em>commitment</em> has been successfully deleted.<br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/delete2.png" alt="Delete result" width="600">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="showing-your-schedule-for-the-month-code-show-code"><a class="link" href="#showing-your-schedule-for-the-month-code-show-code">Showing your schedule for the month: <code>show</code></a></h3>
-<div class="paragraph">
-<p>After adding and deleting your events, you can have an overview of them!</p>
-</div>
-<div class="paragraph">
-<p>How easy is it?</p>
-</div>
-<div class="paragraph">
-<p><strong>Format:</strong><br>
-<code>show m/MONTH [y/YEAR]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong><br></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>show m/Dec</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Step by step:</strong></p>
-</div>
-<div class="paragraph">
-<p>Step 1. Type <code>show m/Dec</code> in the <em>command box</em> and press <em>Enter</em>.<br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/show1.png" alt="Show command" width="600">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 2. The <em>month and year panel</em> and <em>month view panel</em> will change to show you your schedule for this December.</p>
-</div>
-<div class="paragraph">
-<p>Step 3. The <em>result box</em> will also display a message to indicate that <em>TravEzy</em> is currently showing you your schedule for December.<br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/show2.png" alt="Show result" width="600">
-</div>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Do remember that if you leave out the year (as we have done in this example), the current year will be used. This applies to the following commands as well.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="listing-your-events-code-list-code"><a class="link" href="#listing-your-events-code-list-code">Listing your events: <code>list</code></a></h3>
-<div class="paragraph">
-<p>If you would like to view your events as a list instead, this command would be helpful!</p>
-</div>
-<div class="paragraph">
-<p><strong>Format:</strong><br>
-<code>list [d/START DAY] [m/START MONTH] [y/START YEAR] [D/END DAY] [M/END MONTH] [Y/END YEAR]</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Examples:</strong></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>To list all <em>events</em>,</p>
-<div class="literalblock">
-<div class="content">
-<pre>list</pre>
-</div>
-</div>
-</li>
-<li>
-<p>To list all <em>events</em> that happen between 2 December 2019 to 10 December 2019,</p>
-<div class="literalblock">
-<div class="content">
-<pre>list d/2 m/Dec y/2019 D/10 M/Dec Y/2019</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Step by step:</strong></p>
-</div>
-<div class="paragraph">
-<p>Step 1. Type <code>list</code> in the <em>command box</em> and press <em>Enter</em>.<br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/list1.png" alt="List command" width="600">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 2. A pop-up will appear to show you all your <em>events</em>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="calendarScreenshots/list2.png" alt="List result" width="600">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 3. When you click at a region outside of the pop-up, the pop-up will disappear. How neat is that?</p>
-</div>
-</div>
 <div class="sect2">
 <h3 id="checking-your-availability-for-a-trip-code-check-code"><a class="link" href="#checking-your-availability-for-a-trip-code-check-code">Checking your availability for a trip: <code>check</code></a></h3>
 <div class="paragraph">
@@ -574,7 +227,7 @@ Do remember that if you leave out the year (as we have done in this example), th
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="calendarScreenshots/check1.png" alt="Check command" width="600">
+<img src="../images/calendarScreenshots/check1.png" alt="Check command" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -585,7 +238,7 @@ Do remember that if you leave out the year (as we have done in this example), th
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="calendarScreenshots/check2.png" alt="Check result" width="600">
+<img src="../images/calendarScreenshots/check2.png" alt="Check result" width="600">
 </div>
 </div>
 </div>
@@ -636,7 +289,7 @@ Do remember that if you leave out the year (as we have done in this example), th
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="calendarScreenshots/suggest1.png" alt="Suggest command" width="600">
+<img src="../images/calendarScreenshots/suggest1.png" alt="Suggest command" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -647,8 +300,11 @@ Do remember that if you leave out the year (as we have done in this example), th
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="calendarScreenshots/suggest2.png" alt="Suggest result" width="600">
+<img src="../images/calendarScreenshots/suggest2.png" alt="Suggest result" width="600">
 </div>
+</div>
+<div class="paragraph">
+<p>To view all my contributions to the user guide, please click <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/blob/master/docs/UserGuide.adoc#calendar">here</a>.</p>
 </div>
 </div>
 </div>
@@ -659,18 +315,8 @@ Do remember that if you leave out the year (as we have done in this example), th
 <div class="paragraph">
 <p>This section provides the contributions I have made to the developer guide.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
-</tr>
-</tbody>
-</table>
 <div class="sect2">
-<h3 id="calendar-2"><a class="link" href="#calendar-2">Calendar</a></h3>
+<h3 id="calendar"><a class="link" href="#calendar">Calendar</a></h3>
 <div class="paragraph">
 <p>The calendar feature in <em>TravEzy</em> allows users to easily plan when to travel. In this section, we will discuss how the calendar is designed and how the <em>add an event</em> feature is implemented.</p>
 </div>
@@ -684,9 +330,8 @@ Do remember that if you leave out the year (as we have done in this example), th
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="CalendarClassDiagram.png" alt="Calendar model class diagram">
+<img src="../images/CalendarClassDiagram.png" alt="Calendar model class diagram">
 </div>
-<div class="title">Figure 3. Calendar model class diagram</div>
 </div>
 <div class="paragraph">
 <p>As shown above, the <code>Calendar</code> instance interacts with the <code>EventManager</code> by querying it. With the help of <code>EventManger</code>, the <code>Calendar</code> instance does not need to deal with "lower-level" concerns (for instance, how <code>Event</code>s are managed internally).</p>
@@ -744,21 +389,8 @@ Do remember that if you leave out the year (as we have done in this example), th
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="CalendarSequenceDiagram.png" alt="Calendar model sequence diagram">
+<img src="../images/CalendarSequenceDiagram.png" alt="Calendar model sequence diagram">
 </div>
-<div class="title">Figure 4. Calendar model sequence diagram</div>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-To simplify the sequence diagram, the process of validating that <code>event</code> is in fact a <code>Holiday</code> instance has been left out.
-</td>
-</tr>
-</table>
 </div>
 </div>
 <div class="sect3">
@@ -771,9 +403,8 @@ To simplify the sequence diagram, the process of validating that <code>event</co
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="CalendarActivityDiagram.png" alt="Calendar activity diagram">
+<img src="../images/CalendarActivityDiagram.png" alt="Calendar activity diagram">
 </div>
-<div class="title">Figure 5. Calendar activity diagram</div>
 </div>
 <div class="paragraph">
 <p>From the diagram, it can be seen that there are three major reasons that can interrupt the user request:</p>
@@ -881,4 +512,4 @@ To simplify the sequence diagram, the process of validating that <code>event</co
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 17:26:36 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 22:58:56 UTC</div></div></div></body></html>
