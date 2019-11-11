@@ -219,7 +219,7 @@ The following class plays an important role at the architecture level:</p>
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-The Calendar and Itinerary window work in tandem with each other. Due to their dependency, modification to one of the feeature might result in the the other feature breaking.
+The Calendar and Itinerary window work in tandem with each other. Due to their dependency, modification to one of the feature might result in the the other feature breaking.
 </td>
 </tr>
 </table>
@@ -1042,7 +1042,7 @@ Each time a new <code>Country</code> is selected from the <em>Countries dropdown
 <div class="sect2">
 <h3 id="diary"><a class="link" href="#diary">4.4. Diary</a></h3>
 <div class="sect3">
-<h4 id="architecture"><a class="link" href="#architecture">4.4.1. Architecture</a></h4>
+<h4 id="architecture-of-diary"><a class="link" href="#architecture-of-diary">4.4.1. Architecture of Diary</a></h4>
 <div class="imageblock">
 <div class="content">
 <img src="images/DiaryArchitectureDiagram.png" alt="DiaryArchitectureDiagram">
@@ -1050,47 +1050,194 @@ Each time a new <code>Country</code> is selected from the <em>Countries dropdown
 <div class="title">Figure 14. Architecture Diagram for Diary Feature</div>
 </div>
 <div class="paragraph">
-<p>The architecture diagram above explains the high-level design and implementation of the Diary Feature within TravEzy.</p>
+<p>The <strong><em>Architecture Diagram</em></strong> above explains the high -level design of the <em>Diary</em> within <em>TravEzy</em>. Below, there is a brief explanation of each component.
+The actual <em>Diary</em> is represented as a <code>DiaryModel</code> in the diagram. This <code>DiaryModel</code> has the basic functionalities of a real <em>Diary</em>.
+It can store multiple entries which can then be manipulated by the user. The exact functionalities are described in more detail in the <strong><em>Model</em></strong> section below.</p>
 </div>
 <div class="paragraph">
-<p><code>Diary Model</code> has multiple classes which form the basis of a Diary.
-This implementation starts at the root object, which is a <code>DiaryEntry</code>. These entries
-are stored within a <code>DiaryList</code>, which are then encapsulated within a <code>DiaryBook</code></p>
+<p><code>GUI</code> represents the Graphical User Interface through which users input their commands.</p>
 </div>
 <div class="paragraph">
-<p>After receiving user input from <code>DiaryUi</code>, <code>DiaryParser</code>
-changes the input to a executable format, and <code>DiaryCommand</code> allows for execution of the user input.</p>
+<p><code>DiaryLogic</code> is the main executor of Diary. It is composed of the <code>Logic</code>, <code>DiaryParser</code> and <code>DiaryCommand</code>. After receiving input from the <code>GUI</code>, logic triggers
+the <code>DiaryParser</code> to <code>Parse</code> the input and output the matching <code>Command</code></p>
+</div>
+<div class="paragraph">
+<p><code>DiaryModel</code>. As mentioned above, this encapsulates a <em>Diary</em> and hence, the <code>Command</code> from <code>DiaryCommand</code> is implemented on this <code>DiaryModel</code></p>
+</div>
+<div class="paragraph">
+<p><code>Storage</code>. After the <code>Command</code>  has been executed, logic then stores the updated <code>DiaryModel`in `Storage</code>. Data is written to and read from the hard drive using <code>Storage</code> .</p>
+</div>
+<div class="paragraph">
+<p><code>Commons</code>. <code>DiaryParser</code> and <code>GUI</code> are derived from classes in <code>Commons</code>. Diary Feature also utilises the <code>Log Center</code></p>
+</div>
+<div class="paragraph">
+<p><code>JUnit Test</code> contains the testing classes for the <em>Diary</em>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="ui-component"><a class="link" href="#ui-component">4.4.2. UI component</a></h4>
+<h4 id="structure-of-diary-model"><a class="link" href="#structure-of-diary-model">4.4.2. Structure of Diary Model</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/DiaryUI.png" alt="DiaryUI">
+<img src="images/DiaryLogicClassDiagram.png" alt="DiaryLogicClassDiagram">
 </div>
-<div class="title">Figure 15. Structure of DiaryUi</div>
-</div>
-<div class="paragraph">
-<p><code>DiaryUI</code>, which is represented above, consists of  <code>DiaryPage</code>, which encapsulates all the smaller Ui components.</p>
+<div class="title">Figure 15. Class Diagram for the Diary Model</div>
 </div>
 <div class="paragraph">
-<p><strong>The main components are the:</strong></p>
+<p>The above diagram is a Class Diagram of the <code>DiaryModel</code></p>
+</div>
+<div class="paragraph">
+<p><code>DiaryModel</code> Encapsulates the <em>Diary</em> and prevents users from tampering with the underlying structure of the <em>Diary</em>.
+It contains the <code>DiaryBook</code>, which is the actual implementation of <em>Diary</em>.</p>
+</div>
+<div class="paragraph">
+<p><code>DiaryBook</code> is the actual implementation of the <em>Diary</em>.</p>
+</div>
+<div class="paragraph">
+<p>It contains:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>CommandBox</code> &#8594; Captures user input</p>
+<p><code>DiaryList</code>, which is a collection of all the <code>DiaryEntries</code> in a list form</p>
 </li>
 <li>
-<p><code>ResultDisplay</code> &#8594; Returns the output after the user input has passed through the DiaryCommand</p>
+<p><code>Observable List</code> , which exposes an unmodifiable <code>ObservableList&lt;DiaryEntry&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates upon any changes.</p>
 </li>
 <li>
-<p><code>DiaryListPanel</code> &#8594; Shows an easily readable version of the current DiaryBook</p>
+<p><code>Details</code>, which is a component of the <em>Diary</em> to keep <code>DiaryEntries</code> private using username and password protection</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>All of these components inherit from the abstract <code>UiPart</code> Class</p>
+<p>This <code>DiaryBook</code> has the relevant methods to allow users to add, delete, find general and specific <code>DiaryEntries</code>, private and unprivate their <code>DiaryEntries</code> and also password protect their <code>DiaryEntries</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>DiaryEntries</code>: This is the base component of the <em>Diary</em>, and encapsulates a single entry into a diary.</p>
+</div>
+<div class="paragraph">
+<p>It contains:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Title</code>, which refers to the title of the <code>DiaryEntry</code></p>
+</li>
+<li>
+<p><code>Date</code>, which refers to the date and time of the <code>DiaryEntry</code></p>
+</li>
+<li>
+<p><code>Place</code>, which refers to the place of the <code>DiaryEntry</code></p>
+</li>
+<li>
+<p><code>Memory</code>, which refers to the memory of the <code>DiaryEntry</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sequence-of-find-command"><a class="link" href="#sequence-of-find-command">4.4.3. Sequence of Find Command</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryFindCommandSequenceDiagram.png" alt="DiaryFindCommandSequenceDiagram">
+</div>
+<div class="title">Figure 16. Sequence Diagram for the Find Command</div>
+</div>
+<div class="paragraph">
+<p>Above, we have the sequence diagram for the <code>FindCommand</code> in the <em>Diary</em>. In this case, we have taken the scenario of finding any <code>DiaryEntries</code> which contain the word "temp".</p>
+</div>
+<div class="paragraph">
+<p>Process:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Upon receiving the instruction from <code>Logic</code> to parse the input <code>find temp</code>, the <code>DiaryBookParser</code> begins parsing the input to match it (based on the <em>Command Word</em>) to the appropriate <em>Parser</em></p>
+</li>
+<li>
+<p>In this case, given that the the <em>Command Word</em> is <code>find</code> the appropriate <em>Parser</em> is the <code>FindCommandParser</code>, which is created and then begins to <code>parse("temp")</code></p>
+</li>
+<li>
+<p>This in turn creates a new <code>FindPredicate</code>, based on the input <code>temp</code>. This <code>FindPredicate</code> will be used to filter through the <code>DiaryModel</code> to get the matching <code>DiaryEntries</code></p>
+</li>
+<li>
+<p>With the <code>FindPredicate</code>, a new <code>FindCommand</code> is created which is returned to logic and executed</p>
+</li>
+<li>
+<p>This execution leads to the <code>find(temp)</code> command being executed on the <code>DiaryModel</code>, which returns the updated <code>DiaryModel</code> with the matching <code>DiaryEntries</code></p>
+</li>
+<li>
+<p>This model is then returned to the user in the form of the <code>Command Result</code>, and is visible on the GUI in the form of a list of the matching <code>DiaryEntries</code>.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for FindCommandParser should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="logic-of-unprivate-and-unlock-commands"><a class="link" href="#logic-of-unprivate-and-unlock-commands">4.4.4. Logic of Unprivate and Unlock  Commands</a></h4>
+<div class="paragraph">
+<p>Given the similar function of the 2 commands, <code>unprivate</code> and <code>unlock</code>, there is a more detailed explanation of the differences between the commands below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUnPrivateActivityDiagram.png" alt="DiaryUnPrivateActivityDiagram">
+</div>
+<div class="title">Figure 17. Activity Diagram for the Unprivate Command</div>
+</div>
+<div class="paragraph">
+<p>Above, is the logical flow for the Unprivate Command. In brief, it allows a user to unprivate any private entry <strong>IF</strong> there are no <code>Details</code> set. As a result, the command can be input like this:</p>
+</div>
+<div class="paragraph">
+<p><code>unprivate 1</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>1</code> is the index of the Diary Entry which is to be unprivated
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DiaryUnLockActivityDiagram.png" alt="DiaryUnLockActivityDiagram">
+</div>
+<div class="title">Figure 18. Activity Diagram for the UnLock Command</div>
+</div>
+<div class="paragraph">
+<p>Above, is the logical flow for the Unlock Command. In brief, it allows a user to unlock any private entry <strong>IF</strong> there are <code>Details</code> and the <code>Details</code> input by the user match the original <code>Details</code> set by the user.As a result, the command can be input like this:</p>
+</div>
+<div class="paragraph">
+<p><code>unlock 1 user/username password/password</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>1</code> is the index of the Diary Entry which is to be unlocked and <code>user/username</code> and <code>password/password</code> are the relevant Details.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In summary, the <code>unlock</code> command is only to be used when the user has already set <code>Details</code>. Otherwise, the user has to use the <code>unprivate</code> command to see private <code>DiaryEntries</code></p>
 </div>
 </div>
 </div>
@@ -1102,7 +1249,7 @@ changes the input to a executable format, and <code>DiaryCommand</code> allows f
 <div class="content">
 <img src="images/AddressLogicClassDiagram.png" alt="AddressLogicClassDiagram">
 </div>
-<div class="title">Figure 16. Structure of the Logic Component</div>
+<div class="title">Figure 19. Structure of the Logic Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
@@ -1134,7 +1281,7 @@ changes the input to a executable format, and <code>DiaryCommand</code> allows f
 <div class="content">
 <img src="images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
 </div>
-<div class="title">Figure 17. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+<div class="title">Figure 20. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1155,7 +1302,7 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 <div class="content">
 <img src="images/AddressModelClassDiagram.png" alt="AddressModelClassDiagram">
 </div>
-<div class="title">Figure 18. Structure of the Model Component</div>
+<div class="title">Figure 21. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/address/model/AddressBookModel.java"><code>AddressBookModel.java</code></a></p>
@@ -1200,7 +1347,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="content">
 <img src="images/AchievementsLogicClassDiagram.png" alt="AchievementsLogicClassDiagram">
 </div>
-<div class="title">Figure 19. AchievementsLogic Diagram of the Achievements feature</div>
+<div class="title">Figure 22. AchievementsLogic Diagram of the Achievements feature</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
@@ -1251,7 +1398,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="content">
 <img src="images/AchievementsPage.png" alt="AchievementsPage">
 </div>
-<div class="title">Figure 20. Sequence Diagram of the Statistics Model</div>
+<div class="title">Figure 23. Sequence Diagram of the Statistics Model</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1272,7 +1419,7 @@ The <code>StatisticsModel</code> is lazily created. Hence, the statistics will o
 <div class="content">
 <img src="images/AchievementsModelClassDiagram.png" alt="AchievementsModelClassDiagram">
 </div>
-<div class="title">Figure 21. StatisticsModel Diagram of the Achievements feature</div>
+<div class="title">Figure 24. StatisticsModel Diagram of the Achievements feature</div>
 </div>
 <div class="paragraph">
 <p>The <code>StatisticsModel</code>,</p>
@@ -1911,4 +2058,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 09:01:42 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 09:27:27 UTC</div></div></div></body></html>
