@@ -1,64 +1,22 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>TravEzy - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Setting up</title><link rel="stylesheet" href="./gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">TravEzy</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S1-CS2103T-T17-2/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>TravEzy - Developer Guide</h1></div><div id="content"><div id="preamble">
-<div class="sectionbody">
+<link rel="stylesheet" href="./coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">TravEzy</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S1-CS2103T-T17-2/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"></div><div id="content"><div class="paragraph">
+<p>TravEzy - Developer Guide
+:site-section: DeveloperGuide
+:toc:
+:toc-title:
+:toc-placement: preamble
+:sectnums:
+:imagesDir: images
+:stylesDir: stylesheets
+:xrefstyle: full
+:repoURL: <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master" class="bare">https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master</a></p>
+</div>
 <div class="paragraph">
 <p>By: <code>Team T17-2</code>      Since: <code>Aug 2019</code>      Licence: <code>MIT</code></p>
 </div>
-</div>
-<div id="toc" class="toc">
-<div id="toctitle"></div>
-<ul class="sectlevel1">
-<li><a href="#setting-up">1. Setting up</a></li>
-<li><a href="#design">2. Design</a>
-<ul class="sectlevel2">
-<li><a href="#Design-Architecture">2.1. TravEzy Architecture</a></li>
-<li><a href="#Design-Ui">2.2. UI component</a></li>
-<li><a href="#Design-Logic">2.3. Logic component</a></li>
-<li><a href="#Design-Model">2.4. Model component</a></li>
-<li><a href="#Design-Storage">2.5. Storage component</a></li>
-<li><a href="#Design-Commons">2.6. Common classes</a></li>
-</ul>
-</li>
-<li><a href="#implementation">3. Implementation</a>
-<ul class="sectlevel2">
-<li><a href="#proposed-undo-redo-feature">3.1. [Proposed] Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.3. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.4. Configuration</a></li>
-</ul>
-</li>
-<li><a href="#features">4. Features</a>
-<ul class="sectlevel2">
-<li><a href="#calendar">4.1. Calendar</a></li>
-<li><a href="#itinerary">4.2. Itinerary</a></li>
-<li><a href="#financial-tracker">4.3. Financial Tracker</a></li>
-<li><a href="#diary">4.4. Diary</a></li>
-<li><a href="#address-book">4.5. Address Book</a></li>
-<li><a href="#achievements">4.6. Achievements</a></li>
-</ul>
-</li>
-<li><a href="#documentation">5. Documentation</a></li>
-<li><a href="#testing">6. Testing</a></li>
-<li><a href="#dev-ops">7. Dev Ops</a></li>
-<li><a href="#product-scope">Appendix A: Product Scope</a></li>
-<li><a href="#user-stories">Appendix B: User Stories</a></li>
-<li><a href="#use-cases">Appendix C: Use Cases</a></li>
-<li><a href="#non-functional-requirements">Appendix D: Non Functional Requirements</a></li>
-<li><a href="#glossary">Appendix E: Glossary</a></li>
-<li><a href="#product-survey">Appendix F: Product Survey</a></li>
-<li><a href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a>
-<ul class="sectlevel2">
-<li><a href="#launch-and-shutdown">G.1. Launch and Shutdown</a></li>
-<li><a href="#deleting-a-person">G.2. Deleting a person</a></li>
-<li><a href="#saving-data">G.3. Saving data</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
 <div class="sect1">
-<h2 id="setting-up"><a class="link" href="#setting-up">1. Setting up</a></h2>
+<h2 id="setting-up"><a class="link" href="#setting-up">Setting up</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Refer to the guide <a href="SettingUp.html">here</a>.</p>
@@ -66,13 +24,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="design"><a class="link" href="#design">2. Design</a></h2>
+<h2 id="design"><a class="link" href="#design">Design</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="Design-Architecture"><a class="link" href="#Design-Architecture">2.1. TravEzy Architecture</a></h3>
+<h3 id="Design-Architecture"><a class="link" href="#Design-Architecture">TravEzy Architecture</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/TravezyArchitectureDiagram.png" alt="TravezyArchitectureDiagram">
+<img src="TravezyArchitectureDiagram.png" alt="TravezyArchitectureDiagram">
 </div>
 <div class="title">Figure 1. Travezy Architecture Diagram</div>
 </div>
@@ -92,7 +50,7 @@ TravEzy is mainly a Common Line Interface (CLI) desktop application. Hence, user
 </table>
 </div>
 <div class="paragraph">
-<p><code>Main</code> has two classes called <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/Main.java"><code>Main</code></a> and <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/MainApp.java"><code>MainApp</code></a>. It is responsible for,</p>
+<p><code>Main</code> has two classes called <a href="{repoURL}/src/main/java/seedu/address/Main.java"><code>Main</code></a> and <a href="{repoURL}/src/main/java/seedu/address/MainApp.java"><code>MainApp</code></a>. It is responsible for,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -152,7 +110,7 @@ The following class plays an important role at the architecture level:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/BetterLogicClassDiagram.png" alt="BetterLogicClassDiagram">
+<img src="BetterLogicClassDiagram.png" alt="BetterLogicClassDiagram">
 </div>
 <div class="title">Figure 2. Class Diagram of the Logic Component</div>
 </div>
@@ -162,7 +120,7 @@ The following class plays an important role at the architecture level:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ArchitectureSequenceDiagram.png" alt="ArchitectureSequenceDiagram">
+<img src="ArchitectureSequenceDiagram.png" alt="ArchitectureSequenceDiagram">
 </div>
 <div class="title">Figure 3. Component interactions for <code>delete 1</code> command</div>
 </div>
@@ -171,21 +129,21 @@ The following class plays an important role at the architecture level:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Ui"><a class="link" href="#Design-Ui">2.2. UI component</a></h3>
+<h3 id="Design-Ui"><a class="link" href="#Design-Ui">UI component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/UiClassDiagram.png" alt="UiClassDiagram">
+<img src="UiClassDiagram.png" alt="UiClassDiagram">
 </div>
 <div class="title">Figure 4. Structure of the UI Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
+<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="{repoURL}/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="{repoURL}/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component extends out to many different pages in TravEzy which represents the features that it has. This includes:</p>
@@ -248,16 +206,16 @@ The Calendar and Itinerary window work in tandem with each other. Due to their d
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Logic"><a class="link" href="#Design-Logic">2.3. Logic component</a></h3>
+<h3 id="Design-Logic"><a class="link" href="#Design-Logic">Logic component</a></h3>
 <div id="fig-LogicClassDiagram" class="imageblock">
 <div class="content">
-<img src="images/BetterLogicClassDiagram.png" alt="BetterLogicClassDiagram">
+<img src="BetterLogicClassDiagram.png" alt="BetterLogicClassDiagram">
 </div>
 <div class="title">Figure 5. Structure of the Logic Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
-<a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
+<a href="{repoURL}/src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -286,7 +244,7 @@ The Calendar and Itinerary window work in tandem with each other. Due to their d
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
+<img src="DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
 </div>
 <div class="title">Figure 6. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
 </div>
@@ -304,15 +262,15 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Model"><a class="link" href="#Design-Model">2.4. Model component</a></h3>
+<h3 id="Design-Model"><a class="link" href="#Design-Model">Model component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/BetterModelClassDiagram.png" alt="BetterModelClassDiagram">
+<img src="BetterModelClassDiagram.png" alt="BetterModelClassDiagram">
 </div>
 <div class="title">Figure 7. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>Model</code>,</p>
@@ -348,22 +306,22 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 <td class="content">
 As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book</code>, which <code>Person</code> can reference. This would allow <code>Address Book</code> to only require one <code>Tag</code> object per unique <code>Tag</code>, instead of each <code>Person</code> needing their own <code>Tag</code> object. An example of how such a model may look like is given below.<br>
 <br>
-<span class="image"><img src="images/BetterAddressBookModelClassDiagram.png" alt="BetterAddressBookModelClassDiagram"></span>
+<span class="image"><img src="BetterAddressBookModelClassDiagram.png" alt="BetterAddressBookModelClassDiagram"></span>
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Storage"><a class="link" href="#Design-Storage">2.5. Storage component</a></h3>
+<h3 id="Design-Storage"><a class="link" href="#Design-Storage">Storage component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/StorageClassDiagram.png" alt="StorageClassDiagram">
+<img src="StorageClassDiagram.png" alt="StorageClassDiagram">
 </div>
 <div class="title">Figure 8. Structure of the Storage Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>Storage</code> component,</p>
@@ -380,7 +338,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.6. Common classes</a></h3>
+<h3 id="Design-Commons"><a class="link" href="#Design-Commons">Common classes</a></h3>
 <div class="paragraph">
 <p>Classes used by multiple components are in the <code>seedu.addressbook.commons</code> package.</p>
 </div>
@@ -388,15 +346,15 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 <div class="sect1">
-<h2 id="implementation"><a class="link" href="#implementation">3. Implementation</a></h2>
+<h2 id="implementation"><a class="link" href="#implementation">Implementation</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.1. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">[Proposed] Undo/Redo feature</a></h3>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.1.1. Proposed Implementation</a></h4>
+<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">Proposed Implementation</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by <code>VersionedAddressBook</code>.
 It extends <code>AddressBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
@@ -426,7 +384,7 @@ Additionally, it implements the following operations:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState0.png" alt="UndoRedoState0">
+<img src="UndoRedoState0.png" alt="UndoRedoState0">
 </div>
 </div>
 <div class="paragraph">
@@ -434,7 +392,7 @@ Additionally, it implements the following operations:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState1.png" alt="UndoRedoState1">
+<img src="UndoRedoState1.png" alt="UndoRedoState1">
 </div>
 </div>
 <div class="paragraph">
@@ -442,7 +400,7 @@ Additionally, it implements the following operations:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState2.png" alt="UndoRedoState2">
+<img src="UndoRedoState2.png" alt="UndoRedoState2">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -462,7 +420,7 @@ If a command fails its execution, it will not call <code>Model#commitAddressBook
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState3.png" alt="UndoRedoState3">
+<img src="UndoRedoState3.png" alt="UndoRedoState3">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -482,7 +440,7 @@ If the <code>currentStatePointer</code> is at index 0, pointing to the initial a
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoSequenceDiagram.png" alt="UndoSequenceDiagram">
+<img src="UndoSequenceDiagram.png" alt="UndoSequenceDiagram">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -517,7 +475,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState4.png" alt="UndoRedoState4">
+<img src="UndoRedoState4.png" alt="UndoRedoState4">
 </div>
 </div>
 <div class="paragraph">
@@ -525,7 +483,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState5.png" alt="UndoRedoState5">
+<img src="UndoRedoState5.png" alt="UndoRedoState5">
 </div>
 </div>
 <div class="paragraph">
@@ -533,12 +491,12 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/CommitActivityDiagram.png" alt="CommitActivityDiagram">
+<img src="CommitActivityDiagram.png" alt="CommitActivityDiagram">
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
 <div class="ulist">
@@ -608,20 +566,20 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">[Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.3. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.4, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Configuration</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -652,7 +610,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.4. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -660,47 +618,225 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect1">
-<h2 id="features"><a class="link" href="#features">4. Features</a></h2>
+<h2 id="features"><a class="link" href="#features">Features</a></h2>
 <div class="sectionbody">
 <div id="Features-Calendar" class="paragraph">
 <p>TravEzy has several features which are listed below.
 Each of these features have their own design and implementation logic.</p>
 </div>
 <div class="sect2">
-<h3 id="calendar"><a class="link" href="#calendar">4.1. Calendar</a></h3>
+<h3 id="calendar"><a class="link" href="#calendar">Calendar</a></h3>
 <div class="paragraph">
-<p>The calendar feature in TravEzy allows users to easily find a free duration of time to travel.</p>
+<p>The calendar feature in <em>TravEzy</em> allows users to easily plan when to travel. In this section, we will discuss how the calendar is designed and how the <em>add an event</em> feature is implemented.</p>
+</div>
+<div class="sect3">
+<h4 id="calendar-model"><a class="link" href="#calendar-model">Calendar Model</a></h4>
+<div class="paragraph">
+<p>This section discusses some design details of the calendar model.</p>
 </div>
 <div class="paragraph">
-<p><strong>Calendar Class Diagram:</strong>+</p>
+<p>The following diagram illustrates the class diagram of the most important part of the calendar model. Specifically, it focuses on the <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/calendar/model/event"><code>Event</code> component</a>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/CalendarClassDiagram.png" alt="CalendarClassDiagram">
+<img src="CalendarClassDiagram.png" alt="Calendar model class diagram">
 </div>
+<div class="title">Figure 9. Calendar model class diagram</div>
 </div>
 <div class="paragraph">
-<p>The above diagram shows that <code>Calendar</code> stores information about the state of the user&#8217;s calendar, including information about the user&#8217;s current view as indicated by <code>currentViewOnlyMonth</code>.</p>
+<p>As shown above, the <code>Calendar</code> instance interacts with the <code>EventManager</code> by querying it. With the help of <code>EventManger</code>, the <code>Calendar</code> instance does not need to deal with "lower-level" concerns (for instance, how <code>Event</code>s are managed internally).</p>
+</div>
+<div class="paragraph">
+<p>Every <code>EventManager</code> can access <code>Event</code>s that have been added. These <code>Event</code>s can be <code>Commitment</code>, <code>Trip</code>, <code>SchoolBreak</code> or <code>Holiday</code> instances. If other instances need a read-only access to <code>EventManager</code>, they can obtain it using the observer <code>EventViewer</code> which is implemented by <code>EventManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>In addition, every <code>EventManager</code> depends on <code>EventQuery</code> to perform queries.</p>
+</div>
+<div class="paragraph">
+<p>More information about this package is provided below.</p>
+</div>
+<div class="paragraph">
+<p><strong>What is an <code>Event</code>?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>represents the event specified by the user: it is made up of the relevant <code>Name</code>, <code>EventType</code> and <code>Date</code> (which is found in the <code>Date</code> package) instances</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>What is an <code>EventQuery</code>?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>similar to an <code>Event</code> but is only made up of <code>Date</code></p>
+</li>
+<li>
+<p>is used to query the <code>IntervalSearchTree</code> (from the <code>Util</code> package) to obtain events that are relevant to the user&#8217;s request more efficiently.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>How do classes in <code>Util</code> interact with those from <code>Event</code>?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Util</code> contains important classes and interfaces like <code>DateUtil</code>, <code>IntervalSearchTree</code> and <code>Interval</code></p>
+</li>
+<li>
+<p><code>DateUtil</code> helps <code>EventManager</code> to deal with manipulation of <code>Date</code>-related operations</p>
+</li>
+<li>
+<p><code>IntervalSearchTree</code> makes certain user-requested operations more efficient computationally. However, to facilitate the use of <code>IntervalSearchTree</code>, <code>Event</code> and <code>EventType</code> need to inherit from <code>Interval</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To find out how <code>Calendar</code>, <code>EventManager</code> and <code>IntervalSearchTree</code> described above interact, consider the following sequence diagram. It describes how these classes work together when the user tries to add a holiday, which is represented by <code>event</code> (a <code>Holiday</code> instance) in the diagram below.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ShowSequenceDiagram.png" alt="ShowSequenceDiagram">
+<img src="CalendarSequenceDiagram.png" alt="Calendar model sequence diagram">
 </div>
+<div class="title">Figure 10. Calendar model sequence diagram</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+To simplify the sequence diagram, the process of validating that <code>event</code> is in fact a <code>Holiday</code> instance has been left out.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="add-an-event-feature"><a class="link" href="#add-an-event-feature">Add An Event Feature</a></h4>
+<div class="paragraph">
+<p>This section provides some details about how the <em>add an event</em> feature is implemented.</p>
 </div>
 <div class="paragraph">
-<p>The above sequence diagram shows the sequence of events that take place when a user calls <code>show</code> command. Do note that the above sequence of events are very similar to those for the other commands which extend <code>Command</code> class.</p>
+<p>The following diagram illustrates the course of action(s) that is(are) possibly taken when a user tries to add a new trip to his/her calendar.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/SmartSuggestActivityDiagram.png" alt="SmartSuggestActivityDiagram">
+<img src="CalendarActivityDiagram.png" alt="Calendar activity diagram">
 </div>
+<div class="title">Figure 11. Calendar activity diagram</div>
 </div>
 <div class="paragraph">
-<p>The above activity diagram shows how <code>smartSuggest</code> command works.</p>
+<p>From the diagram, it can be seen that there are three major reasons that can interrupt the user request:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the user entered an invalid input (for instance, by typing an invalid date)</p>
+</li>
+<li>
+<p>the user tried to add a duplicate event</p>
+</li>
+<li>
+<p>the user tried to add an event that may result in conflicts in his/her schedule</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h4>
+<div class="paragraph">
+<p>This section details a few design considerations I made before deciding how I would like to implement the functionalities of this calendar.</p>
+</div>
+<table class="tableblock frame-none grid-rows spread">
+<caption class="title">Table 1. Design considerations for calendar</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Aspect</th>
+<th class="tableblock halign-left valign-top">Alternative 1</th>
+<th class="tableblock halign-left valign-top">Alternative 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data structure to support <code>suggest</code> and <code>check</code> commands</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>The calendar simply stores all events in a list.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement</p>
+</li>
+<li>
+<p>Cons: Possibly slower performance, especially when users have many events in their calendars</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>The calendar stores the events in an interval search tree.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: On average, <code>suggest</code> and <code>check</code> commands can be performed more quickly, especially when there are many events in the calendar. In turn, this can improve user experience.</p>
+</li>
+<li>
+<p>Cons: Implementation of interval search tree is tedious.</p>
+</li>
+<li>
+<p>I chose this option because performance efficiency is essential if TravEzy is to scale. Furthermore, I can use the interval search tree to implement enhancements for <code>add</code> and <code>delete</code> commands more easily.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Required date format for user input</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>The usual date format like dd/mm/yyyy (for example, 12/05/2019 to specify 12 May 2019).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement. It can be intuitive for users since this date format is common.</p>
+</li>
+<li>
+<p>Cons: Very restrictive and not everyone uses the above format (for instance, in some countries, people specify date using the mm/dd/yyyy format).</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Allow users to specify day, month and year in whichever order they want.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More flexible and less restrictive for users.</p>
+</li>
+<li>
+<p>Cons: If caution is not taken, bugs can arise quite easily.</p>
+</li>
+<li>
+<p>I chose this implementation because it allows users to specify dates in the format which they are most familiar with.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="itinerary"><a class="link" href="#itinerary">4.2. Itinerary</a></h3>
+<h3 id="itinerary"><a class="link" href="#itinerary">Itinerary</a></h3>
 <div class="paragraph">
 <p>The itinerary feature in TravEzy allows users to organize their events and view these events in one convenient <em>Event List</em>.</p>
 </div>
@@ -714,9 +850,9 @@ With these implementations, <em>TravEzy</em> aims to be at the frontier of conve
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ItineraryUseCaseDiagram.png" alt="ItineraryUseCaseDiagram">
+<img src="ItineraryUseCaseDiagram.png" alt="ItineraryUseCaseDiagram">
 </div>
-<div class="title">Figure 9. Use Case Diagram of the Itinerary feature</div>
+<div class="title">Figure 12. Use Case Diagram of the Itinerary feature</div>
 </div>
 <div class="paragraph">
 <p>Due to the numerous features supported by the itinerary, it requires a complex structure to ensure that each input
@@ -724,9 +860,9 @@ by the user are cautiously parsed before giving the appropriate command result.<
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ItineraryDiagram.png" alt="ItineraryDiagram">
+<img src="ItineraryDiagram.png" alt="ItineraryDiagram">
 </div>
-<div class="title">Figure 10. Architecture Diagram of the Itinerary feature</div>
+<div class="title">Figure 13. Architecture Diagram of the Itinerary feature</div>
 </div>
 <div class="paragraph">
 <p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of the itinerary feature.
@@ -739,7 +875,7 @@ However, in the <code>parser</code> package of itinerary, it contains various pa
 This is to ensure that each command in the itinerary have only one parser validating the command.</p>
 </div>
 <div class="sect3">
-<h4 id="model-component"><a class="link" href="#model-component">4.2.1. Model Component</a></h4>
+<h4 id="model-component"><a class="link" href="#model-component">Model Component</a></h4>
 <div class="paragraph">
 <p>The implementation of the model class in TravEzy is to be a generic. Hence, the model object being instantiated
 could be any of the following 5 features, <code>Calendar</code>, <code>Itinerary</code>, <code>Financial Tracker</code>, <code>Travel Diary</code>
@@ -747,9 +883,9 @@ and <code>Achievements</code>. Below is the model class diagram for the itinerar
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ItineraryModelDiagram.png" alt="ItineraryModelDiagram">
+<img src="ItineraryModelDiagram.png" alt="ItineraryModelDiagram">
 </div>
-<div class="title">Figure 11. Model Diagram of the Itinerary feature</div>
+<div class="title">Figure 14. Model Diagram of the Itinerary feature</div>
 </div>
 <div class="paragraph">
 <p>The Model, is the crux of the itinerary feature which serves several functions this include:</p>
@@ -818,7 +954,7 @@ are being defined by the user.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="itinerary-search-command"><a class="link" href="#itinerary-search-command">4.2.2. Itinerary search command</a></h4>
+<h4 id="itinerary-search-command"><a class="link" href="#itinerary-search-command">Itinerary search command</a></h4>
 <div class="paragraph">
 <p>The search command for specified events in the event list is facilitated by the <code>Itinerary</code> class which contains
 an event list and keep track of the events that the user has inputted into TravEzy. There are several search conditions
@@ -849,9 +985,9 @@ being called.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ItinerarySearchCommand.png" alt="ItinerarySearchCommand">
+<img src="ItinerarySearchCommand.png" alt="ItinerarySearchCommand">
 </div>
-<div class="title">Figure 12. Sequence Diagram of the Search Command</div>
+<div class="title">Figure 15. Sequence Diagram of the Search Command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -893,9 +1029,9 @@ search command in the itinerary:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ItinerarySearchActivityDiagram.png" alt="ItinerarySearchActivityDiagram">
+<img src="ItinerarySearchActivityDiagram.png" alt="ItinerarySearchActivityDiagram">
 </div>
-<div class="title">Figure 13. Activity Diagram of the Search Command</div>
+<div class="title">Figure 16. Activity Diagram of the Search Command</div>
 </div>
 <div class="paragraph">
 <p>The following search command is implemented in the series of steps as described in the activity diagram as shown above
@@ -913,41 +1049,45 @@ based on the specific search condition and only the filtered list will be given 
 </div>
 </div>
 <div class="sect2">
-<h3 id="financial-tracker"><a class="link" href="#financial-tracker">4.3. Financial Tracker</a></h3>
+<h3 id="financial-tracker"><a class="link" href="#financial-tracker">Financial Tracker</a></h3>
 <div class="paragraph">
-<p>The <em>Financial Tracker</em> feature in <em>TravEzy</em> allows users to keep track of their financial expenses with appropriate categorized expenditure by different countries.</p>
+<p>The Financial Tracker feature in TravEzy allows users to keep track of their financial expenses with appropriate categorized expenditure and country.</p>
 </div>
 <div class="paragraph">
 <p><strong>Architecture:</strong></p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="FinancialTrackerDiagram.png" alt="FinancialTrackerDiagram">
+</div>
+<div class="title">Figure 17. Architecture Diagram of the Financial Tracker feature</div>
+</div>
 <div class="paragraph">
-<p>The Architecture Diagram given below explains the high-level design of the <em>Financial Tracker</em> feature.</p>
+<p>The Architecture Diagram given above explains the high-level design of the financial tracker feature.
+Inputs given by the user are channeled from the <code>textUI</code> and parsed by <code>CommandParser</code> before different commands are formed which generates
+the <code>Model</code> and updates the <code>FinancialTracker</code> object which contains the expense list.</p>
+</div>
+<div class="paragraph">
+<p>The <code>textUI</code>, <code>Log Centre</code> and <code>Storage</code> all stem from the common package of the main TravEzy application.
+This is to ensure that each command in financial tracker have only one parser validating the command.
+The GUI also collaborate with <code>Model</code> Class directly, which will be changed to only communicate with <code>Logic</code> class in later time.</p>
+</div>
+<div class="paragraph">
+<p><strong>Financial Tracker Class Diagram</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerDiagram.png" alt="FinancialTrackerDiagram" width="600">
+<img src="FinancialTrackerClassDiagram.png" alt="FinancialTrackerClassDiagram">
 </div>
-</div>
-<div class="paragraph">
-<p>Inputs given by the user are channeled from the <code>textUI</code> and handled by <code>Logic</code> before different commands are formed which execute on
-the <code>Model</code>. The <code>Model</code> will then update the <code>FinancialTracker</code> object which contains the expense list.</p>
+<div class="title">Figure 18. Class Diagram of the Financial Tracker feature</div>
 </div>
 <div class="paragraph">
-<p>The <code>textUI</code> and <code>Log Centre</code> stem from the common package of the main <em>TravEzy</em> application while <code>Logic</code>, <code>Model,</code> and <code>Storage</code> all have similar architecture design with the other features (Calendar, Itinerary, etc.).</p>
+<p>The Model,
+stores the <code>FinancialTracker</code> data which includes the <code>ExpenseList</code> which keeps track of all the expenses
+that are included by the user and stores it into the storage in a JSON file.</p>
 </div>
 <div class="paragraph">
-<p><strong>Financial Tracker Class Diagram:</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/FinancialTrackerClassDiagram.png" alt="FinancialTrackerClassDiagram" width="800">
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>Model</code> stores the <code>FinancialTracker</code> data which includes several <code>ExpenseList</code> each associated with a country that keeps track of all the expenses.</p>
-</div>
-<div class="paragraph">
-<p><code>Financial Tracker</code> exposes an unmodifiable <code>ObservableMap&lt;String, ExpenseList&gt;</code> that can be observed. The UI is bound to the <code>Model</code> whereby the <code>Model</code> returns an expense list associated with the current <code>Country</code> of the <code>Financial Tracker</code> and updates when the querying <code>Country</code> changed.</p>
+<p>It exposes an unmodifiable <code>ObservableList&lt;Expense&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -956,46 +1096,47 @@ the <code>Model</code>. The <code>Model</code> will then update the <code>Financ
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Each time a new <code>Country</code> is selected from the <em>Countries dropdown box</em>, the respective expense list will be returned for that specific country, this implementation is to ease categorising and sorting.
+Each time a new <code>Country</code> is selected from the javafx drop down menu, an expense list will be generated for that specific country, this
+implementation is to ease categorising and sorting.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Sequence Diagram example:</strong></p>
-</div>
-<div class="paragraph">
-<p>The sequence diagram below shows the sequence of events that will take place when a user calls <code>Summary</code> command.</p>
+<p><strong>Sequence Diagram example</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerSummaryCommandDiagram.png" alt="FinancialTrackerSummaryCommandDiagram" width="800">
+<img src="FinancialTrackerSummaryCommandDiagram.png" alt="FinancialTrackerSummaryCommandDiagram">
 </div>
-</div>
-<div class="paragraph">
-<p>The sequence of events are very likely to those of the other commands in <em>Financial Tracker</em> feature.</p>
+<div class="title">Figure 19. Sequence Diagram of the Financial Tracker feature</div>
 </div>
 <div class="paragraph">
-<p><strong>Activity Diagram example:</strong></p>
+<p>The above sequence diagram shows the sequence of events that will take place when a user calls <code>Summary</code> command.
+Note that that above sequence of events are very likely to those for the other commands in Financial Tracker feature.</p>
 </div>
 <div class="paragraph">
-<p>The activity diagram below shows how <code>edits</code> command works.</p>
+<p><strong>Activity Diagram example</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FinancialTrackerActivityDiagram.png" alt="FinancialTrackerActivityDiagram" width="800">
+<img src="FinancialTrackerActivityDiagram.png" alt="FinancialTrackerActivityDiagram">
 </div>
+<div class="title">Figure 20. Activity Diagram of the Financial Tracker feature</div>
+</div>
+<div class="paragraph">
+<p>The above activity shows how <code>edits</code> command works.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="diary"><a class="link" href="#diary">4.4. Diary</a></h3>
+<h3 id="diary"><a class="link" href="#diary">Diary</a></h3>
 <div class="sect3">
-<h4 id="architecture-of-diary"><a class="link" href="#architecture-of-diary">4.4.1. Architecture of Diary</a></h4>
+<h4 id="architecture-of-diary"><a class="link" href="#architecture-of-diary">Architecture of Diary</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/DiaryArchitectureDiagram.png" alt="DiaryArchitectureDiagram">
+<img src="DiaryArchitectureDiagram.png" alt="DiaryArchitectureDiagram">
 </div>
-<div class="title">Figure 14. Architecture Diagram for Diary Feature</div>
+<div class="title">Figure 21. Architecture Diagram for Diary Feature</div>
 </div>
 <div class="paragraph">
 <p>The <strong><em>Architecture Diagram</em></strong> above explains the high -level design of the <em>Diary</em> within <em>TravEzy</em>. Below, there is a brief explanation of each component.
@@ -1023,12 +1164,12 @@ the <code>DiaryParser</code> to <code>Parse</code> the input and output the matc
 </div>
 </div>
 <div class="sect3">
-<h4 id="structure-of-diary-model"><a class="link" href="#structure-of-diary-model">4.4.2. Structure of Diary Model</a></h4>
+<h4 id="structure-of-diary-model"><a class="link" href="#structure-of-diary-model">Structure of Diary Model</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/DiaryLogicClassDiagram.png" alt="DiaryLogicClassDiagram">
+<img src="DiaryLogicClassDiagram.png" alt="DiaryLogicClassDiagram">
 </div>
-<div class="title">Figure 15. Class Diagram for the Diary Model</div>
+<div class="title">Figure 22. Class Diagram for the Diary Model</div>
 </div>
 <div class="paragraph">
 <p>The above diagram is a Class Diagram of the <code>DiaryModel</code></p>
@@ -1083,12 +1224,12 @@ It contains the <code>DiaryBook</code>, which is the actual implementation of <e
 </div>
 </div>
 <div class="sect3">
-<h4 id="sequence-of-find-command"><a class="link" href="#sequence-of-find-command">4.4.3. Sequence of Find Command</a></h4>
+<h4 id="sequence-of-find-command"><a class="link" href="#sequence-of-find-command">Sequence of Find Command</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/DiaryFindCommandSequenceDiagram.png" alt="DiaryFindCommandSequenceDiagram">
+<img src="DiaryFindCommandSequenceDiagram.png" alt="DiaryFindCommandSequenceDiagram">
 </div>
-<div class="title">Figure 16. Sequence Diagram for the Find Command</div>
+<div class="title">Figure 23. Sequence Diagram for the Find Command</div>
 </div>
 <div class="paragraph">
 <p>Above, we have the sequence diagram for the <code>FindCommand</code> in the <em>Diary</em>. In this case, we have taken the scenario of finding any <code>DiaryEntries</code> which contain the word "temp".</p>
@@ -1132,15 +1273,15 @@ The lifeline for FindCommandParser should end at the destroy marker (X) but due 
 </div>
 </div>
 <div class="sect3">
-<h4 id="logic-of-unprivate-and-unlock-commands"><a class="link" href="#logic-of-unprivate-and-unlock-commands">4.4.4. Logic of Unprivate and Unlock  Commands</a></h4>
+<h4 id="logic-of-unprivate-and-unlock-commands"><a class="link" href="#logic-of-unprivate-and-unlock-commands">Logic of Unprivate and Unlock  Commands</a></h4>
 <div class="paragraph">
 <p>Given the similar function of the 2 commands, <code>unprivate</code> and <code>unlock</code>, there is a more detailed explanation of the differences between the commands below.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/DiaryUnPrivateActivityDiagram.png" alt="DiaryUnPrivateActivityDiagram">
+<img src="DiaryUnPrivateActivityDiagram.png" alt="DiaryUnPrivateActivityDiagram">
 </div>
-<div class="title">Figure 17. Activity Diagram for the Unprivate Command</div>
+<div class="title">Figure 24. Activity Diagram for the Unprivate Command</div>
 </div>
 <div class="paragraph">
 <p>Above, is the logical flow for the Unprivate Command. In brief, it allows a user to unprivate any private entry <strong>IF</strong> there are no <code>Details</code> set. As a result, the command can be input like this:</p>
@@ -1162,9 +1303,9 @@ The lifeline for FindCommandParser should end at the destroy marker (X) but due 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/DiaryUnLockActivityDiagram.png" alt="DiaryUnLockActivityDiagram">
+<img src="DiaryUnLockActivityDiagram.png" alt="DiaryUnLockActivityDiagram">
 </div>
-<div class="title">Figure 18. Activity Diagram for the UnLock Command</div>
+<div class="title">Figure 25. Activity Diagram for the UnLock Command</div>
 </div>
 <div class="paragraph">
 <p>Above, is the logical flow for the Unlock Command. In brief, it allows a user to unlock any private entry <strong>IF</strong> there are <code>Details</code> and the <code>Details</code> input by the user match the original <code>Details</code> set by the user.As a result, the command can be input like this:</p>
@@ -1190,18 +1331,18 @@ The lifeline for FindCommandParser should end at the destroy marker (X) but due 
 </div>
 </div>
 <div class="sect2">
-<h3 id="address-book"><a class="link" href="#address-book">4.5. Address Book</a></h3>
+<h3 id="address-book"><a class="link" href="#address-book">Address Book</a></h3>
 <div class="sect3">
-<h4 id="logic-component"><a class="link" href="#logic-component">4.5.1. Logic Component</a></h4>
+<h4 id="logic-component"><a class="link" href="#logic-component">Logic Component</a></h4>
 <div id="fig-LogicClassDiagram" class="imageblock">
 <div class="content">
-<img src="images/AddressLogicClassDiagram.png" alt="AddressLogicClassDiagram">
+<img src="AddressLogicClassDiagram.png" alt="AddressLogicClassDiagram">
 </div>
-<div class="title">Figure 19. Structure of the Logic Component</div>
+<div class="title">Figure 26. Structure of the Logic Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
-<a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/address/logic/AddressBookLogic.java"><code>AddressBookLogic.java</code></a></p>
+<a href="{repoURL}/src/main/java/seedu/address/address/logic/AddressBookLogic.java"><code>AddressBookLogic.java</code></a></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1227,9 +1368,9 @@ The lifeline for FindCommandParser should end at the destroy marker (X) but due 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
+<img src="DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
 </div>
-<div class="title">Figure 20. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+<div class="title">Figure 27. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1245,15 +1386,15 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 </div>
 </div>
 <div class="sect3">
-<h4 id="Design-Model"><a class="link" href="#Design-Model">4.5.2. Model component</a></h4>
+<h4 id="Design-Model"><a class="link" href="#Design-Model">Model component</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/AddressModelClassDiagram.png" alt="AddressModelClassDiagram">
+<img src="AddressModelClassDiagram.png" alt="AddressModelClassDiagram">
 </div>
-<div class="title">Figure 21. Structure of the Model Component</div>
+<div class="title">Figure 28. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/address/model/AddressBookModel.java"><code>AddressBookModel.java</code></a></p>
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/address/model/AddressBookModel.java"><code>AddressBookModel.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>Model</code>,</p>
@@ -1280,7 +1421,7 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 <td class="content">
 As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book</code>, which <code>Person</code> can reference. This would allow <code>Address Book</code> to only require one <code>Tag</code> object per unique <code>Tag</code>, instead of each <code>Person</code> needing their own <code>Tag</code> object. An example of how such a model may look like is given below.<br>
 <br>
-<span class="image"><img src="images/BetterAddressBookModelClassDiagram.png" alt="BetterAddressBookModelClassDiagram"></span>
+<span class="image"><img src="BetterAddressBookModelClassDiagram.png" alt="BetterAddressBookModelClassDiagram"></span>
 </td>
 </tr>
 </table>
@@ -1288,18 +1429,18 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 <div class="sect2">
-<h3 id="achievements"><a class="link" href="#achievements">4.6. Achievements</a></h3>
+<h3 id="achievements"><a class="link" href="#achievements">Achievements</a></h3>
 <div class="sect3">
-<h4 id="logic-component-2"><a class="link" href="#logic-component-2">4.6.1. Logic Component</a></h4>
+<h4 id="logic-component-2"><a class="link" href="#logic-component-2">Logic Component</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/AchievementsLogicClassDiagram.png" alt="AchievementsLogicClassDiagram">
+<img src="AchievementsLogicClassDiagram.png" alt="AchievementsLogicClassDiagram">
 </div>
-<div class="title">Figure 22. AchievementsLogic Diagram of the Achievements feature</div>
+<div class="title">Figure 29. AchievementsLogic Diagram of the Achievements feature</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
-<a href="https://github.com/AY1920S1-CS2103T-T17-2/main/tree/master/src/main/java/seedu/address/achievements/logic/AchievementsLogic.java"><code>AchievementsLogic.java</code></a></p>
+<a href="{repoURL}/src/main/java/seedu/address/achievements/logic/AchievementsLogic.java"><code>AchievementsLogic.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>AchievementsLogic</code> is responsible for generating statistics for the different components in Travezy</p>
@@ -1344,9 +1485,9 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/AchievementsPage.png" alt="AchievementsPage">
+<img src="AchievementsPage.png" alt="AchievementsPage">
 </div>
-<div class="title">Figure 23. Sequence Diagram of the Statistics Model</div>
+<div class="title">Figure 30. Sequence Diagram of the Statistics Model</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1362,12 +1503,12 @@ The <code>StatisticsModel</code> is lazily created. Hence, the statistics will o
 </div>
 </div>
 <div class="sect3">
-<h4 id="model-component-2"><a class="link" href="#model-component-2">4.6.2. Model Component</a></h4>
+<h4 id="model-component-2"><a class="link" href="#model-component-2">Model Component</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/AchievementsModelClassDiagram.png" alt="AchievementsModelClassDiagram">
+<img src="AchievementsModelClassDiagram.png" alt="AchievementsModelClassDiagram">
 </div>
-<div class="title">Figure 24. StatisticsModel Diagram of the Achievements feature</div>
+<div class="title">Figure 31. StatisticsModel Diagram of the Achievements feature</div>
 </div>
 <div class="paragraph">
 <p>The <code>StatisticsModel</code>,</p>
@@ -1390,7 +1531,7 @@ The <code>StatisticsModel</code> is lazily created. Hence, the statistics will o
 </div>
 </div>
 <div class="sect1">
-<h2 id="documentation"><a class="link" href="#documentation">5. Documentation</a></h2>
+<h2 id="documentation"><a class="link" href="#documentation">Documentation</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Refer to the guide <a href="Documentation.html">here</a>.</p>
@@ -1398,7 +1539,7 @@ The <code>StatisticsModel</code> is lazily created. Hence, the statistics will o
 </div>
 </div>
 <div class="sect1">
-<h2 id="testing"><a class="link" href="#testing">6. Testing</a></h2>
+<h2 id="testing"><a class="link" href="#testing">Testing</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Refer to the guide <a href="Testing.html">here</a>.</p>
@@ -1406,7 +1547,7 @@ The <code>StatisticsModel</code> is lazily created. Hence, the statistics will o
 </div>
 </div>
 <div class="sect1">
-<h2 id="dev-ops"><a class="link" href="#dev-ops">7. Dev Ops</a></h2>
+<h2 id="dev-ops"><a class="link" href="#dev-ops">Dev Ops</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Refer to the guide <a href="DevOps.html">here</a>.</p>
@@ -1916,7 +2057,7 @@ These instructions only provide a starting point for testers to work on; testers
 </table>
 </div>
 <div class="sect2">
-<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">G.1. Launch and Shutdown</a></h3>
+<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">Launch and Shutdown</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1954,7 +2095,7 @@ Expected: The most recent window size and location is retained.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">G.2. Deleting a person</a></h3>
+<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">Deleting a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1986,7 +2127,7 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">G.3. Saving data</a></h3>
+<h3 id="saving-data"><a class="link" href="#saving-data">Saving data</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2006,4 +2147,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 12:21:44 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 12:47:03 UTC</div></div></div></body></html>
