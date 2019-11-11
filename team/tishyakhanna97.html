@@ -5,8 +5,11 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>This project portfolio has been written to elaborate on my
-contributions to a team-based software engineering project in the NUS Computing
-module CS2103T.In this module, my team of five was tasked to create an application, with reference to
+contributions to a <strong>team-based software engineering project</strong> in the NUS Computing
+module CS2103T.</p>
+</div>
+<div class="paragraph">
+<p>In this module, my team of five was tasked to create an application, with reference to
 the <a href="https://github.com/nus-cs2103-AY1920S1/addressbook-level3">Address Book - Level 3</a>.</p>
 </div>
 <div class="sect2">
@@ -74,45 +77,17 @@ calendars, itinerary planners, diaries and budgeting tools into one convenient
 and intuitive interface.</p>
 </div>
 <div class="paragraph">
-<p>Our product is targeting NUS students who are avid travellers. Given their
+<p>Our product is for NUS students who are avid travellers. Given their
 busy schedules and love for travelling, <strong>TravEzy</strong> is the optimal
 solution for their travel needs.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="overview-of-my-contribution"><a class="link" href="#overview-of-my-contribution">Overview of my contribution</a></h3>
+<h3 id="overview-of-my-contributions"><a class="link" href="#overview-of-my-contributions">Overview of my contributions</a></h3>
 <div class="paragraph">
 <p>I took up the responsibility of implementing the <em>Diary Feature</em> , end to end, in TravEzy. While this was my main task, I also
 worked on the common code base and design. In addition, I provided structure and content for critical documentation such as the User and
 Developer guides. I shall elaborate more in the following sections.</p>
-</div>
-<div class="paragraph">
-<p>In order to increase readability, I have included a legend of the formatting and symbols used in this portfolio.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-This symbol is to highlight important information
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><code>command</code>: Text which is contained in a grey box (as can be seen on the left) refers to <em>commands</em> that the user
-can type into the command line in order to interact with TravEzy</p>
-</div>
-<div class="paragraph">
-<p><em>Components</em>: Text which is italicised refers to technical components in the application</p>
-</div>
-<div class="paragraph">
-<p><strong>Highlight</strong> Bold text is mainly for titles</p>
-</div>
-<div class="paragraph">
-<p><span class="underline">attention</span> Underlined text is used to highlight certain key words and phrases</p>
 </div>
 </div>
 </div>
@@ -121,17 +96,18 @@ can type into the command line in order to interact with TravEzy</p>
 <h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>My contributions, summarised below, have been ordered with respect to the importance and impact on the project.</p>
+<p>My contributions, summarised below. Given that the largest feature that I implemented was the Diary, I have discussed it in detail below.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>Major enhancement:</strong></dt>
-<dd>
-<p><strong>Diary Feature</strong></p>
-<div class="ulist">
-<ul>
-<li>
+<div class="sect2">
+<h3 id="diary-feature"><a class="link" href="#diary-feature">Diary Feature</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DiaryPPP.png" alt="DiaryPPP">
+</div>
+</div>
+<div class="paragraph">
 <p>What is this:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -140,9 +116,9 @@ his/her <em>Diary Entries</em>.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
+<div class="paragraph">
 <p>Why is this necessary:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -151,41 +127,52 @@ This feature allows for users to do exactly that, with the some additional featu
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Highlights:</p>
+<div class="sect3">
+<h4 id="highlights"><a class="link" href="#highlights">Highlights:</a></h4>
+<div class="paragraph">
+<p>Other than being able to  add, delete and display diary entries, this implementation of the diary feature also allows users to find specific
+entries, sort through entries and encrypt private memories to keep them safe.</p>
+</div>
+<div class="sect4">
+<h5 id="code-find-code-and-code-findspecific-code"><a class="link" href="#code-find-code-and-code-findspecific-code"><code>find</code> and <code>findSpecific</code></a></h5>
+<div class="paragraph">
+<p>Looking through a large number of diary entries can be challenging, and that&#8217;s why,
+I implemented a basic <code>find</code> command which allows users to run through all their entries quickly and find entries
+which match their input. The <code>findSpecific</code> command takes this functionality to the next level by allowing users to segment their diary entries
+based on the different componenets of an entry (Title, Date etc)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="code-private-code-and-code-unlock-code"><a class="link" href="#code-private-code-and-code-unlock-code"><code>private</code> and <code>unlock</code></a></h5>
+<div class="paragraph">
+<p>Most diaries are for personal thoughts and opinions, and thus, I implemented the  <code>private</code> command which allows users to
+protect their memories. In order to further safeguard entries, I implemented the <code>setDetails</code> command which allows
+users to password protect their memories. Finally, to fully protect the users, I encrypted their data to ensure that no
+unauthorised users can read private information straight from the storage of TravEzy</p>
+</div>
+<div class="paragraph">
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s1.github.io/tp-dashboard/#search=tishyakhanna97&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2019-09-06&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false">Code</a>]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-contributions"><a class="link" href="#other-contributions">Other Contributions</a></h3>
+<div class="paragraph">
+<p><strong>Other contributions</strong>:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Other than being able to do add, delete and display diary entries, this implementation of the diary feature also allows users to find specific
-entries, sort through entries and encrypt private memories to keep them safe.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>] <em>{give links to collated code files}</em></p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>Minor enhancement:</strong></dt>
-<dd>
 <p><strong>Delay Function</strong></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Added a delay function which allows users to see an exit message when leaving the application
-*</p>
+<p>Added a delay function which allows users to see an exit message when leaving the application</p>
 </li>
-<li>
-<p><strong>Other contributions</strong>:</p>
-<div class="ulist">
-<ul>
+</ul>
+</div>
+</li>
 <li>
 <p>Project management:</p>
 <div class="ulist">
@@ -198,6 +185,9 @@ entries, sort through entries and encrypt private memories to keep them safe.</p
 </li>
 <li>
 <p>Enabled Autopublishing of documentation using Travis</p>
+</li>
+<li>
+<p>Procided feedback and inputs to teammates <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/pull/157">21</a>, <a href="https://github.com/AY1920S1-CS2103T-T17-2/main/pull/156">22</a></p>
 </li>
 </ul>
 </div>
@@ -219,18 +209,14 @@ entries, sort through entries and encrypt private memories to keep them safe.</p
 <li>
 <p>Transformed the structure and language of the User Guide and Developer Guide to increase readability and make it more user friendly.
 <a href="https://github.com/tishyakhanna97/main/commit/f49233f32a3b2c6c841f59755d0c0fa96e8f4590">8</a>,
-<a href="https://github.com/tishyakhanna97/main/commit/341deffba3e3b00970f9160feb37a2134ffc1c22">9</a></p>
+<a href="https://github.com/tishyakhanna97/main/commit/341deffba3e3b00970f9160feb37a2134ffc1c22">9</a>,
+<a href="https://github.com/AY1920S1-CS2103T-T17-2/main/commit/00ebf7dda94401bc4c980f850d6bffef9b81e0f8">10</a></p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
 </div>
 </div>
 </div>
@@ -239,44 +225,49 @@ entries, sort through entries and encrypt private memories to keep them safe.</p
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, I shall be sharing some of the portions from the <strong>TravEzy</strong> Userguide which I wrote.
-I shall be focusing on the <code>find</code>, <code>findSpecific</code> and <code>encrypt</code> commands.</p>
+I shall be focusing on the <code>find</code>, <code>findSpecific</code> and <code>encrypt</code> commands.
+They showcase my ability to write documentation targeting end-users.</p>
 </div>
 <div class="sect2">
-<h3 id="find-a-diary-entry-which-include-a-certain-word-inside-code-find-code"><a class="link" href="#find-a-diary-entry-which-include-a-certain-word-inside-code-find-code">Find a Diary Entry which include a certain word inside: <code>find</code></a></h3>
+<h3 id="find-specific-diary-entries-code-findspecific-code"><a class="link" href="#find-specific-diary-entries-code-findspecific-code">Find specific diary entries <code>findSpecific</code></a></h3>
 <div class="paragraph">
-<p>"Hey, when did I go to Spain?" It can be hard to remember
-all the details of your trips. That&#8217;s why, this Diary allows you to <strong>Find</strong></p>
+<p>Let&#8217;s narrow down your search! The <em>Diary</em> allows you to look through specific sections of each <em>Diary Entry</em> to find the exact entry that you want!</p>
 </div>
 <div class="paragraph">
-<p><strong>Find entries containing a certain text: <code>find</code></strong></p>
+<p><strong>Format:</strong><br>
+ <code>findSpecific [t/TITLE] [d/DATE TIME] [p/PLACE] [m/MEMORY]</code></p>
 </div>
 <div class="paragraph">
-<p>Finds all entries which contain your input text. There is one parameter, which
-is the text that you want to find.</p>
+<p><strong>Example:</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>findSpecific d/12/12/2019</pre>
+</div>
 </div>
 <div class="paragraph">
-<p>The <em>Command Word</em> is <code>find</code>.</p>
+<p><strong>Step by step:</strong></p>
 </div>
 <div class="paragraph">
-<p>Format: <code>list input</code></p>
+<p>You know that you had a trip on the 12th of December 2019, but you can&#8217;t remember what you did&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>Example: I want to look at an old entry, it had something to do with "Aruba"&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>The user enters the command <code>find Aruba</code></p>
+<p>Step 1: Type <code>findSpecific d/12/12/2019</code> into the <em>User Input Box</em> and press <em>Enter</em> on the keyboard. You can refer to the picture below, where the number <strong>1</strong> is.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/DiaryFindCommand.png" alt="DiaryFindCommand">
+<img src="../images/DiaryFindSpecificBefore.png" alt="DiaryFindSpecificBefore" width="600">
 </div>
 </div>
 <div class="paragraph">
-<p>And gets a list of all <em>Diary Entries</em> which match the command:</p>
+<p>Step 2: TravEzy will tell you if your <code>findSpecific</code> command was successful in the <em>Result Display</em>, as can be seen where the number <strong>2</strong> is, in the picture below.</p>
+</div>
+<div class="paragraph">
+<p>Step 3: You can see the specific matching <em>Diary Entries</em> in your <em>Diary List Panel</em>, similar to number <strong>3</strong> in the picture below.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/DiaryFindCommandResult.png" alt="DiaryFindCommandResult">
+<img src="../images/DiaryFindSpecificAfter.png" alt="DiaryFindSpecificAfter" width="600">
 </div>
 </div>
 </div>
@@ -335,59 +326,114 @@ The <code>find</code> and <code>findSpecific</code> commands can&#8217;t be used
 <div class="sect1">
 <h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Given below is a sample of the sections that I contributed to the Developer Guide.
+They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</p>
+</div>
 <div class="sect2">
-<h3 id="diary"><a class="link" href="#diary">Diary</a></h3>
-<div class="sect3">
-<h4 id="architecture"><a class="link" href="#architecture">Architecture</a></h4>
+<h3 id="sequence-of-find-command"><a class="link" href="#sequence-of-find-command">Sequence of Find Command</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="../images/DiaryArchitecture.png" alt="DiaryArchitecture">
+<img src="../images/DiaryFindCommandSequenceDiagram.png" alt="DiaryFindCommandSequenceDiagram">
 </div>
-<div class="title">Figure 1. Architecture Diagram for Diary Feature</div>
-</div>
-<div class="paragraph">
-<p>The architecture diagram above explains the high-level design and implementation of the Diary Feature within TravEzy.</p>
+<div class="title">Figure 1. Sequence Diagram for the Find Command</div>
 </div>
 <div class="paragraph">
-<p><code>Diary Model</code> has multiple classes which form the basis of a Diary.
-This implementation starts at the root object, which is a <code>DiaryEntry</code>. These entries
-are stored within a <code>DiaryList</code>, which are then encapsulated within a <code>DiaryBook</code></p>
+<p>Above, we have the sequence diagram for the <code>FindCommand</code> in the <em>Diary</em>. In this case, we have taken the scenario of finding any <code>DiaryEntries</code> which contain the word "temp".</p>
 </div>
 <div class="paragraph">
-<p>After receiving user input from <code>DiaryUi</code>, <code>DiaryParser</code>
-changes the input to a executable format, and <code>DiaryCommand</code> allows for execution of the user input.</p>
+<p>Process:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Upon receiving the instruction from <code>Logic</code> to parse the input <code>find temp</code>, the <code>DiaryBookParser</code> begins parsing the input to match it (based on the <em>Command Word</em>) to the appropriate <em>Parser</em></p>
+</li>
+<li>
+<p>In this case, given that the the <em>Command Word</em> is <code>find</code> the appropriate <em>Parser</em> is the <code>FindCommandParser</code>, which is created and then begins to <code>parse("temp")</code></p>
+</li>
+<li>
+<p>This in turn creates a new <code>FindPredicate</code>, based on the input <code>temp</code>. This <code>FindPredicate</code> will be used to filter through the <code>DiaryModel</code> to get the matching <code>DiaryEntries</code></p>
+</li>
+<li>
+<p>With the <code>FindPredicate</code>, a new <code>FindCommand</code> is created which is returned to logic and executed</p>
+</li>
+<li>
+<p>This execution leads to the <code>find(temp)</code> command being executed on the <code>DiaryModel</code>, which returns the updated <code>DiaryModel</code> with the matching <code>DiaryEntries</code></p>
+</li>
+<li>
+<p>This model is then returned to the user in the form of the <code>Command Result</code>, and is visible on the GUI in the form of a list of the matching <code>DiaryEntries</code>.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for FindCommandParser should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="ui-component"><a class="link" href="#ui-component">UI component</a></h4>
+<div class="sect2">
+<h3 id="logic-of-unprivate-and-unlock-commands"><a class="link" href="#logic-of-unprivate-and-unlock-commands">Logic of Unprivate and Unlock  Commands</a></h3>
+<div class="paragraph">
+<p>Given the similar function of the 2 commands, <code>unprivate</code> and <code>unlock</code>, there is a more detailed explanation of the differences between the commands below.</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/DiaryUI.png" alt="DiaryUI">
+<img src="../images/DiaryUnPrivateActivityDiagram.png" alt="DiaryUnPrivateActivityDiagram">
 </div>
-<div class="title">Figure 2. Structure of DiaryUi</div>
-</div>
-<div class="paragraph">
-<p><code>DiaryUI</code>, which is represented above, consists of  <code>DiaryPage</code>, which encapsulates all the smaller Ui components.</p>
+<div class="title">Figure 2. Activity Diagram for the Unprivate Command</div>
 </div>
 <div class="paragraph">
-<p><strong>The main components are the:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>CommandBox</code> &#8594; Captures user input</p>
-</li>
-<li>
-<p><code>ResultDisplay</code> &#8594; Returns the output after the user input has passed through the DiaryCommand</p>
-</li>
-<li>
-<p><code>DiaryListPanel</code> &#8594; Shows an easily readable version of the current DiaryBook</p>
-</li>
-</ul>
+<p>Above, is the logical flow for the Unprivate Command. In brief, it allows a user to unprivate any private entry <strong>IF</strong> there are no <code>Details</code> set. As a result, the command can be input like this:</p>
 </div>
 <div class="paragraph">
-<p>All of these components inherit from the abstract <code>UiPart</code> Class</p>
+<p><code>unprivate 1</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>1</code> is the index of the Diary Entry which is to be unprivated
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DiaryUnLockActivityDiagram.png" alt="DiaryUnLockActivityDiagram">
+</div>
+<div class="title">Figure 3. Activity Diagram for the UnLock Command</div>
+</div>
+<div class="paragraph">
+<p>Above, is the logical flow for the Unlock Command. In brief, it allows a user to unlock any private entry <strong>IF</strong> there are <code>Details</code> and the <code>Details</code> input by the user match the original <code>Details</code> set by the user.As a result, the command can be input like this:</p>
+</div>
+<div class="paragraph">
+<p><code>unlock 1 user/username password/password</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>1</code> is the index of the Diary Entry which is to be unlocked and <code>user/username</code> and <code>password/password</code> are the relevant Details.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In summary, the <code>unlock</code> command is only to be used when the user has already set <code>Details</code>. Otherwise, the user has to use the <code>unprivate</code> command to see private <code>DiaryEntries</code></p>
 </div>
 </div>
 </div>
@@ -396,8 +442,5 @@ changes the input to a executable format, and <code>DiaryCommand</code> allows f
 <h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
 <div class="sectionbody">
 <hr>
-<div class="paragraph">
-<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 14:00:37 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 17:14:41 UTC</div></div></div></body></html>
