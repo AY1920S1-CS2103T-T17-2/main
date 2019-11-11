@@ -702,27 +702,12 @@ Each of these features have their own design and implementation logic.</p>
 <div class="sect2">
 <h3 id="itinerary"><a class="link" href="#itinerary">4.2. Itinerary</a></h3>
 <div class="paragraph">
-<p>The itinerary feature in TravEzy allows users to organize their events by giving a certain time they planned to
-finish each event.</p>
+<p>The itinerary feature in TravEzy allows users to organize their events and view these events in one convenient <em>Event List</em>.</p>
 </div>
 <div class="paragraph">
 <p>Current, the itinerary feature supports the basic commands of add, delete, edit and marking your events as done.
-It also includes other more advanced commands such as search, sort and wish&#8482;.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Not sure what you should do during a certain duration of time?
-Use the wish function in the itinerary and TravEzy will grant you three event suggestions based on your past entries.
-These suggestions are
-personalized for each user!
-</td>
-</tr>
-</table>
+In addition, it also includes other more advanced commands such as search and sort to better organize your events.
+With these implementations, <em>TravEzy</em> aims to be at the frontier of convenience.</p>
 </div>
 <div class="paragraph">
 <p>The itinerary feature implements the aforementioned feature based on the use cases below:</p>
@@ -748,21 +733,8 @@ by the user are cautiously parsed before giving the appropriate command result.<
 Inputs given by the user are channeled from the text UI and parsed in the logic package before different commands
 are formed which generates the model and updates the itinerary object which contains the event list.</p>
 </div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-The Calendar and Itinerary window work in tandem with each other. Due to their dependency,
-modification to one of the feature might result in the the other feature breaking.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
-<p>The <code>text UI</code>, <code>logic</code> and <code>storage</code> all stem from the common package of the main TravEzy application.
+<p>The <code>text UI</code>, <code>logic manager</code> and <code>storage manager</code> all stem from the common package of the main TravEzy application.
 However, in the <code>parser</code> package of itinerary, it contains various parser objects for the different command.
 This is to ensure that each command in the itinerary have only one parser validating the command.</p>
 </div>
@@ -805,8 +777,8 @@ throughout TravEzy.</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-A plausible extension to the itinerary model is give users the ability to <strong>tag</strong> each of their events based
-on different priority. This has ever since been implemented in v1.3
+A plausible extension to the itinerary model is to have the location field dictated by a dropdown bar, similar to the
+Priority Dropdown Bar.
 </td>
 </tr>
 </table>
@@ -817,27 +789,28 @@ on different priority. This has ever since been implemented in v1.3
 <div class="ulist">
 <ul>
 <li>
-<p>Use javaFX drop down menu to only users to tag based on priority:<br></p>
+<p>Use javaFX drop down menu to select the location of the event:<br></p>
 <div class="paragraph">
-<p>PROS: Can use tagging as a search condition and easier for storage / maintenance purposes.<br></p>
+<p>PROS: Can use location as a search condition and easier for storage / maintenance purposes.<br>
+Standardize the UI layout with <em>TravEzy</em> Financial Tracker which also has a Dropdown bar for location.</p>
 </div>
 <div class="paragraph">
-<p>CONS: Limiting the users to only a certain set of taggings.</p>
+<p>CONS: Limiting the users to only a certain set of locations.</p>
 </div>
 </li>
 <li>
-<p>Allow user to type in tagging during the add command template:<br></p>
+<p>Allow user to type in location during the add command template:<br></p>
 <div class="literalblock">
 <div class="content">
 <pre>add title/[title] date/[date] time/[time] l/[location] d/[description]</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>PROS: Allows the user to put in any tag they want to allow for more variety. Search function is still
-applicable for tags but users would need to know the specific tag they used for that particular event.<br></p>
+<p>PROS: Allows the user to put in any location they want to allow for more variety. Search function is still
+applicable for location but users would need to know the specific location they used for that particular event.<br></p>
 </div>
 <div class="paragraph">
-<p>CONS: Harder to maintain the individual tags in the storage since there could be a lot of tags that
+<p>CONS: Harder to maintain the individual locations in the storage since there could be a lot of locations that
 are being defined by the user.</p>
 </div>
 </li>
@@ -936,31 +909,6 @@ Running through all the events in the event list will ensure that all the events
 <div class="paragraph">
 <p>This sequential approach in implementing the <code>SearchCommand</code> will ensure that all the current events are being looked through
 based on the specific search condition and only the filtered list will be given as a result.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="future-extensions"><a class="link" href="#future-extensions">4.2.3. Future Extensions</a></h4>
-<div class="paragraph">
-<p>As indicated in the user guide, there are several features which are yet to be implemented during v1.3 and even during
-v1.4. These feature include the undo, redo and wish command which are supposedly included during the v1.3 or v1.4
-of the TravEzy itinerary implementation. However, due to the sheer number of features that are already implemented
-in the Travezy itinerary during v1.3, these features will be postponed to the next version instead. While implementing
-the TravEzy, we have in mind to provide you with quality instead of quantity. Hence, after much consideration, these
-features are left to later versions instead.</p>
-</div>
-<div class="paragraph">
-<p>That being said, stay tuned for TravEzy v2.0 for these cool features such as undo-ing your previous action calls that
-you have made in TravEzy itinerary, and if you happen to undo the wrong command, fret not since the redo command will
-also be implement in compliment to the undo command so that you as a user can call redo and revert back the undo call
-too! Lastly, there is this awesome feature in the upcoming which is the wish command, what it does is that TravEzy will
-refer back to the user&#8217;s storage and look through all the past events that the user has inputted in his itinerary list.
-Then based on these information provided, TravEzy will suggest 3 events that are suitable for the user to consider and
-add it into his current itinerary event list. These 3 events that TravEzy itinerary suggest will be something that the
-user will definitely enjoy doing or something that the user has to urgently do. Since it is personalized for each user
-and anaylzed carefully with the previous event entries.</p>
-</div>
-<div class="paragraph">
-<p>Hope that you are excited as I am in all these cool features that are coming up in v2.0.</p>
 </div>
 </div>
 </div>
@@ -2058,4 +2006,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 09:27:27 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 12:03:21 UTC</div></div></div></body></html>
